@@ -48,6 +48,19 @@
       margin: 10px 0;
       font-size: 17px;
     }
+    .issue-list {
+      list-style-position: outside;
+    }
+    .issue-list li {
+      margin: 18px 0;
+    }
+    .issue-summary {
+      color: #5b5b5b;
+      display: block;
+      font-size: 15px;
+      line-height: 1.45;
+      margin-top: 4px;
+    }
     a {
       color: #8a3324;
       text-decoration: none;
@@ -68,17 +81,47 @@
     <div class="meta">Current issue: 10 email drafts</div>
     <h1>The Policy Gradient</h1>
     <h2>ICLR 2026 Orals</h2>
-    <ol>
-      <li><a href="draft/iclr2026_orals_issue01_llms_agents_and_tool_use.html">Issue 01 - LLMs, Agents, and Tool Use</a></li>
-      <li><a href="draft/iclr2026_orals_issue02_llms_agents_and_tool_use.html">Issue 02 - LLMs, Agents, and Tool Use</a></li>
-      <li><a href="draft/iclr2026_orals_issue03_llms_agents_and_tool_use.html">Issue 03 - LLMs, Agents, and Tool Use</a></li>
-      <li><a href="draft/iclr2026_orals_issue04_vision_multimodal_and_generative_models.html">Issue 04 - Vision, Multimodal, and Generative Models</a></li>
-      <li><a href="draft/iclr2026_orals_issue05_reinforcement_learning_and_control.html">Issue 05 - Reinforcement Learning and Control</a></li>
-      <li><a href="draft/iclr2026_orals_issue06_reinforcement_learning_and_control.html">Issue 06 - Reinforcement Learning and Control</a></li>
-      <li><a href="draft/iclr2026_orals_issue07_reinforcement_learning_and_control.html">Issue 07 - Reinforcement Learning and Control</a></li>
-      <li><a href="draft/iclr2026_orals_issue08_cross_cutting_oral_highlights.html">Issue 08 - Cross-Cutting Oral Highlights</a></li>
-      <li><a href="draft/iclr2026_orals_issue09_safety_robustness_and_privacy.html">Issue 09 - Safety, Robustness, and Privacy</a></li>
-      <li><a href="draft/iclr2026_orals_issue10_theory_optimization_and_generalization.html">Issue 10 - Theory, Optimization, and Generalization</a></li>
+    <ol class="issue-list">
+      <li>
+        <a href="draft/iclr2026_orals_issue01_llms_agents_and_tool_use.html">Issue 01 - LLMs, Agents, and Tool Use</a>
+        <span class="issue-summary">AgentGym-RL; EmotionThinker; Gaia2; GEPA; In-the-Flow Agentic System Optimization; MedAgentGym.</span>
+      </li>
+      <li>
+        <a href="draft/iclr2026_orals_issue02_llms_agents_and_tool_use.html">Issue 02 - LLMs, Agents, and Tool Use</a>
+        <span class="issue-summary">MemAgent; spatial intelligence in MLLMs; online learning with ranking feedback; OpenApps; MoE reasoning sparsity; Q-RAG.</span>
+      </li>
+      <li>
+        <a href="draft/iclr2026_orals_issue03_llms_agents_and_tool_use.html">Issue 03 - LLMs, Agents, and Tool Use</a>
+        <span class="issue-summary">Visual RL for image quality; sampling-based reasoning; belief-deviation reduction; RefineStat; social-learning control; coverage principle.</span>
+      </li>
+      <li>
+        <a href="draft/iclr2026_orals_issue04_vision_multimodal_and_generative_models.html">Issue 04 - Vision, Multimodal, and Generative Models</a>
+        <span class="issue-summary">Compositional diffusion for planning; DiffusionNFT; FlashWorld; latent particle world models; MotionStream; safety-guided flow.</span>
+      </li>
+      <li>
+        <a href="draft/iclr2026_orals_issue05_reinforcement_learning_and_control.html">Issue 05 - Reinforcement Learning and Control</a>
+        <span class="issue-summary">Differentiable MPC; offline reward evaluation for bidding; exploratory diffusion; recursive likelihood-ratio optimization; hyperparameter trajectories; reward hacking.</span>
+      </li>
+      <li>
+        <a href="draft/iclr2026_orals_issue06_reinforcement_learning_and_control.html">Issue 06 - Reinforcement Learning and Control</a>
+        <span class="issue-summary">LongWriter-Zero; LoongRL; sparse CUDA generation with DRL; Mean Flow Policy; Nash preference optimization; Omni-Reward.</span>
+      </li>
+      <li>
+        <a href="draft/iclr2026_orals_issue07_reinforcement_learning_and_control.html">Issue 07 - Reinforcement Learning and Control</a>
+        <span class="issue-summary">Optimistic task inference; overthinking reduction; TD-JEPA; scaling RL compute for LLMs; ride-sharing dispatch; TROLL trust regions.</span>
+      </li>
+      <li>
+        <a href="draft/iclr2026_orals_issue08_cross_cutting_oral_highlights.html">Issue 08 - Cross-Cutting Oral Highlights</a>
+        <span class="issue-summary">MomaGraph; semi-supervised preference optimization; human feedback descriptions; DPO misspecification; World-In-World; robot action learning.</span>
+      </li>
+      <li>
+        <a href="draft/iclr2026_orals_issue09_safety_robustness_and_privacy.html">Issue 09 - Safety, Robustness, and Privacy</a>
+        <span class="issue-summary">Conformal robustness control; personalized generative reward models; PateGAIL++; SafeDPO; dormant adversarial behaviors; discount model search.</span>
+      </li>
+      <li>
+        <a href="draft/iclr2026_orals_issue10_theory_optimization_and_generalization.html">Issue 10 - Theory, Optimization, and Generalization</a>
+        <span class="issue-summary">FIRE; sticky Track-and-Stop; token-importance guided DPO; Visual Planning.</span>
+      </li>
     </ol>
   </main>
 </body>
