@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ICLR 2026 Orals - Issue 03</title>
+<style>
+body { margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #f3efe6; }
+a { color: #8a3324; text-decoration: none; }
+@media screen and (max-width: 620px) {
+  .container { width: 100% !important; }
+  .px-mob { padding-left: 24px !important; padding-right: 24px !important; }
+}
+</style>
+</head>
+<body style="margin:0; padding:0; background-color:#f3efe6;">
+<div style="display:none; max-height:0; overflow:hidden; mso-hide:all; font-size:1px; line-height:1px; color:#f3efe6;">ICLR 2026 oral papers: Reasoning as Representation: Rethinking Visual Reinforcement...; Reasoning with Sampling: Your Base Model is Smarter Than You Think; Reducing Belief Deviation in Reinforcement Learning for Active...; and more</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f3efe6">
+<tr><td align="center" style="padding: 32px 12px;">
+<table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px; background-color:#fbf8f1; border:1px solid #1a1a1a;">
+<tr><td style="height:6px; background-color:#1a1a1a; line-height:6px; font-size:0;">&nbsp;</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 12px 40px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td align="left" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px;">Vol. 04 &nbsp;&middot;&nbsp; Issue 3</td>
+<td align="right" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px;">May 28, 2026</td>
+</tr></table></td></tr>
+<tr><td class="px-mob" style="padding: 0 40px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top:1px solid #1a1a1a; height:1px; line-height:1px; font-size:0;">&nbsp;</td></tr></table></td></tr>
+<tr><td class="px-mob" align="center" style="padding: 28px 40px 8px 40px;"><div style="font-family: Georgia, 'Times New Roman', Times, serif; font-size:54px; line-height:54px; letter-spacing:2px; color:#1a1a1a; font-weight:normal;"><i>The&nbsp;</i><b>Policy</b><i>&nbsp;Gradient</i></div></td></tr>
+<tr><td class="px-mob" align="center" style="padding: 4px 40px 24px 40px; font-family: 'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:3px; text-transform:uppercase;">A curated digest of machine learning research</td></tr>
+<tr><td class="px-mob" style="padding: 0 40px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top:3px double #1a1a1a; height:3px; line-height:3px; font-size:0;">&nbsp;</td></tr></table></td></tr>
+<tr><td class="px-mob" style="padding: 36px 40px 12px 40px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#8a3324; letter-spacing:3px; text-transform:uppercase; margin-bottom:14px;">&#9670; ICLR 2026 Orals, 3 of 9</div>
+<h1 style="margin:0; font-family: Georgia, serif; font-size:38px; line-height:42px; color:#1a1a1a; font-weight:normal; letter-spacing:-0.5px;">LLMs, Agents, and Tool Use.</h1>
+<p style="margin: 18px 0 0 0; font-family: Georgia, serif; font-size:16px; line-height:26px; color:#3a3a3a;">A themed pass through the ICLR 2026 oral track. This draft collects 6 oral papers, with a compact research brief and concrete next steps for deciding whether to read deeply, reproduce, benchmark, or cite.</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 24px 40px 32px 40px; border-bottom:1px solid #d8d2c1; font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic;">Edited by the Research Desk &nbsp;&middot;&nbsp; 6 papers &nbsp;&middot;&nbsp; ~9 min read</td></tr>
+
+<!-- PAPER 01 -->
+<tr><td class="px-mob" style="padding: 48px 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="80" style="padding-right:18px;">
+<div style="font-family: Georgia, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">01</div>
+<div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+</td>
+<td valign="top">
+<div style="margin-bottom:8px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:12px; color:#1a1a1a; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;"><span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span></div>
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:16px; color:#5b5b5b; letter-spacing:1px; text-transform:uppercase;">LLMs, Agents, and Tool Use &middot; Image Quality Assessment, Low Level Vision</div>
+</div>
+<h2 style="margin:0; font-family: Georgia, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">Reasoning as Representation: Rethinking Visual Reinforcement Learning in Image Quality Assessment</h2>
+<div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">Shijie Zhao, Xuanyu Zhang, Weiqi Li, Junlin Li, Li zhang, et al. (7 authors)</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<p style="margin:0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#2a2a2a;">Reasoning-based image quality assessment (IQA) models trained through reinforcement learning (RL) exhibit exceptional generalization, yet the underlying mechanisms and critical factors driving this capability remain underexplored in current research. Moreover, despite their superior performance, these models incur inference...</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;"><tr><td style="padding:14px 18px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Next steps for researchers</div>
+<div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">Perturb the Image Quality Assessment, Low Level Vision loop directly: remove memory, corrupt retrieved evidence, cap tool calls, vary horizon length, and separate planning errors from execution errors. The ICLR-style application is to port the method to one messy environment such as code editing, web navigation, scientific QA, or data analysis and report failure taxonomy, not only aggregate success.</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 36px 40px;">
+<a href="https://openreview.net/forum?id=DkHt2K1g2Y" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a;">Read on OpenReview &rarr;</a>&nbsp;&nbsp;&nbsp;<a href="https://openreview.net/pdf/6ee8e184932d53e992c770f27281bdf84ccecd3e.pdf" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b;">PDF</a>
+</td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 36px 40px;"><div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div></td></tr>
+
+
+<!-- PAPER 02 -->
+<tr><td class="px-mob" style="padding: 0 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="80" style="padding-right:18px;">
+<div style="font-family: Georgia, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">02</div>
+<div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+</td>
+<td valign="top">
+<div style="margin-bottom:8px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:12px; color:#1a1a1a; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;"><span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span></div>
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:16px; color:#5b5b5b; letter-spacing:1px; text-transform:uppercase;">LLMs, Agents, and Tool Use &middot; LLMs, reasoning</div>
+</div>
+<h2 style="margin:0; font-family: Georgia, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">Reasoning with Sampling: Your Base Model is Smarter Than You Think</h2>
+<div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">Aayush Karan, Yilun Du</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<p style="margin:0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#2a2a2a;">We find a training-free sampling algorithm that achieves reasoning boosts on base models comparable to those obtained by RL techniques.</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;"><tr><td style="padding:14px 18px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Next steps for researchers</div>
+<div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">Perturb the LLMs, reasoning loop directly: remove memory, corrupt retrieved evidence, cap tool calls, vary horizon length, and separate planning errors from execution errors. The ICLR-style application is to port the method to one messy environment such as code editing, web navigation, scientific QA, or data analysis and report failure taxonomy, not only aggregate success.</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 36px 40px;">
+<a href="https://openreview.net/forum?id=Vsgq2ldr4K" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a;">Read on OpenReview &rarr;</a>&nbsp;&nbsp;&nbsp;<a href="https://openreview.net/pdf/777608f2969d5ddafb9a37918f42d2eae852e0e8.pdf" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b;">PDF</a>
+</td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 36px 40px;"><div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div></td></tr>
+
+
+<!-- PAPER 03 -->
+<tr><td class="px-mob" style="padding: 0 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="80" style="padding-right:18px;">
+<div style="font-family: Georgia, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">03</div>
+<div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+</td>
+<td valign="top">
+<div style="margin-bottom:8px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:12px; color:#1a1a1a; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;"><span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span></div>
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:16px; color:#5b5b5b; letter-spacing:1px; text-transform:uppercase;">LLMs, Agents, and Tool Use &middot; Large language models, LLM reasoning</div>
+</div>
+<h2 style="margin:0; font-family: Georgia, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">Reducing Belief Deviation in Reinforcement Learning for Active Reasoning of LLM Agents</h2>
+<div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">Deyu Zou, Yongqiang Chen, Jianxiang Wang, Garry YANG, Mufei Li, et al. (9 authors)</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<p style="margin:0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#2a2a2a;">Active reasoning requires large language model (LLM) agents to interact with external sources and strategically gather information to solve problems in multiple turns. Central to this process is belief tracking: maintaining an accurate representation of the underlying state and uncertainty in understanding and solving the...</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;"><tr><td style="padding:14px 18px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Next steps for researchers</div>
+<div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">Attack the Large language models, LLM reasoning claim before extending it: run adaptive adversaries, distribution shift, paraphrase/corruption tests, and capability-preservation checks. The follow-up worth writing is a threat-model-specific version with clear guarantees, costs, and failure cases on real model outputs rather than a broad safety claim.</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 36px 40px;">
+<a href="https://openreview.net/forum?id=r8hzDA3pUY" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a;">Read on OpenReview &rarr;</a>&nbsp;&nbsp;&nbsp;<a href="https://openreview.net/pdf/6c8b5b3e57cec03e85ff9ebcba761990071567fa.pdf" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b;">PDF</a>
+</td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 36px 40px;"><div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div></td></tr>
+
+
+<!-- PAPER 04 -->
+<tr><td class="px-mob" style="padding: 0 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="80" style="padding-right:18px;">
+<div style="font-family: Georgia, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">04</div>
+<div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+</td>
+<td valign="top">
+<div style="margin-bottom:8px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:12px; color:#1a1a1a; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;"><span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span></div>
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:16px; color:#5b5b5b; letter-spacing:1px; text-transform:uppercase;">LLMs, Agents, and Tool Use &middot; Probabilistic Programming, Constrained...</div>
+</div>
+<h2 style="margin:0; font-family: Georgia, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">RefineStat: Efficient Exploration for Probabilistic Program Synthesis</h2>
+<div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">Madhav Kanda, Shubham Ugare, Sasa Misailovic</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<p style="margin:0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#2a2a2a;">Probabilistic programming offers a powerful framework for modeling uncertainty, yet statistical model discovery in this domain entails navigating an immense search space under strict domain‐specific constraints. When small language models are tasked with generating probabilistic programs, they frequently produce outputs that...</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;"><tr><td style="padding:14px 18px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Next steps for researchers</div>
+<div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">Perturb the Probabilistic Programming, Constrained Generation loop directly: remove memory, corrupt retrieved evidence, cap tool calls, vary horizon length, and separate planning errors from execution errors. The ICLR-style application is to port the method to one messy environment such as code editing, web navigation, scientific QA, or data analysis and report failure taxonomy, not only aggregate success.</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 36px 40px;">
+<a href="https://openreview.net/forum?id=SAl337ZX5d" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a;">Read on OpenReview &rarr;</a>&nbsp;&nbsp;&nbsp;<a href="https://openreview.net/pdf/d7b0e6d088495ab5d435c0ca8694985df7f9ca69.pdf" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b;">PDF</a>
+</td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 36px 40px;"><div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div></td></tr>
+
+
+<!-- PAPER 05 -->
+<tr><td class="px-mob" style="padding: 0 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="80" style="padding-right:18px;">
+<div style="font-family: Georgia, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">05</div>
+<div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+</td>
+<td valign="top">
+<div style="margin-bottom:8px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:12px; color:#1a1a1a; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;"><span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span></div>
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:16px; color:#5b5b5b; letter-spacing:1px; text-transform:uppercase;">LLMs, Agents, and Tool Use &middot; Social learning, LLMs</div>
+</div>
+<h2 style="margin:0; font-family: Georgia, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">Steering the Herd: A Framework for LLM-based Control of Social Learning</h2>
+<div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">Raghu Arghal, Kevin He, Shirin Saeedi Bidokhti, Saswati Sarkar</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<p style="margin:0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#2a2a2a;">We introduce, analyze, and simulate (via LLMs) a model of controlled social learning to study how algorithms can influence social beliefs, decisions, and welfare via information design.</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;"><tr><td style="padding:14px 18px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Next steps for researchers</div>
+<div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">Perturb the Social learning, LLMs loop directly: remove memory, corrupt retrieved evidence, cap tool calls, vary horizon length, and separate planning errors from execution errors. The ICLR-style application is to port the method to one messy environment such as code editing, web navigation, scientific QA, or data analysis and report failure taxonomy, not only aggregate success.</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 36px 40px;">
+<a href="https://openreview.net/forum?id=RtS4UqSmNt" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a;">Read on OpenReview &rarr;</a>&nbsp;&nbsp;&nbsp;<a href="https://openreview.net/pdf/53be8f05da195d7c51bad1833cd8bc30851fbefa.pdf" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b;">PDF</a>
+</td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 36px 40px;"><div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div></td></tr>
+
+
+<!-- PAPER 06 -->
+<tr><td class="px-mob" style="padding: 0 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="80" style="padding-right:18px;">
+<div style="font-family: Georgia, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">06</div>
+<div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+</td>
+<td valign="top">
+<div style="margin-bottom:8px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:12px; color:#1a1a1a; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;"><span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span></div>
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:16px; color:#5b5b5b; letter-spacing:1px; text-transform:uppercase;">LLMs, Agents, and Tool Use &middot; language models, reinforcement learning</div>
+</div>
+<h2 style="margin:0; font-family: Georgia, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">The Coverage Principle: How Pre-Training Enables Post-Training</h2>
+<div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">Fan Chen, Audrey Huang, Noah Golowich, Sadhika Malladi, Adam Block, et al. (8 authors)</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<p style="margin:0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#2a2a2a;">We introduce the coverage profile, which captures the relationship between pre- and post-training performance and admits a rich statistical theory</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;"><tr><td style="padding:14px 18px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Next steps for researchers</div>
+<div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">Perturb the language models, reinforcement learning loop directly: remove memory, corrupt retrieved evidence, cap tool calls, vary horizon length, and separate planning errors from execution errors. The ICLR-style application is to port the method to one messy environment such as code editing, web navigation, scientific QA, or data analysis and report failure taxonomy, not only aggregate success.</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 48px 40px;">
+<a href="https://openreview.net/forum?id=AUXvYQlQLZ" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a;">Read on OpenReview &rarr;</a>&nbsp;&nbsp;&nbsp;<a href="https://openreview.net/pdf/1226c823f59fb68fc5d92284a2e506324ba85680.pdf" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b;">PDF</a>
+</td></tr>
+
+
+<tr><td class="px-mob" style="padding: 40px 40px 0 40px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#1a1a1a;"><tr><td style="padding: 32px 32px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#e9b44c; letter-spacing:3px; text-transform:uppercase;">From the editor</div>
+<p style="margin: 16px 0 0 0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#f3efe6; font-style:italic;">This issue is a working research draft: use it as a triage layer before committing time to full papers. The next-step notes are meant to turn each oral from a title in a program into an actionable reading or replication decision.</p>
+<div style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#a8a094; letter-spacing:2px; margin-top:18px;">&mdash; The Research Desk</div>
+</td></tr></table></td></tr>
+<tr><td class="px-mob" style="padding: 40px 40px 24px 40px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top:1px solid #1a1a1a; height:1px; line-height:1px; font-size:0;">&nbsp;</td></tr></table></td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 12px 40px;"><div style="font-family: Georgia, serif; font-size:14px; color:#1a1a1a; font-style:italic; letter-spacing:1px;"><i>The&nbsp;</i><b>Policy</b><i>&nbsp;Gradient</i></div></td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 32px 40px; font-family: Georgia, serif; font-size:11px; color:#8a8a8a; line-height:16px;">&copy; 2026 The Policy Gradient. <br/>Paper data sourced from OpenReview ICLR 2026 oral track. Abstracts and paper metadata remain &copy; their respective authors.</td></tr>
+<tr><td style="height:6px; background-color:#1a1a1a; line-height:6px; font-size:0;">&nbsp;</td></tr>
+</table></td></tr></table>
+</body>
+</html>

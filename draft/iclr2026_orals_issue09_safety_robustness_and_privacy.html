@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ICLR 2026 Orals - Issue 09</title>
+<style>
+body { margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #f3efe6; }
+a { color: #8a3324; text-decoration: none; }
+@media screen and (max-width: 620px) {
+  .container { width: 100% !important; }
+  .px-mob { padding-left: 24px !important; padding-right: 24px !important; }
+}
+</style>
+</head>
+<body style="margin:0; padding:0; background-color:#f3efe6;">
+<div style="display:none; max-height:0; overflow:hidden; mso-hide:all; font-size:1px; line-height:1px; color:#f3efe6;">ICLR 2026 oral papers: Conformal Robustness Control: A New Strategy for Robust Decision; P-GenRM: Personalized Generative Reward Model with Test-time...; PateGAIL++: Utility Optimized Private Trajectory Generation with...; and more</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f3efe6">
+<tr><td align="center" style="padding: 32px 12px;">
+<table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px; background-color:#fbf8f1; border:1px solid #1a1a1a;">
+<tr><td style="height:6px; background-color:#1a1a1a; line-height:6px; font-size:0;">&nbsp;</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 12px 40px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td align="left" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px;">Vol. 04 &nbsp;&middot;&nbsp; Issue 9</td>
+<td align="right" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px;">May 28, 2026</td>
+</tr></table></td></tr>
+<tr><td class="px-mob" style="padding: 0 40px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top:1px solid #1a1a1a; height:1px; line-height:1px; font-size:0;">&nbsp;</td></tr></table></td></tr>
+<tr><td class="px-mob" align="center" style="padding: 28px 40px 8px 40px;"><div style="font-family: Georgia, 'Times New Roman', Times, serif; font-size:54px; line-height:54px; letter-spacing:2px; color:#1a1a1a; font-weight:normal;"><i>The&nbsp;</i><b>Policy</b><i>&nbsp;Gradient</i></div></td></tr>
+<tr><td class="px-mob" align="center" style="padding: 4px 40px 24px 40px; font-family: 'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:3px; text-transform:uppercase;">A curated digest of machine learning research</td></tr>
+<tr><td class="px-mob" style="padding: 0 40px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top:3px double #1a1a1a; height:3px; line-height:3px; font-size:0;">&nbsp;</td></tr></table></td></tr>
+<tr><td class="px-mob" style="padding: 36px 40px 12px 40px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#8a3324; letter-spacing:3px; text-transform:uppercase; margin-bottom:14px;">&#9670; ICLR 2026 Orals, 9 of 9</div>
+<h1 style="margin:0; font-family: Georgia, serif; font-size:38px; line-height:42px; color:#1a1a1a; font-weight:normal; letter-spacing:-0.5px;">Safety, Robustness, and Privacy.</h1>
+<p style="margin: 18px 0 0 0; font-family: Georgia, serif; font-size:16px; line-height:26px; color:#3a3a3a;">A themed pass through the ICLR 2026 oral track. This draft collects 6 oral papers, with a compact research brief and concrete next steps for deciding whether to read deeply, reproduce, benchmark, or cite.</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 24px 40px 32px 40px; border-bottom:1px solid #d8d2c1; font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic;">Edited by the Research Desk &nbsp;&middot;&nbsp; 6 papers &nbsp;&middot;&nbsp; ~9 min read</td></tr>
+
+<!-- PAPER 01 -->
+<tr><td class="px-mob" style="padding: 48px 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="80" style="padding-right:18px;">
+<div style="font-family: Georgia, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">01</div>
+<div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+</td>
+<td valign="top">
+<div style="margin-bottom:8px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:12px; color:#1a1a1a; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;"><span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span></div>
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:16px; color:#5b5b5b; letter-spacing:1px; text-transform:uppercase;">Safety, Robustness, and Privacy &middot; Conformal prediction, Contextual robust...</div>
+</div>
+<h2 style="margin:0; font-family: Georgia, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">Conformal Robustness Control: A New Strategy for Robust Decision</h2>
+<div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">Yang Hu, Jieren Tan, Changliang Zou, Yajie Bao, Haojie Ren</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<p style="margin:0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#2a2a2a;">This paper develops a new strategy for robust decision problems via conformal robustness control.</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;"><tr><td style="padding:14px 18px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Next steps for researchers</div>
+<div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">Attack the Conformal prediction, Contextual robust optimization claim before extending it: run adaptive adversaries, distribution shift, paraphrase/corruption tests, and capability-preservation checks. The follow-up worth writing is a threat-model-specific version with clear guarantees, costs, and failure cases on real model outputs rather than a broad safety claim.</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 36px 40px;">
+<a href="https://openreview.net/forum?id=bt4Ahpemmi" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a;">Read on OpenReview &rarr;</a>&nbsp;&nbsp;&nbsp;<a href="https://openreview.net/pdf/17cdb1fbeb3c7bdfe5af0929b7b4f910f03e114d.pdf" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b;">PDF</a>
+</td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 36px 40px;"><div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div></td></tr>
+
+
+<!-- PAPER 02 -->
+<tr><td class="px-mob" style="padding: 0 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="80" style="padding-right:18px;">
+<div style="font-family: Georgia, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">02</div>
+<div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+</td>
+<td valign="top">
+<div style="margin-bottom:8px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:12px; color:#1a1a1a; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;"><span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span></div>
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:16px; color:#5b5b5b; letter-spacing:1px; text-transform:uppercase;">Safety, Robustness, and Privacy &middot; personalizd alignment, generative reward model</div>
+</div>
+<h2 style="margin:0; font-family: Georgia, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">P-GenRM: Personalized Generative Reward Model with Test-time User-based Scaling</h2>
+<div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">Pinyi Zhang, Ting-En Lin, Yuchuan Wu, Jingyang Chen, Zongqi Wang, et al. (10 authors)</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<p style="margin:0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#2a2a2a;">The first personalized generative reward model with test-time user-based scaling for preference alignment</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;"><tr><td style="padding:14px 18px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Next steps for researchers</div>
+<div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">Attack the personalizd alignment, generative reward model claim before extending it: run adaptive adversaries, distribution shift, paraphrase/corruption tests, and capability-preservation checks. The follow-up worth writing is a threat-model-specific version with clear guarantees, costs, and failure cases on real model outputs rather than a broad safety claim.</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 36px 40px;">
+<a href="https://openreview.net/forum?id=hXNApWLBZG" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a;">Read on OpenReview &rarr;</a>&nbsp;&nbsp;&nbsp;<a href="https://openreview.net/pdf/fc6b1cac897e4dcfeca4dd1ad6aa4369ae5d94cc.pdf" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b;">PDF</a>
+</td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 36px 40px;"><div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div></td></tr>
+
+
+<!-- PAPER 03 -->
+<tr><td class="px-mob" style="padding: 0 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="80" style="padding-right:18px;">
+<div style="font-family: Georgia, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">03</div>
+<div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+</td>
+<td valign="top">
+<div style="margin-bottom:8px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:12px; color:#1a1a1a; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;"><span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span></div>
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:16px; color:#5b5b5b; letter-spacing:1px; text-transform:uppercase;">Safety, Robustness, and Privacy &middot; Differential Privacy, Imitation Learning</div>
+</div>
+<h2 style="margin:0; font-family: Georgia, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">PateGAIL++: Utility Optimized Private Trajectory Generation with Imitation Learning</h2>
+<div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">Yingjie Ma, Bijal Bharadva, Xin Zhang, Joann Qiongna Chen</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<p style="margin:0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#2a2a2a;">Human mobility trajectory data supports a wide range of applications, including urban planning, intelligent transportation systems, and public safety monitoring. However, large-scale, high-quality mobility datasets are difficult to obtain due to privacy concerns.</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;"><tr><td style="padding:14px 18px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Next steps for researchers</div>
+<div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">Attack the Differential Privacy, Imitation Learning claim before extending it: run adaptive adversaries, distribution shift, paraphrase/corruption tests, and capability-preservation checks. The follow-up worth writing is a threat-model-specific version with clear guarantees, costs, and failure cases on real model outputs rather than a broad safety claim.</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 36px 40px;">
+<a href="https://openreview.net/forum?id=Oyfz6G0hmc" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a;">Read on OpenReview &rarr;</a>&nbsp;&nbsp;&nbsp;<a href="https://openreview.net/pdf/9dc20cc623070a1d8abb78b6219b8d174289bfaa.pdf" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b;">PDF</a>
+</td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 36px 40px;"><div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div></td></tr>
+
+
+<!-- PAPER 04 -->
+<tr><td class="px-mob" style="padding: 0 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="80" style="padding-right:18px;">
+<div style="font-family: Georgia, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">04</div>
+<div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+</td>
+<td valign="top">
+<div style="margin-bottom:8px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:12px; color:#1a1a1a; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;"><span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span></div>
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:16px; color:#5b5b5b; letter-spacing:1px; text-transform:uppercase;">Safety, Robustness, and Privacy &middot; Safety Alignment, LLM Fine-tuning</div>
+</div>
+<h2 style="margin:0; font-family: Georgia, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">SafeDPO: A Simple Approach to Direct Preference Optimization with Enhanced Safety</h2>
+<div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">Geon-Hyeong Kim, Yu Jin Kim, Byoungjip Kim, Honglak Lee, Kyunghoon Bae, et al. (7 authors)</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<p style="margin:0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#2a2a2a;">This work introduces a simple yet principled approach for directly optimizing the safety alignment objective during policy learning</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;"><tr><td style="padding:14px 18px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Next steps for researchers</div>
+<div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">Attack the Safety Alignment, LLM Fine-tuning claim before extending it: run adaptive adversaries, distribution shift, paraphrase/corruption tests, and capability-preservation checks. The follow-up worth writing is a threat-model-specific version with clear guarantees, costs, and failure cases on real model outputs rather than a broad safety claim.</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 36px 40px;">
+<a href="https://openreview.net/forum?id=PJdw4VBsXD" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a;">Read on OpenReview &rarr;</a>&nbsp;&nbsp;&nbsp;<a href="https://openreview.net/pdf/316f85a1cf0c2e7c193e15109dfe60548d2e888e.pdf" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b;">PDF</a>
+</td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 36px 40px;"><div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div></td></tr>
+
+
+<!-- PAPER 05 -->
+<tr><td class="px-mob" style="padding: 0 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="80" style="padding-right:18px;">
+<div style="font-family: Georgia, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">05</div>
+<div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+</td>
+<td valign="top">
+<div style="margin-bottom:8px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:12px; color:#1a1a1a; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;"><span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span></div>
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:16px; color:#5b5b5b; letter-spacing:1px; text-transform:uppercase;">Safety, Robustness, and Privacy &middot; LLM, Finetuning</div>
+</div>
+<h2 style="margin:0; font-family: Georgia, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">Watch your steps: Dormant Adversarial Behaviors that Activate upon LLM Finetuning</h2>
+<div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">Thibaud Gloaguen, Mark Vero, Robin Staab, Martin Vechev</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<p style="margin:0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#2a2a2a;">We show that adversaries can implant hidden adversarial behaviors in LLM that are inadvertently triggered by users finetuning the model.</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;"><tr><td style="padding:14px 18px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Next steps for researchers</div>
+<div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">Attack the LLM, Finetuning claim before extending it: run adaptive adversaries, distribution shift, paraphrase/corruption tests, and capability-preservation checks. The follow-up worth writing is a threat-model-specific version with clear guarantees, costs, and failure cases on real model outputs rather than a broad safety claim.</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 36px 40px;">
+<a href="https://openreview.net/forum?id=yfM2e8Icsw" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a;">Read on OpenReview &rarr;</a>&nbsp;&nbsp;&nbsp;<a href="https://openreview.net/pdf/f571a5290bef9fbf2cbf56bb97d5b54796293a38.pdf" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b;">PDF</a>
+</td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 36px 40px;"><div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div></td></tr>
+
+
+<!-- PAPER 06 -->
+<tr><td class="px-mob" style="padding: 0 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="80" style="padding-right:18px;">
+<div style="font-family: Georgia, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">06</div>
+<div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+</td>
+<td valign="top">
+<div style="margin-bottom:8px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:12px; color:#1a1a1a; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;"><span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span></div>
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:16px; color:#5b5b5b; letter-spacing:1px; text-transform:uppercase;">Theory, Optimization, and Generalization &middot; quality diversity optimization, black-box...</div>
+</div>
+<h2 style="margin:0; font-family: Georgia, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">Discount Model Search for Quality Diversity Optimization in High-Dimensional Measure Spaces</h2>
+<div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">Bryon Tjanaka, Henry Chen, Matthew Christopher Fontaine, Stefanos Nikolaidis</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<p style="margin:0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#2a2a2a;">We present a method that enhances exploration in quality diversity (QD) optimization and show how this method enables new applications for QD. Project page: https://discount-models.github.io/</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;"><tr><td style="padding:14px 18px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Next steps for researchers</div>
+<div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">Perturb the quality diversity optimization, black-box optimization loop directly: remove memory, corrupt retrieved evidence, cap tool calls, vary horizon length, and separate planning errors from execution errors. The ICLR-style application is to port the method to one messy environment such as code editing, web navigation, scientific QA, or data analysis and report failure taxonomy, not only aggregate success.</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 48px 40px;">
+<a href="https://openreview.net/forum?id=m6Hv0yZO3n" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a;">Read on OpenReview &rarr;</a>&nbsp;&nbsp;&nbsp;<a href="https://openreview.net/pdf/7e8d9127a883f7c4e5bcfd6431069923743d478c.pdf" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b;">PDF</a>
+</td></tr>
+
+
+<tr><td class="px-mob" style="padding: 40px 40px 0 40px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#1a1a1a;"><tr><td style="padding: 32px 32px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#e9b44c; letter-spacing:3px; text-transform:uppercase;">From the editor</div>
+<p style="margin: 16px 0 0 0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#f3efe6; font-style:italic;">This issue is a working research draft: use it as a triage layer before committing time to full papers. The next-step notes are meant to turn each oral from a title in a program into an actionable reading or replication decision.</p>
+<div style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#a8a094; letter-spacing:2px; margin-top:18px;">&mdash; The Research Desk</div>
+</td></tr></table></td></tr>
+<tr><td class="px-mob" style="padding: 40px 40px 24px 40px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top:1px solid #1a1a1a; height:1px; line-height:1px; font-size:0;">&nbsp;</td></tr></table></td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 12px 40px;"><div style="font-family: Georgia, serif; font-size:14px; color:#1a1a1a; font-style:italic; letter-spacing:1px;"><i>The&nbsp;</i><b>Policy</b><i>&nbsp;Gradient</i></div></td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 32px 40px; font-family: Georgia, serif; font-size:11px; color:#8a8a8a; line-height:16px;">&copy; 2026 The Policy Gradient. <br/>Paper data sourced from OpenReview ICLR 2026 oral track. Abstracts and paper metadata remain &copy; their respective authors.</td></tr>
+<tr><td style="height:6px; background-color:#1a1a1a; line-height:6px; font-size:0;">&nbsp;</td></tr>
+</table></td></tr></table>
+</body>
+</html>

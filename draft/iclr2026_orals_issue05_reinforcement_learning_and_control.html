@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ICLR 2026 Orals - Issue 05</title>
+<style>
+body { margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #f3efe6; }
+a { color: #8a3324; text-decoration: none; }
+@media screen and (max-width: 620px) {
+  .container { width: 100% !important; }
+  .px-mob { padding-left: 24px !important; padding-right: 24px !important; }
+}
+</style>
+</head>
+<body style="margin:0; padding:0; background-color:#f3efe6;">
+<div style="display:none; max-height:0; overflow:hidden; mso-hide:all; font-size:1px; line-height:1px; color:#f3efe6;">ICLR 2026 oral papers: Differentiable Model Predictive Control on the GPU; Enhancing Generative Auto-bidding with Offline Reward Evaluation and...; Exploratory Diffusion Model for Unsupervised Reinforcement Learning; and more</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f3efe6">
+<tr><td align="center" style="padding: 32px 12px;">
+<table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px; background-color:#fbf8f1; border:1px solid #1a1a1a;">
+<tr><td style="height:6px; background-color:#1a1a1a; line-height:6px; font-size:0;">&nbsp;</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 12px 40px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td align="left" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px;">Vol. 04 &nbsp;&middot;&nbsp; Issue 5</td>
+<td align="right" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px;">May 28, 2026</td>
+</tr></table></td></tr>
+<tr><td class="px-mob" style="padding: 0 40px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top:1px solid #1a1a1a; height:1px; line-height:1px; font-size:0;">&nbsp;</td></tr></table></td></tr>
+<tr><td class="px-mob" align="center" style="padding: 28px 40px 8px 40px;"><div style="font-family: Georgia, 'Times New Roman', Times, serif; font-size:54px; line-height:54px; letter-spacing:2px; color:#1a1a1a; font-weight:normal;"><i>The&nbsp;</i><b>Policy</b><i>&nbsp;Gradient</i></div></td></tr>
+<tr><td class="px-mob" align="center" style="padding: 4px 40px 24px 40px; font-family: 'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:3px; text-transform:uppercase;">A curated digest of machine learning research</td></tr>
+<tr><td class="px-mob" style="padding: 0 40px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top:3px double #1a1a1a; height:3px; line-height:3px; font-size:0;">&nbsp;</td></tr></table></td></tr>
+<tr><td class="px-mob" style="padding: 36px 40px 12px 40px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#8a3324; letter-spacing:3px; text-transform:uppercase; margin-bottom:14px;">&#9670; ICLR 2026 Orals, 5 of 9</div>
+<h1 style="margin:0; font-family: Georgia, serif; font-size:38px; line-height:42px; color:#1a1a1a; font-weight:normal; letter-spacing:-0.5px;">Reinforcement Learning and Control.</h1>
+<p style="margin: 18px 0 0 0; font-family: Georgia, serif; font-size:16px; line-height:26px; color:#3a3a3a;">A themed pass through the ICLR 2026 oral track. This draft collects 6 oral papers, with a compact research brief and concrete next steps for deciding whether to read deeply, reproduce, benchmark, or cite.</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 24px 40px 32px 40px; border-bottom:1px solid #d8d2c1; font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic;">Edited by the Research Desk &nbsp;&middot;&nbsp; 6 papers &nbsp;&middot;&nbsp; ~9 min read</td></tr>
+
+<!-- PAPER 01 -->
+<tr><td class="px-mob" style="padding: 48px 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="80" style="padding-right:18px;">
+<div style="font-family: Georgia, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">01</div>
+<div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+</td>
+<td valign="top">
+<div style="margin-bottom:8px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:12px; color:#1a1a1a; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;"><span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span></div>
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:16px; color:#5b5b5b; letter-spacing:1px; text-transform:uppercase;">Reinforcement Learning and Control &middot; differentiable optimization, model predictive...</div>
+</div>
+<h2 style="margin:0; font-family: Georgia, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">Differentiable Model Predictive Control on the GPU</h2>
+<div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">Emre Adabag, Marcus Greiff, John Subosits, Thomas Jonathan Lew</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<p style="margin:0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#2a2a2a;">Differentiable model predictive control (MPC) offers a powerful framework for combining learning and control. However, its adoption has been limited by the inherently sequential nature of traditional optimization algorithms, which are challenging to parallelize on modern computing hardware like GPUs.</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;"><tr><td style="padding:14px 18px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Next steps for researchers</div>
+<div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">Attack the differentiable optimization, model predictive control claim before extending it: run adaptive adversaries, distribution shift, paraphrase/corruption tests, and capability-preservation checks. The follow-up worth writing is a threat-model-specific version with clear guarantees, costs, and failure cases on real model outputs rather than a broad safety claim.</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 36px 40px;">
+<a href="https://openreview.net/forum?id=bFYfV6c9zu" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a;">Read on OpenReview &rarr;</a>&nbsp;&nbsp;&nbsp;<a href="https://openreview.net/pdf/5782e9600377127c89a97f6c666b74f358423fb4.pdf" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b;">PDF</a>
+</td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 36px 40px;"><div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div></td></tr>
+
+
+<!-- PAPER 02 -->
+<tr><td class="px-mob" style="padding: 0 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="80" style="padding-right:18px;">
+<div style="font-family: Georgia, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">02</div>
+<div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+</td>
+<td valign="top">
+<div style="margin-bottom:8px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:12px; color:#1a1a1a; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;"><span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span></div>
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:16px; color:#5b5b5b; letter-spacing:1px; text-transform:uppercase;">Reinforcement Learning and Control &middot; auto-bidding, offline reinforcement learning</div>
+</div>
+<h2 style="margin:0; font-family: Georgia, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">Enhancing Generative Auto-bidding with Offline Reward Evaluation and Policy Search</h2>
+<div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">Zhiyu Mou, Yiqin Lv, Miao Xu, Cheems Wang, Yixiu Mao, et al. (12 authors)</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<p style="margin:0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#2a2a2a;">Auto-bidding is a critical tool for advertisers to improve advertising performance. Recent progress has demonstrated that AI-Generated Bidding (AIGB), which learns a conditional generative planner from offline data, achieves superior performance compared to typical offline reinforcement learning (RL)-based auto-bidding methods.</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;"><tr><td style="padding:14px 18px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Next steps for researchers</div>
+<div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">Perturb the auto-bidding, offline reinforcement learning loop directly: remove memory, corrupt retrieved evidence, cap tool calls, vary horizon length, and separate planning errors from execution errors. The ICLR-style application is to port the method to one messy environment such as code editing, web navigation, scientific QA, or data analysis and report failure taxonomy, not only aggregate success.</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 36px 40px;">
+<a href="https://openreview.net/forum?id=kMuQBgPIdg" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a;">Read on OpenReview &rarr;</a>&nbsp;&nbsp;&nbsp;<a href="https://openreview.net/pdf/fb33b81816ac97bae083fa6ee7dc27d9ed497bd2.pdf" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b;">PDF</a>
+</td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 36px 40px;"><div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div></td></tr>
+
+
+<!-- PAPER 03 -->
+<tr><td class="px-mob" style="padding: 0 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="80" style="padding-right:18px;">
+<div style="font-family: Georgia, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">03</div>
+<div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+</td>
+<td valign="top">
+<div style="margin-bottom:8px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:12px; color:#1a1a1a; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;"><span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span></div>
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:16px; color:#5b5b5b; letter-spacing:1px; text-transform:uppercase;">Reinforcement Learning and Control &middot; reinforcement learning, diffusion policy</div>
+</div>
+<h2 style="margin:0; font-family: Georgia, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">Exploratory Diffusion Model for Unsupervised Reinforcement Learning</h2>
+<div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">Chengyang Ying, Huayu Chen, Xinning Zhou, Zhongkai Hao, Hang Su, Jun Zhu</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<p style="margin:0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#2a2a2a;">We propose Exploratory Diffusion Model (ExDM), boosting unsupervised exploration and few-shot fine-tuning by diffusion models.</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;"><tr><td style="padding:14px 18px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Next steps for researchers</div>
+<div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">Attack the reinforcement learning, diffusion policy claim before extending it: run adaptive adversaries, distribution shift, paraphrase/corruption tests, and capability-preservation checks. The follow-up worth writing is a threat-model-specific version with clear guarantees, costs, and failure cases on real model outputs rather than a broad safety claim.</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 36px 40px;">
+<a href="https://openreview.net/forum?id=k0Kb1ynFbt" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a;">Read on OpenReview &rarr;</a>&nbsp;&nbsp;&nbsp;<a href="https://openreview.net/pdf/05e41c6980c2fcade50359e8be76cba6c08baaca.pdf" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b;">PDF</a>
+</td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 36px 40px;"><div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div></td></tr>
+
+
+<!-- PAPER 04 -->
+<tr><td class="px-mob" style="padding: 0 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="80" style="padding-right:18px;">
+<div style="font-family: Georgia, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">04</div>
+<div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+</td>
+<td valign="top">
+<div style="margin-bottom:8px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:12px; color:#1a1a1a; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;"><span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span></div>
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:16px; color:#5b5b5b; letter-spacing:1px; text-transform:uppercase;">Reinforcement Learning and Control &middot; diffusion model, post-training</div>
+</div>
+<h2 style="margin:0; font-family: Georgia, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">Half-order Fine-Tuning for Diffusion Model: A Recursive Likelihood Ratio Optimizer</h2>
+<div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">Tao Ren, Zishi Zhang, Jinyang Jiang, Zehao Li, Shentao Qin, et al. (12 authors)</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<p style="margin:0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#2a2a2a;">The probabilistic diffusion model (DM), generating content by inferencing through a recursive chain structure, has emerged as a powerful framework for visual generation. After pre-training on enormous data, the model needs to be properly aligned to meet requirements for downstream applications.</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;"><tr><td style="padding:14px 18px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Next steps for researchers</div>
+<div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">Stress the diffusion model, post-training objective, not only the score: sweep reward misspecification, dataset quality, reference-policy distance, discount/horizon, and action-noise perturbations. A strong follow-up would identify the regime boundary where the method beats simpler imitation, supervised fine-tuning, or PPO-style baselines, then apply it to one realistic control or alignment setting.</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 36px 40px;">
+<a href="https://openreview.net/forum?id=AZ6lqcvHLX" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a;">Read on OpenReview &rarr;</a>&nbsp;&nbsp;&nbsp;<a href="https://openreview.net/pdf/93c3775f56bb4f6fb04f9593552c0904df06dc15.pdf" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b;">PDF</a>
+</td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 36px 40px;"><div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div></td></tr>
+
+
+<!-- PAPER 05 -->
+<tr><td class="px-mob" style="padding: 0 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="80" style="padding-right:18px;">
+<div style="font-family: Georgia, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">05</div>
+<div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+</td>
+<td valign="top">
+<div style="margin-bottom:8px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:12px; color:#1a1a1a; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;"><span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span></div>
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:16px; color:#5b5b5b; letter-spacing:1px; text-transform:uppercase;">Reinforcement Learning and Control &middot; hyperparameter, optimal transport</div>
+</div>
+<h2 style="margin:0; font-family: Georgia, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">Hyperparameter Trajectory Inference with Conditional Lagrangian Optimal Transport</h2>
+<div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">Harry Amad, Mihaela van der Schaar</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<p style="margin:0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#2a2a2a;">Neural networks (NNs) often have critical behavioural trade-offs that are set at design time with hyperparameters—such as reward weights in reinforcement learning or quantile targets in regression. Post-deployment, however, user preferences can evolve, making initial settings undesirable, necessitating potentially expensive...</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;"><tr><td style="padding:14px 18px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Next steps for researchers</div>
+<div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">Stress the hyperparameter, optimal transport objective, not only the score: sweep reward misspecification, dataset quality, reference-policy distance, discount/horizon, and action-noise perturbations. A strong follow-up would identify the regime boundary where the method beats simpler imitation, supervised fine-tuning, or PPO-style baselines, then apply it to one realistic control or alignment setting.</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 36px 40px;">
+<a href="https://openreview.net/forum?id=P5B97gZwRb" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a;">Read on OpenReview &rarr;</a>&nbsp;&nbsp;&nbsp;<a href="https://openreview.net/pdf/8052165fad9c24dde2e57c8f8f2e085f88cd5d80.pdf" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b;">PDF</a>
+</td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 36px 40px;"><div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div></td></tr>
+
+
+<!-- PAPER 06 -->
+<tr><td class="px-mob" style="padding: 0 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="80" style="padding-right:18px;">
+<div style="font-family: Georgia, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">06</div>
+<div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+</td>
+<td valign="top">
+<div style="margin-bottom:8px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:12px; color:#1a1a1a; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;"><span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span></div>
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:16px; color:#5b5b5b; letter-spacing:1px; text-transform:uppercase;">Reinforcement Learning and Control &middot; Reward Hacking Detection, Chain-of-Thought...</div>
+</div>
+<h2 style="margin:0; font-family: Georgia, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">Is it Thinking or Cheating? Detecting Implicit Reward Hacking by Measuring Reasoning Effort</h2>
+<div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">Xinpeng Wang, Nitish Joshi, Barbara Plank, Rico Angell, He He</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<p style="margin:0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#2a2a2a;">TRACE detects implicit reward hacking by measuring how quickly truncated reasoning suffices to pass verification, outperforming CoT monitoring and enabling hidden loopholes discovery.</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;"><tr><td style="padding:14px 18px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Next steps for researchers</div>
+<div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">Perturb the Reward Hacking Detection, Chain-of-Thought Monitoring loop directly: remove memory, corrupt retrieved evidence, cap tool calls, vary horizon length, and separate planning errors from execution errors. The ICLR-style application is to port the method to one messy environment such as code editing, web navigation, scientific QA, or data analysis and report failure taxonomy, not only aggregate success.</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 48px 40px;">
+<a href="https://openreview.net/forum?id=Gk7gLAtVDO" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a;">Read on OpenReview &rarr;</a>&nbsp;&nbsp;&nbsp;<a href="https://openreview.net/pdf/b247aaee550b9df9c740bbd85ea933a55c977ca8.pdf" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b;">PDF</a>
+</td></tr>
+
+
+<tr><td class="px-mob" style="padding: 40px 40px 0 40px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#1a1a1a;"><tr><td style="padding: 32px 32px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#e9b44c; letter-spacing:3px; text-transform:uppercase;">From the editor</div>
+<p style="margin: 16px 0 0 0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#f3efe6; font-style:italic;">This issue is a working research draft: use it as a triage layer before committing time to full papers. The next-step notes are meant to turn each oral from a title in a program into an actionable reading or replication decision.</p>
+<div style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#a8a094; letter-spacing:2px; margin-top:18px;">&mdash; The Research Desk</div>
+</td></tr></table></td></tr>
+<tr><td class="px-mob" style="padding: 40px 40px 24px 40px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top:1px solid #1a1a1a; height:1px; line-height:1px; font-size:0;">&nbsp;</td></tr></table></td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 12px 40px;"><div style="font-family: Georgia, serif; font-size:14px; color:#1a1a1a; font-style:italic; letter-spacing:1px;"><i>The&nbsp;</i><b>Policy</b><i>&nbsp;Gradient</i></div></td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 32px 40px; font-family: Georgia, serif; font-size:11px; color:#8a8a8a; line-height:16px;">&copy; 2026 The Policy Gradient. <br/>Paper data sourced from OpenReview ICLR 2026 oral track. Abstracts and paper metadata remain &copy; their respective authors.</td></tr>
+<tr><td style="height:6px; background-color:#1a1a1a; line-height:6px; font-size:0;">&nbsp;</td></tr>
+</table></td></tr></table>
+</body>
+</html>

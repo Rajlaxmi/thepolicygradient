@@ -1,0 +1,619 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="x-apple-disable-message-reformatting" />
+  <meta name="color-scheme" content="light" />
+  <meta name="supported-color-schemes" content="light" />
+  <title>RL @ ICLR 2026 — Curated Digest</title>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+  <style>
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: collapse; }
+    img { -ms-interpolation-mode: bicubic; border: 0; outline: none; text-decoration: none; display: block; }
+    body { margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #f3efe6; }
+    a { color: #8a3324; text-decoration: none; }
+    @media screen and (max-width: 620px) {
+      .container { width: 100% !important; }
+      .px-mob { padding-left: 24px !important; padding-right: 24px !important; }
+      .stack { display: block !important; width: 100% !important; }
+      .h1 { font-size: 30px !important; line-height: 34px !important; }
+      .masthead-title { font-size: 36px !important; line-height: 38px !important; letter-spacing: 1px !important; }
+      .paper-title { font-size: 19px !important; line-height: 24px !important; }
+      .meta-num { font-size: 38px !important; }
+    }
+  </style>
+</head>
+<body style="margin:0; padding:0; background-color:#f3efe6;">
+
+  <div style="display:none; max-height:0; overflow:hidden; mso-hide:all; font-size:1px; line-height:1px; color:#f3efe6;">
+    Six reinforcement learning papers from the ICLR 2026 oral track — hand-picked and summarized.
+  </div>
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f3efe6">
+    <tr>
+      <td align="center" style="padding: 32px 12px;">
+
+        <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px; background-color:#fbf8f1; border:1px solid #1a1a1a;">
+
+          <tr>
+            <td style="height:6px; background-color:#1a1a1a; line-height:6px; font-size:0;">&nbsp;</td>
+          </tr>
+
+          <tr>
+            <td class="px-mob" style="padding: 18px 40px 12px 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td align="left" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px;">
+                    Vol. 04 &nbsp;·&nbsp; Issue 11
+                  </td>
+                  <td align="right" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px;">
+                    May 2026
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="px-mob" style="padding: 0 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr><td style="border-top:1px solid #1a1a1a; height:1px; line-height:1px; font-size:0;">&nbsp;</td></tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="px-mob" align="center" style="padding: 28px 40px 8px 40px;">
+              <div class="masthead-title" style="font-family: Georgia, 'Times New Roman', Times, serif; font-size:54px; line-height:54px; letter-spacing:2px; color:#1a1a1a; font-weight:normal;">
+                <i>The&nbsp;</i><b>Policy</b><i>&nbsp;Gradient</i>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" align="center" style="padding: 4px 40px 24px 40px; font-family: 'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:3px; text-transform:uppercase;">
+              A curated digest of reinforcement learning research
+            </td>
+          </tr>
+
+          <tr>
+            <td class="px-mob" style="padding: 0 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr><td style="border-top:3px double #1a1a1a; height:3px; line-height:3px; font-size:0;">&nbsp;</td></tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="px-mob" style="padding: 36px 40px 12px 40px;">
+              <div style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#8a3324; letter-spacing:3px; text-transform:uppercase; margin-bottom:14px;">
+                &#9670; This Issue
+              </div>
+              <h1 class="h1" style="margin:0; font-family: Georgia, 'Times New Roman', Times, serif; font-size:38px; line-height:42px; color:#1a1a1a; font-weight:normal; letter-spacing:-0.5px;">
+                Six reinforcement learning orals from <span style="font-style:italic;">ICLR&nbsp;2026</span>.
+              </h1>
+              <p style="margin: 18px 0 0 0; font-family: Georgia, 'Times New Roman', Times, serif; font-size:16px; line-height:26px; color:#3a3a3a;">
+                Two themes dominated the RL track this year: making RL on LLMs predictable enough to scale like pre-training, and learning representations general enough to solve any reward function at test-time. The other four papers move the needle on exploration, agent reasoning, and trust-region optimization.
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="px-mob" style="padding: 24px 40px 32px 40px; border-bottom:1px solid #d8d2c1;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="font-family: Georgia, 'Times New Roman', Times, serif; font-size:13px; color:#5b5b5b; font-style:italic;">
+                    Edited by the Research Desk &nbsp;·&nbsp; 6 papers &nbsp;·&nbsp; ~9 min read
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="px-mob" style="padding: 32px 40px 32px 40px; background-color:#1a1a1a;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td class="stack" width="33%" align="center" style="padding: 0 8px;">
+                    <div class="meta-num" style="font-family: Georgia, 'Times New Roman', Times, serif; font-size:46px; line-height:46px; color:#f3efe6;">223</div>
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#a8a094; letter-spacing:2px; text-transform:uppercase; margin-top:8px;">Total Orals</div>
+                  </td>
+                  <td class="stack" width="33%" align="center" style="padding: 0 8px; border-left:1px solid #3a3a3a; border-right:1px solid #3a3a3a;">
+                    <div class="meta-num" style="font-family: Georgia, 'Times New Roman', Times, serif; font-size:46px; line-height:46px; color:#f3efe6;">~15</div>
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#a8a094; letter-spacing:2px; text-transform:uppercase; margin-top:8px;">RL-focused</div>
+                  </td>
+                  <td class="stack" width="33%" align="center" style="padding: 0 8px;">
+                    <div class="meta-num" style="font-family: Georgia, 'Times New Roman', Times, serif; font-size:46px; line-height:46px; color:#e9b44c;">6</div>
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#a8a094; letter-spacing:2px; text-transform:uppercase; margin-top:8px;">Featured</div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- PAPER 01 -->
+          <tr>
+            <td class="px-mob" style="padding: 48px 40px 8px 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td valign="top" width="80" style="padding-right:18px;">
+                    <div style="font-family: Georgia, 'Times New Roman', Times, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">01</div>
+                    <div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+                  </td>
+                  <td valign="top">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px;">
+                      <span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span> &nbsp; RL Scaling &middot; LLMs
+                    </div>
+                    <h2 class="paper-title" style="margin:0; font-family: Georgia, 'Times New Roman', Times, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">
+                      The Art of Scaling Reinforcement Learning Compute for LLMs
+                    </h2>
+                    <div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">
+                      Devvrit, Madaan, Tiwari, Bansal, Duvvuri, Zaheer, Dhillon, Brandfonbrener, Agarwal
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" style="padding: 18px 40px 0 40px;">
+              <p style="margin:0; font-family: Georgia, 'Times New Roman', Times, serif; font-size:15px; line-height:24px; color:#2a2a2a;">
+                A <b>400,000 GPU-hour</b> systematic study fitting sigmoidal compute-performance curves to RL training on LLMs. The headline finding: design choices like loss aggregation, normalization, curriculum, and off-policy algorithm mostly affect <i>compute efficiency</i>, not the asymptote &mdash; while a few choices genuinely move the ceiling. They distill the lessons into <b>ScaleRL</b>, a recipe whose 100k-GPU-hour run was successfully predicted from smaller-scale fits.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" style="padding: 18px 40px 0 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;">
+                <tr>
+                  <td style="padding:14px 18px;">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Why it matters</div>
+                    <div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">
+                      RL on LLMs has lacked the scaling laws that pre-training enjoys. This paper provides the first principled framework for extrapolating from small runs &mdash; turning algorithmic decisions into testable predictions.
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" style="padding: 18px 40px 36px 40px;">
+              <a href="https://openreview.net/forum?id=FMjeC9Msws" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a; padding-bottom:2px;">Read on OpenReview &rarr;</a>
+              &nbsp;&nbsp;&nbsp;
+              <a href="https://openreview.net/pdf?id=FMjeC9Msws" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b; padding-bottom:2px;">PDF</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="px-mob" align="center" style="padding: 0 40px 36px 40px;">
+              <div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div>
+            </td>
+          </tr>
+
+          <!-- PAPER 02 -->
+          <tr>
+            <td class="px-mob" style="padding: 0 40px 8px 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td valign="top" width="80" style="padding-right:18px;">
+                    <div style="font-family: Georgia, 'Times New Roman', Times, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">02</div>
+                    <div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+                  </td>
+                  <td valign="top">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px;">
+                      Oral &nbsp; &middot; &nbsp; RLVR &middot; Trust Regions
+                    </div>
+                    <h2 class="paper-title" style="margin:0; font-family: Georgia, 'Times New Roman', Times, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">
+                      TROLL: Trust Regions Improve Reinforcement Learning for Large Language Models
+                    </h2>
+                    <div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">
+                      Becker, Freymuth, Thilges, Otto, Neumann &nbsp;&middot;&nbsp; KIT, Tübingen
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" style="padding: 18px 40px 0 40px;">
+              <p style="margin:0; font-family: Georgia, 'Times New Roman', Times, serif; font-size:15px; line-height:24px; color:#2a2a2a;">
+                Argues that PPO's clipping objective is a crude stand-in for the KL trust region it was meant to approximate, and replaces it with a <b>discrete differentiable trust region projection</b> over the model's most important token logits. On math reasoning and code generation, TROLL beats PPO-style clipping on training speed, stability, and final success rate &mdash; without changing inference behavior.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" style="padding: 18px 40px 0 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;">
+                <tr>
+                  <td style="padding:14px 18px;">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Why it matters</div>
+                    <div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">
+                      Everyone uses PPO clipping; few revisit it. This is a drop-in replacement that recovers the theoretical motivation everyone quietly abandoned.
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" style="padding: 18px 40px 36px 40px;">
+              <a href="https://openreview.net/forum?id=X9D5MVpPJ9" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a; padding-bottom:2px;">Read on OpenReview &rarr;</a>
+              &nbsp;&nbsp;&nbsp;
+              <a href="https://openreview.net/pdf?id=X9D5MVpPJ9" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b; padding-bottom:2px;">PDF</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="px-mob" align="center" style="padding: 0 40px 36px 40px;">
+              <div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div>
+            </td>
+          </tr>
+
+          <!-- PAPER 03 -->
+          <tr>
+            <td class="px-mob" style="padding: 0 40px 8px 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td valign="top" width="80" style="padding-right:18px;">
+                    <div style="font-family: Georgia, 'Times New Roman', Times, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">03</div>
+                    <div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+                  </td>
+                  <td valign="top">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px;">
+                      Oral &nbsp; &middot; &nbsp; Zero-Shot RL &middot; Foundation Models
+                    </div>
+                    <h2 class="paper-title" style="margin:0; font-family: Georgia, 'Times New Roman', Times, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">
+                      Optimistic Task Inference for Behavior Foundation Models
+                    </h2>
+                    <div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">
+                      Rupf, Bagatella, Vlastelica, Krause &nbsp;&middot;&nbsp; ETH Zürich
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" style="padding: 18px 40px 0 40px;">
+              <p style="margin:0; font-family: Georgia, 'Times New Roman', Times, serif; font-size:15px; line-height:24px; color:#2a2a2a;">
+                Behavior Foundation Models retrieve a policy for any reward at test-time, but typically need rewards labeled across a large inference dataset. <b>OpTI-BFM</b> instead infers the task purely through environment interaction: an optimistic criterion that models uncertainty over reward functions and guides exploration. With a regret bound borrowed from linear bandit theory, BFMs identify and optimize an unseen reward in a handful of episodes.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" style="padding: 18px 40px 0 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;">
+                <tr>
+                  <td style="padding:14px 18px;">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Why it matters</div>
+                    <div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">
+                      Removes the last labeling bottleneck for zero-shot RL: you no longer need a reward function or a labeled inference set &mdash; just the ability to act in the environment.
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" style="padding: 18px 40px 36px 40px;">
+              <a href="https://openreview.net/forum?id=m5byThUSNE" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a; padding-bottom:2px;">Read on OpenReview &rarr;</a>
+              &nbsp;&nbsp;&nbsp;
+              <a href="https://openreview.net/pdf?id=m5byThUSNE" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b; padding-bottom:2px;">PDF</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="px-mob" align="center" style="padding: 0 40px 36px 40px;">
+              <div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div>
+            </td>
+          </tr>
+
+          <!-- PAPER 04 -->
+          <tr>
+            <td class="px-mob" style="padding: 0 40px 8px 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td valign="top" width="80" style="padding-right:18px;">
+                    <div style="font-family: Georgia, 'Times New Roman', Times, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">04</div>
+                    <div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+                  </td>
+                  <td valign="top">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px;">
+                      Oral &nbsp; &middot; &nbsp; Unsupervised RL &middot; Representations
+                    </div>
+                    <h2 class="paper-title" style="margin:0; font-family: Georgia, 'Times New Roman', Times, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">
+                      TD-JEPA: Latent-Predictive Representations for Zero-Shot RL
+                    </h2>
+                    <div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">
+                      Bagatella, Pirotta, Touati, Lazaric, Tirinzoni &nbsp;&middot;&nbsp; Meta&nbsp;FAIR, ETH&nbsp;Zürich
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" style="padding: 18px 40px 0 40px;">
+              <p style="margin:0; font-family: Georgia, 'Times New Roman', Times, serif; font-size:15px; line-height:24px; color:#2a2a2a;">
+                Extends JEPA-style self-prediction to RL by using <b>temporal difference learning</b> to predict long-term latent dynamics across multiple policies &mdash; from offline, reward-free transitions. Trains state and task encoders plus a policy-conditioned multi-step predictor entirely in latent space, enabling zero-shot reward optimization. Matches or beats SOTA on 13 ExoRL/OGBench datasets, especially in <b>zero-shot RL from pixels</b>.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" style="padding: 18px 40px 0 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;">
+                <tr>
+                  <td style="padding:14px 18px;">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Why it matters</div>
+                    <div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">
+                      Demonstrates that successor-feature-style transfer can be learned implicitly through latent prediction &mdash; with theory showing the predictor recovers them automatically.
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" style="padding: 18px 40px 36px 40px;">
+              <a href="https://openreview.net/forum?id=SzXDuBN8M1" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a; padding-bottom:2px;">Read on OpenReview &rarr;</a>
+              &nbsp;&nbsp;&nbsp;
+              <a href="https://openreview.net/pdf?id=SzXDuBN8M1" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b; padding-bottom:2px;">PDF</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="px-mob" align="center" style="padding: 0 40px 36px 40px;">
+              <div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div>
+            </td>
+          </tr>
+
+          <!-- PAPER 05 -->
+          <tr>
+            <td class="px-mob" style="padding: 0 40px 8px 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td valign="top" width="80" style="padding-right:18px;">
+                    <div style="font-family: Georgia, 'Times New Roman', Times, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">05</div>
+                    <div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+                  </td>
+                  <td valign="top">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px;">
+                      Oral &nbsp; &middot; &nbsp; Exploration &middot; Diffusion Policies
+                    </div>
+                    <h2 class="paper-title" style="margin:0; font-family: Georgia, 'Times New Roman', Times, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">
+                      Exploratory Diffusion Model for Unsupervised Reinforcement Learning
+                    </h2>
+                    <div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">
+                      Ying, Chen, Zhou, Hao, Su, Zhu &nbsp;&middot;&nbsp; Tsinghua
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" style="padding: 18px 40px 0 40px;">
+              <p style="margin:0; font-family: Georgia, 'Times New Roman', Times, serif; font-size:15px; line-height:24px; color:#2a2a2a;">
+                <b>ExDM</b> uses diffusion models to fit the heterogeneous replay-buffer distributions that plague unsupervised RL, then derives a <b>score-based intrinsic reward</b> that pushes the agent into under-visited regions. Comes with theory and practical algorithms for fine-tuning diffusion policies under limited interaction budgets. New SOTA on Maze2d and URLB, particularly strong in cross-embodiment settings.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" style="padding: 18px 40px 0 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;">
+                <tr>
+                  <td style="padding:14px 18px;">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Why it matters</div>
+                    <div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">
+                      Intrinsic motivation has been stuck on simple density models for a decade. Diffusion offers a far more expressive estimator &mdash; and the score function falls out for free.
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" style="padding: 18px 40px 36px 40px;">
+              <a href="https://openreview.net/forum?id=k0Kb1ynFbt" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a; padding-bottom:2px;">Read on OpenReview &rarr;</a>
+              &nbsp;&nbsp;&nbsp;
+              <a href="https://github.com/yingchengyang/ExDM" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b; padding-bottom:2px;">Code</a>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="px-mob" align="center" style="padding: 0 40px 36px 40px;">
+              <div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div>
+            </td>
+          </tr>
+
+          <!-- PAPER 06 -->
+          <tr>
+            <td class="px-mob" style="padding: 0 40px 8px 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td valign="top" width="80" style="padding-right:18px;">
+                    <div style="font-family: Georgia, 'Times New Roman', Times, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">06</div>
+                    <div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+                  </td>
+                  <td valign="top">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px;">
+                      Oral &nbsp; &middot; &nbsp; LLM Agents &middot; Active Reasoning
+                    </div>
+                    <h2 class="paper-title" style="margin:0; font-family: Georgia, 'Times New Roman', Times, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">
+                      Reducing Belief Deviation in RL for Active Reasoning of LLM Agents
+                    </h2>
+                    <div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">
+                      Zou, Chen, Wang, Yang, Li, Da, Cheng, Li, Gong &nbsp;&middot;&nbsp; CUHK, Georgia&nbsp;Tech
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" style="padding: 18px 40px 0 40px;">
+              <p style="margin:0; font-family: Georgia, 'Times New Roman', Times, serif; font-size:15px; line-height:24px; color:#2a2a2a;">
+                LLM agents doing multi-turn information gathering suffer <b>belief deviation</b>: their internal model of the problem drifts from the true state, after which trajectories degenerate into uninformative loops &mdash; poisoning the RL credit signal. <b>T³</b> detects this drift and truncates training trajectories at the deviation point, preserving credit for informative prefixes. Up to <b>+30 points</b> on agent benchmarks while cutting token cost by 34%.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" style="padding: 18px 40px 0 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;">
+                <tr>
+                  <td style="padding:14px 18px;">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Why it matters</div>
+                    <div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">
+                      A practical fix for one of the most frustrating failure modes in agent RL &mdash; and a reminder that classical RL diagnostics (credit assignment, trajectory quality) still pay off in the LLM era.
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" style="padding: 18px 40px 48px 40px;">
+              <a href="https://openreview.net/forum?id=r8hzDA3pUY" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a; padding-bottom:2px;">Read on OpenReview &rarr;</a>
+              &nbsp;&nbsp;&nbsp;
+              <a href="https://openreview.net/pdf?id=r8hzDA3pUY" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b; padding-bottom:2px;">PDF</a>
+            </td>
+          </tr>
+
+          <!-- ALSO WORTH READING -->
+          <tr>
+            <td class="px-mob" style="padding: 0 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr><td style="border-top:3px double #1a1a1a; height:3px; line-height:3px; font-size:0;">&nbsp;</td></tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" style="padding: 32px 40px 0 40px;">
+              <div style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#8a3324; letter-spacing:3px; text-transform:uppercase;">
+                &#9670; Also worth reading
+              </div>
+              <h3 style="margin: 8px 0 18px 0; font-family: Georgia, 'Times New Roman', Times, serif; font-size:24px; line-height:28px; color:#1a1a1a; font-weight:normal; font-style:italic;">
+                More RL orals from ICLR 2026.
+              </h3>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="px-mob" style="padding: 0 40px 12px 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="padding: 12px 0; border-bottom:1px dotted #c8c2b1;">
+                    <div style="font-family: Georgia, serif; font-size:15px; line-height:22px; color:#1a1a1a;">
+                      <a href="https://openreview.net/forum?id=o29E01Q6bv" style="color:#1a1a1a; border-bottom:1px solid #8a3324;">LoongRL: Reinforcement Learning for Advanced Reasoning over Long Contexts</a>
+                    </div>
+                    <div style="font-family: Georgia, serif; font-size:12px; color:#5b5b5b; font-style:italic; margin-top:3px;">Long-context RL &middot; LLM reasoning</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px 0; border-bottom:1px dotted #c8c2b1;">
+                    <div style="font-family: Georgia, serif; font-size:15px; line-height:22px; color:#1a1a1a;">
+                      <a href="https://openreview.net/forum?id=ZgCCDwcGwn" style="color:#1a1a1a; border-bottom:1px solid #8a3324;">AgentGym-RL: An Open-Source Framework to Train LLM Agents for Long-Horizon Decision Making via Multi-Turn RL</a>
+                    </div>
+                    <div style="font-family: Georgia, serif; font-size:12px; color:#5b5b5b; font-style:italic; margin-top:3px;">Agent training &middot; Frameworks</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px 0; border-bottom:1px dotted #c8c2b1;">
+                    <div style="font-family: Georgia, serif; font-size:15px; line-height:22px; color:#1a1a1a;">
+                      <a href="https://openreview.net/forum?id=RQm2KQTM5r" style="color:#1a1a1a; border-bottom:1px solid #8a3324;">GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning</a>
+                    </div>
+                    <div style="font-family: Georgia, serif; font-size:12px; color:#5b5b5b; font-style:italic; margin-top:3px;">RL alternatives &middot; Prompt optimization</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px 0; border-bottom:1px dotted #c8c2b1;">
+                    <div style="font-family: Georgia, serif; font-size:15px; line-height:22px; color:#1a1a1a;">
+                      <a href="https://openreview.net/forum?id=k5nIOvYGCL" style="color:#1a1a1a; border-bottom:1px solid #8a3324;">MemAgent: Reshaping Long-Context LLM with Multi-Conv RL-based Memory Agent</a>
+                    </div>
+                    <div style="font-family: Georgia, serif; font-size:12px; color:#5b5b5b; font-style:italic; margin-top:3px;">Memory &middot; LLM agents</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px 0;">
+                    <div style="font-family: Georgia, serif; font-size:15px; line-height:22px; color:#1a1a1a;">
+                      <a href="https://openreview.net/forum?id=kdeiRledV6" style="color:#1a1a1a; border-bottom:1px solid #8a3324;">Overthinking Reduction with Decoupled Rewards and Curriculum Data Scheduling</a>
+                    </div>
+                    <div style="font-family: Georgia, serif; font-size:12px; color:#5b5b5b; font-style:italic; margin-top:3px;">Reasoning RL &middot; Reward design</div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- EDITOR'S NOTE -->
+          <tr>
+            <td class="px-mob" style="padding: 40px 40px 0 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#1a1a1a;">
+                <tr>
+                  <td style="padding: 32px 32px;">
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#e9b44c; letter-spacing:3px; text-transform:uppercase;">
+                      From the editor
+                    </div>
+                    <p style="margin: 16px 0 0 0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#f3efe6; font-style:italic;">
+                      &ldquo;The split this year was unmistakable: half of the RL orals are about making RL on LLMs work like a real engineering discipline &mdash; scaling laws, trust regions, credit assignment &mdash; while the other half quietly continued the JEPA-and-foundation-models program in classical control. Both sides made real progress.&rdquo;
+                    </p>
+                    <div style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#a8a094; letter-spacing:2px; margin-top:18px;">
+                      &mdash; The Research Desk
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- FOOTER -->
+          <tr>
+            <td class="px-mob" style="padding: 40px 40px 24px 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr><td style="border-top:1px solid #1a1a1a; height:1px; line-height:1px; font-size:0;">&nbsp;</td></tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" align="center" style="padding: 0 40px 12px 40px;">
+              <div style="font-family: Georgia, serif; font-size:14px; color:#1a1a1a; font-style:italic; letter-spacing:1px;">
+                <i>The&nbsp;</i><b>Policy</b><i>&nbsp;Gradient</i>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" align="center" style="padding: 0 40px 24px 40px; font-family:'Courier New', Courier, monospace; font-size:10px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; line-height:18px;">
+              Forwarded to you? &nbsp;<a href="#" style="color:#8a3324; border-bottom:1px solid #8a3324;">Subscribe</a><br/>
+              <a href="#" style="color:#5b5b5b;">Archive</a> &nbsp;&middot;&nbsp;
+              <a href="#" style="color:#5b5b5b;">Submit a paper</a> &nbsp;&middot;&nbsp;
+              <a href="#" style="color:#5b5b5b;">Unsubscribe</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-mob" align="center" style="padding: 0 40px 32px 40px; font-family: Georgia, serif; font-size:11px; color:#8a8a8a; line-height:16px;">
+              &copy; 2026 The Policy Gradient. <br/>
+              Paper data sourced from OpenReview. All abstracts &copy; their respective authors (CC BY 4.0).
+            </td>
+          </tr>
+          <tr>
+            <td style="height:6px; background-color:#1a1a1a; line-height:6px; font-size:0;">&nbsp;</td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
