@@ -233,6 +233,13 @@ def build_topic_issues(papers: list[dict]) -> list[dict]:
     return issues
 
 
+def issue_summary(issue: dict) -> str:
+    titles = [paper["title"] for paper in issue["papers"][:5]]
+    if len(issue["papers"]) > 5:
+        titles.append("...")
+    return f"{len(issue['papers'])} papers: " + "; ".join(titles)
+
+
 def count_iclr_posters() -> int:
     data_path = DRAFT_DIR / "iclr2026_posters.json"
     if data_path.exists():
@@ -256,7 +263,7 @@ def render_site_index(icml_issues: list[dict], icml_count: int) -> str:
     icml_items = "\n".join(
         f"""        <li>
           <a href="draft/icml/papers/{esc(issue["filename"])}">ICML Paper Issue - {esc(issue["label"])}</a>
-          <span class="issue-summary">{len(issue["papers"])} papers</span>
+          <span class="issue-summary">{esc(issue_summary(issue))}</span>
         </li>"""
         for issue in icml_issues
     )
@@ -323,7 +330,7 @@ def render_site_index(icml_issues: list[dict], icml_count: int) -> str:
       <section id="icml-papers">
         <h3>ICML 2026 Papers</h3>
         <p class="section-note">{icml_count} reinforcement-learning-related ICML papers, grouped by official RL topic.</p>
-        <ol class="poster-grid">
+        <ol class="issue-list">
 {icml_items}
         </ol>
       </section>
