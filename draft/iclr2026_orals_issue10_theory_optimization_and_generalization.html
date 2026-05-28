@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ICLR 2026 Orals - Issue 10</title>
+<style>
+body { margin: 0 !important; padding: 0 !important; width: 100% !important; background-color: #f3efe6; }
+a { color: #8a3324; text-decoration: none; }
+@media screen and (max-width: 780px) {
+  .container { width: 100% !important; }
+  .px-mob { padding-left: 24px !important; padding-right: 24px !important; }
+}
+</style>
+</head>
+<body style="margin:0; padding:0; background-color:#f3efe6;">
+<div style="display:none; max-height:0; overflow:hidden; mso-hide:all; font-size:1px; line-height:1px; color:#f3efe6;">ICLR 2026 oral papers: FIRE: Frobenius-Isometry Reinitialization for Balancing the...; Non-Asymptotic Analysis of (Sticky) Track-and-Stop; Token-Importance Guided Direct Preference Optimization; and more</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f3efe6">
+<tr><td align="center" style="padding: 32px 16px;">
+<table role="presentation" class="container" width="760" cellpadding="0" cellspacing="0" border="0" style="width:760px; max-width:760px; background-color:#fbf8f1; border:1px solid #1a1a1a;">
+<tr><td style="height:6px; background-color:#1a1a1a; line-height:6px; font-size:0;">&nbsp;</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 12px 40px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td align="left" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px;">Vol. 04 &nbsp;&middot;&nbsp; Issue 10</td>
+<td align="right" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px;">May 28, 2026</td>
+</tr></table></td></tr>
+<tr><td class="px-mob" style="padding: 0 40px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top:1px solid #1a1a1a; height:1px; line-height:1px; font-size:0;">&nbsp;</td></tr></table></td></tr>
+<tr><td class="px-mob" align="center" style="padding: 28px 40px 8px 40px;"><div style="font-family: Georgia, 'Times New Roman', Times, serif; font-size:54px; line-height:54px; letter-spacing:2px; color:#1a1a1a; font-weight:normal;"><i>The&nbsp;</i><b>Policy</b><i>&nbsp;Gradient</i></div></td></tr>
+<tr><td class="px-mob" align="center" style="padding: 4px 40px 24px 40px; font-family: 'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:3px; text-transform:uppercase;">A curated digest of machine learning research</td></tr>
+<tr><td class="px-mob" style="padding: 0 40px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top:3px double #1a1a1a; height:3px; line-height:3px; font-size:0;">&nbsp;</td></tr></table></td></tr>
+<tr><td class="px-mob" style="padding: 36px 40px 12px 40px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#8a3324; letter-spacing:3px; text-transform:uppercase; margin-bottom:14px;">&#9670; ICLR 2026 Orals, 10 of 10</div>
+<h1 style="margin:0; font-family: Georgia, serif; font-size:38px; line-height:42px; color:#1a1a1a; font-weight:normal; letter-spacing:-0.5px;">Theory, Optimization, and Generalization.</h1>
+<p style="margin: 18px 0 0 0; font-family: Georgia, serif; font-size:16px; line-height:26px; color:#3a3a3a;">A themed pass through the ICLR 2026 oral track. This draft collects 4 oral papers, with a compact research brief and concrete next steps for deciding whether to read deeply, reproduce, benchmark, or cite.</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 24px 40px 32px 40px; border-bottom:1px solid #d8d2c1; font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic;">Edited by the Research Desk &nbsp;&middot;&nbsp; 4 papers &nbsp;&middot;&nbsp; ~6 min read</td></tr>
+
+<!-- PAPER 01 -->
+<tr><td class="px-mob" style="padding: 48px 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="80" style="padding-right:18px;">
+<div style="font-family: Georgia, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">01</div>
+<div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+</td>
+<td valign="top">
+<div style="margin-bottom:8px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:12px; color:#1a1a1a; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;"><span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span></div>
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:16px; color:#5b5b5b; letter-spacing:1px; text-transform:uppercase;">Theory, Optimization, and Generalization &middot; stability-plasticity tradeoff, continual...</div>
+</div>
+<h2 style="margin:0; font-family: Georgia, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">FIRE: Frobenius-Isometry Reinitialization for Balancing the Stability–Plasticity Tradeoff</h2>
+<div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">Isaac Han, Sangyeon Park, Seungwon Oh, Donghu Kim, Hojoon Lee, KyungJoong Kim</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<p style="margin:0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#2a2a2a;">We present FIRE, a principled reinitialization approach that balances stability and plasticity through constrained optimization.</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;"><tr><td style="padding:14px 18px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Next steps for researchers</div>
+<div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">Stress the stability-plasticity tradeoff, continual learning objective, not only the score: sweep reward misspecification, dataset quality, reference-policy distance, discount/horizon, and action-noise perturbations. A strong follow-up would identify the regime boundary where the method beats simpler imitation, supervised fine-tuning, or PPO-style baselines, then apply it to one realistic control or alignment setting.</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 36px 40px;">
+<a href="https://openreview.net/forum?id=CfZLxT3zIZ" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a;">Read on OpenReview &rarr;</a>&nbsp;&nbsp;&nbsp;<a href="https://openreview.net/pdf/c0691298216202b7723066a6b56688154b806508.pdf" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b;">PDF</a>
+</td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 36px 40px;"><div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div></td></tr>
+
+
+<!-- PAPER 02 -->
+<tr><td class="px-mob" style="padding: 0 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="80" style="padding-right:18px;">
+<div style="font-family: Georgia, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">02</div>
+<div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+</td>
+<td valign="top">
+<div style="margin-bottom:8px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:12px; color:#1a1a1a; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;"><span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span></div>
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:16px; color:#5b5b5b; letter-spacing:1px; text-transform:uppercase;">Theory, Optimization, and Generalization &middot; Multi-Armed Bandit Theory, Pure Exploration</div>
+</div>
+<h2 style="margin:0; font-family: Georgia, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">Non-Asymptotic Analysis of (Sticky) Track-and-Stop</h2>
+<div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">Riccardo Poiani, Martino Bernasconi, Andrea Celli</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<p style="margin:0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#2a2a2a;">We derive non-asymptotic guarantees for the Track-and-Stop and Sticky Track-and-Stop algorithms.</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;"><tr><td style="padding:14px 18px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Next steps for researchers</div>
+<div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">Stress the Multi-Armed Bandit Theory, Pure Exploration objective, not only the score: sweep reward misspecification, dataset quality, reference-policy distance, discount/horizon, and action-noise perturbations. A strong follow-up would identify the regime boundary where the method beats simpler imitation, supervised fine-tuning, or PPO-style baselines, then apply it to one realistic control or alignment setting.</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 36px 40px;">
+<a href="https://openreview.net/forum?id=vebqP5aioj" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a;">Read on OpenReview &rarr;</a>&nbsp;&nbsp;&nbsp;<a href="https://openreview.net/pdf/f2e3e3b2aec339453648d5d78af64d7a610cf368.pdf" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b;">PDF</a>
+</td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 36px 40px;"><div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div></td></tr>
+
+
+<!-- PAPER 03 -->
+<tr><td class="px-mob" style="padding: 0 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="80" style="padding-right:18px;">
+<div style="font-family: Georgia, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">03</div>
+<div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+</td>
+<td valign="top">
+<div style="margin-bottom:8px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:12px; color:#1a1a1a; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;"><span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span></div>
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:16px; color:#5b5b5b; letter-spacing:1px; text-transform:uppercase;">Theory, Optimization, and Generalization &middot; LLMs, RLHF</div>
+</div>
+<h2 style="margin:0; font-family: Georgia, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">Token-Importance Guided Direct Preference Optimization</h2>
+<div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">Ning Yang, Hai Lin, Yibo Liu, Baoliang Tian, Guoqing Liu, Haijun Zhang</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<p style="margin:0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#2a2a2a;">We proposes Token-Importance Guided Direct Preference Optimization (TI-DPO) to better align LLMs with human preferences by using a hybrid weighting mechanism to identify key tokens and a triplet loss to guide the optimization process.</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;"><tr><td style="padding:14px 18px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Next steps for researchers</div>
+<div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">Attack the LLMs, RLHF claim before extending it: run adaptive adversaries, distribution shift, paraphrase/corruption tests, and capability-preservation checks. The follow-up worth writing is a threat-model-specific version with clear guarantees, costs, and failure cases on real model outputs rather than a broad safety claim.</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 36px 40px;">
+<a href="https://openreview.net/forum?id=cMEnMVvMw9" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a;">Read on OpenReview &rarr;</a>&nbsp;&nbsp;&nbsp;<a href="https://openreview.net/pdf/ee7ba5337c7269bc77a2b118b14ca9e61057952b.pdf" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b;">PDF</a>
+</td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 36px 40px;"><div style="font-family: Georgia, serif; font-size:18px; color:#8a3324; letter-spacing:18px;">&#10086;&nbsp;&#10086;&nbsp;&#10086;</div></td></tr>
+
+
+<!-- PAPER 04 -->
+<tr><td class="px-mob" style="padding: 0 40px 8px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+<td valign="top" width="80" style="padding-right:18px;">
+<div style="font-family: Georgia, serif; font-size:64px; line-height:54px; color:#8a3324; font-style:italic;">04</div>
+<div style="border-top:2px solid #8a3324; width:36px; margin-top:6px;"></div>
+</td>
+<td valign="top">
+<div style="margin-bottom:8px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:12px; color:#1a1a1a; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px;"><span style="background:#e9b44c; color:#1a1a1a; padding:3px 8px;">&#9733; Oral</span></div>
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; line-height:16px; color:#5b5b5b; letter-spacing:1px; text-transform:uppercase;">Vision, Multimodal, and Generative Models &middot; visual planning</div>
+</div>
+<h2 style="margin:0; font-family: Georgia, serif; font-size:22px; line-height:28px; color:#1a1a1a; font-weight:normal;">Visual Planning: Let&#x27;s Think Only with Images</h2>
+<div style="font-family: Georgia, serif; font-size:13px; color:#5b5b5b; font-style:italic; margin-top:6px;">Yi Xu, Chengzu Li, Han Zhou, Xingchen Wan, Caiqi Zhang, et al. (7 authors)</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<p style="margin:0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#2a2a2a;">Recent advancements in Large Language Models (LLMs) and their multimodal extensions (MLLMs) have substantially enhanced machine reasoning across diverse tasks. However, these models predominantly rely on pure text as the medium for both expressing and structuring reasoning, even when visual information is present.</p>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 0 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f3efe6; border-left:3px solid #8a3324;"><tr><td style="padding:14px 18px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:10px; color:#8a3324; letter-spacing:2px; text-transform:uppercase; margin-bottom:6px;">Next steps for researchers</div>
+<div style="font-family: Georgia, serif; font-size:14px; line-height:22px; color:#2a2a2a;">Treat visual plans as an intervention target: replace image-only scratchpads with text-only and hybrid scratchpads, corrupt intermediate plan frames, and increase horizon length until the policy breaks. The best application experiments are robot manipulation, UI navigation, and geometry tasks where drawing the next state should be more natural than verbalizing it; the ICLR angle is showing visual plans are causally used rather than decorative rationales.</div>
+</td></tr></table>
+</td></tr>
+<tr><td class="px-mob" style="padding: 18px 40px 48px 40px;">
+<a href="https://openreview.net/forum?id=wsnse46kRO" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#1a1a1a; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #1a1a1a;">Read on OpenReview &rarr;</a>&nbsp;&nbsp;&nbsp;<a href="https://openreview.net/pdf/73a960c68c9dba2c29b599a509d5f5d3a1bcd04a.pdf" style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#5b5b5b; letter-spacing:2px; text-transform:uppercase; border-bottom:1px solid #5b5b5b;">PDF</a>
+</td></tr>
+
+
+<tr><td class="px-mob" style="padding: 40px 40px 0 40px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#1a1a1a;"><tr><td style="padding: 32px 32px;">
+<div style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#e9b44c; letter-spacing:3px; text-transform:uppercase;">From the editor</div>
+<p style="margin: 16px 0 0 0; font-family: Georgia, serif; font-size:15px; line-height:24px; color:#f3efe6; font-style:italic;">This issue is a working research draft: use it as a triage layer before committing time to full papers. The next-step notes are meant to turn each oral from a title in a program into an actionable reading or replication decision.</p>
+<div style="font-family:'Courier New', Courier, monospace; font-size:11px; color:#a8a094; letter-spacing:2px; margin-top:18px;">&mdash; The Research Desk</div>
+</td></tr></table></td></tr>
+<tr><td class="px-mob" style="padding: 40px 40px 24px 40px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top:1px solid #1a1a1a; height:1px; line-height:1px; font-size:0;">&nbsp;</td></tr></table></td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 12px 40px;"><div style="font-family: Georgia, serif; font-size:14px; color:#1a1a1a; font-style:italic; letter-spacing:1px;"><i>The&nbsp;</i><b>Policy</b><i>&nbsp;Gradient</i></div></td></tr>
+<tr><td class="px-mob" align="center" style="padding: 0 40px 32px 40px; font-family: Georgia, serif; font-size:11px; color:#8a8a8a; line-height:16px;">&copy; 2026 The Policy Gradient. <br/>Paper data sourced from OpenReview ICLR 2026 oral track. Abstracts and paper metadata remain &copy; their respective authors.</td></tr>
+<tr><td style="height:6px; background-color:#1a1a1a; line-height:6px; font-size:0;">&nbsp;</td></tr>
+</table></td></tr></table>
+</body>
+</html>

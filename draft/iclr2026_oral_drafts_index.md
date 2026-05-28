@@ -1,8 +1,7 @@
 # ICLR 2026 RL-Oral Drafts
 
-Generated 9 email drafts from 54 RL-related OpenReview oral papers.
-Each generated email draft contains exactly 6 oral papers.
-Held out 4 RL-related papers because they did not fill a complete 6-paper issue.
+Generated 10 email drafts from 58 RL-related OpenReview oral papers.
+Issues 1-9 contain 6 oral papers each; Issue 10 contains the remaining 4 RL-related oral papers.
 Filtered out 166 non-RL oral papers.
 
 - Issue 01: `iclr2026_orals_issue01_llms_agents_and_tool_use.html` - LLMs, Agents, and Tool Use (6 papers)
@@ -68,9 +67,8 @@ Filtered out 166 non-RL oral papers.
   - SafeDPO: A Simple Approach to Direct Preference Optimization with Enhanced Safety (PJdw4VBsXD)
   - Watch your steps: Dormant Adversarial Behaviors that Activate upon LLM Finetuning (yfM2e8Icsw)
   - Discount Model Search for Quality Diversity Optimization in High-Dimensional Measure Spaces (m6Hv0yZO3n)
-
-## Held Out
-- FIRE: Frobenius-Isometry Reinitialization for Balancing the Stability–Plasticity Tradeoff (CfZLxT3zIZ)
-- Non-Asymptotic Analysis of (Sticky) Track-and-Stop (vebqP5aioj)
-- Token-Importance Guided Direct Preference Optimization (cMEnMVvMw9)
-- Visual Planning: Let's Think Only with Images (wsnse46kRO)
+- Issue 10: `iclr2026_orals_issue10_theory_optimization_and_generalization.html` - Theory, Optimization, and Generalization (4 papers)
+  - FIRE: Frobenius-Isometry Reinitialization for Balancing the Stability–Plasticity Tradeoff (CfZLxT3zIZ)
+  - Non-Asymptotic Analysis of (Sticky) Track-and-Stop (vebqP5aioj)
+  - Token-Importance Guided Direct Preference Optimization (cMEnMVvMw9)
+  - Visual Planning: Let's Think Only with Images (wsnse46kRO)

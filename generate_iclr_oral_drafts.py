@@ -381,8 +381,6 @@ def batch_papers(papers: list[dict], size: int = 6) -> list[tuple[str, list[dict
     while carry:
         group = carry[:size]
         carry = carry[size:]
-        if len(group) < size:
-            break
         theme_counts = defaultdict(int)
         for paper in group:
             theme_counts[paper["theme"]] += 1
@@ -510,16 +508,13 @@ def main():
     DATA_PATH.write_text(json.dumps(papers, indent=2, ensure_ascii=False), encoding="utf-8")
     batches = batch_papers(papers)
     total = len(batches)
-    drafted_ids = {paper["id"] for _, group in batches for paper in group}
-    held_out = [paper for paper in papers if paper["id"] not in drafted_ids]
     for stale in DRAFT_DIR.glob("iclr2026_orals_issue*.html"):
         stale.unlink()
     index_lines = [
         "# ICLR 2026 RL-Oral Drafts",
         "",
-        f"Generated {total} email drafts from {len(drafted_ids)} RL-related OpenReview oral papers.",
-        "Each generated email draft contains exactly 6 oral papers.",
-        f"Held out {len(held_out)} RL-related papers because they did not fill a complete 6-paper issue.",
+        f"Generated {total} email drafts from {len(papers)} RL-related OpenReview oral papers.",
+        "Issues 1-9 contain 6 oral papers each; Issue 10 contains the remaining 4 RL-related oral papers.",
         f"Filtered out {len(all_papers) - len(papers)} non-RL oral papers.",
         "",
     ]
@@ -531,15 +526,10 @@ def main():
         index_lines.append(f"- Issue {issue:02d}: `{filename}` - {theme} ({len(group)} papers)")
         for paper in group:
             index_lines.append(f"  - {paper['title']} ({paper['id']})")
-    if held_out:
-        index_lines.extend(["", "## Held Out"])
-        for paper in held_out:
-            index_lines.append(f"- {paper['title']} ({paper['id']})")
     INDEX_PATH.write_text("\n".join(index_lines) + "\n", encoding="utf-8")
     print(f"Fetched {len(all_papers)} oral papers")
     print(f"Kept {len(papers)} RL-related oral papers")
-    print(f"Drafted {len(drafted_ids)} RL-related oral papers in full 6-paper issues")
-    print(f"Held out {len(held_out)} RL-related oral papers")
+    print(f"Drafted {len(papers)} RL-related oral papers")
     print(f"Filtered out {len(all_papers) - len(papers)} non-RL oral papers")
     print(f"Wrote {total} HTML drafts to {DRAFT_DIR}")
     print(f"Wrote cache: {DATA_PATH}")
