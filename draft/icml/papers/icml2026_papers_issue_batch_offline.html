@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ICML 2026 RL Papers - Batch/Offline</title>
+  <style>
+    body { margin: 0; background: #f3efe6; color: #1a1a1a; font-family: Georgia, "Times New Roman", Times, serif; line-height: 1.5; }
+    main { max-width: 980px; margin: 0 auto; padding: 44px 24px 72px; }
+    h1 { font-size: 42px; line-height: 1.1; margin: 0 0 8px; font-weight: normal; }
+    h2 { font-size: 22px; line-height: 1.25; margin: 0 0 30px; font-weight: normal; color: #5b5b5b; }
+    a { color: #8a3324; text-decoration: none; border-bottom: 1px solid #8a3324; }
+    .meta { font-family: "Courier New", Courier, monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #5b5b5b; margin-bottom: 18px; }
+    .paper-list { list-style: none; margin: 0; padding: 0; }
+    .paper-list li { border-top: 1px solid #d8d2c1; display: grid; grid-template-columns: 48px 1fr; gap: 18px; padding: 16px 0; }
+    .paper-num { color: #8a3324; font-family: "Courier New", Courier, monospace; font-size: 13px; letter-spacing: 1px; padding-top: 3px; }
+    .authors, .abstract, .paper-meta { display: block; color: #5b5b5b; font-size: 14px; margin-top: 4px; }
+    .abstract { color: #2f2f2f; font-size: 15px; line-height: 1.45; margin-top: 8px; }
+    .paper-meta { font-family: "Courier New", Courier, monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
+    .nav { display: flex; justify-content: space-between; gap: 16px; margin-top: 36px; }
+    @media (max-width: 640px) {
+      h1 { font-size: 32px; }
+      .paper-list li { grid-template-columns: 1fr; gap: 6px; }
+      .nav { display: block; }
+      .nav a { display: inline-block; margin: 8px 14px 0 0; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="meta">The Policy Gradient · ICML 2026 RL Papers</div>
+    <h1>ICML Paper Issue - Batch/Offline</h1>
+    <h2>33 papers · Reinforcement Learning-&gt;Batch/Offline</h2>
+    <ol class="paper-list">
+      <li>
+        <span class="paper-num">01</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65617">$\text{DT}^\text{2}$: Decision-Targeted Digital Twins</a>
+          <span class="authors">Harry Amad, Mihaela van der Schaar</span>
+          <span class="abstract">A digital twin (DT) is a virtual model of a real-world system that can assist decision-making by simulating scenarios induced by different policies. However, the typical design process of machine learning-based DTs does not optimise for this objective. We...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/65617">ICML</a> · <a href="https://openreview.net/forum?id=BoQg93y6iT">OpenReview</a> · <a href="https://openreview.net/pdf?id=BoQg93y6iT">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">02</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64920">Causal Flow Q-Learning for Robust Offline Reinforcement Learning</a>
+          <span class="authors">Mingxuan Li, Junzhe Zhang, Elias Bareinboim</span>
+          <span class="abstract">Expressive policies based on flow-matching have been successfully applied in reinforcement learning (RL) more recently due to their ability to model complex action distributions from offline data. These algorithms build on standard policy gradients, which...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/64920">ICML</a> · <a href="https://openreview.net/forum?id=IexQEyHm2L">OpenReview</a> · <a href="https://openreview.net/pdf?id=IexQEyHm2L">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">03</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/60579">Chunk-Guided Q-Learning</a>
+          <span class="authors">Gwanwoo Song, Kwanyoung Park, Youngwoon Lee</span>
+          <span class="abstract">In offline reinforcement learning (RL), single-step temporal-difference (TD) learning can suffer from bootstrapping error accumulation over long horizons. Action-chunked TD methods mitigate this by backing up over multiple steps, but can introduce...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/60579">ICML</a> · <a href="https://openreview.net/forum?id=yojuz84NLb">OpenReview</a> · <a href="https://openreview.net/pdf?id=yojuz84NLb">PDF</a> · <a href="https://gwanwoosong.github.io/cgq">Project</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">04</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64324">Compositional Transduction with Latent Analogies for Offline Goal-Conditioned Reinforcement Learning</a>
+          <span class="authors">Junseok Kim, Dohyeong Kim, Mineui Hong, Songhwai Oh</span>
+          <span class="abstract">In offline goal-conditioned reinforcement learning (GCRL), where one relies on a limited reward-free dataset to learn a generalist goal-reaching agent, compositional generalization becomes essential for reaching unseen goals under novel contextual...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/64324">ICML</a> · <a href="https://openreview.net/forum?id=OjXimqfwlX">OpenReview</a> · <a href="https://openreview.net/pdf?id=OjXimqfwlX">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">05</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61224">Continuity-Regularized Flow Matching for Offline Reinforcement Learning</a>
+          <span class="authors">Xiaocong Chen, Siyu Wang, Lina Yao</span>
+          <span class="abstract">Flow-matching policies have recently emerged as a powerful class of generative models for offline reinforcement learning (RL), capable of capturing complex, multi-modal action distributions from static datasets. However, standard training objectives are...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/61224">ICML</a> · <a href="https://openreview.net/forum?id=sV3bCyzAvH">OpenReview</a> · <a href="https://openreview.net/pdf?id=sV3bCyzAvH">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">06</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62096">Decision Transformers As Zero-Shot Learners via Text-Behavior Alignment</a>
+          <span class="authors">Xin Zhang, Jonathan Martinez, Yanhua Li, Yingxue Zhang</span>
+          <span class="abstract">Offline meta-reinforcement learning (meta-RL) aims to train agents that can generalize to unseen tasks using pre-collected data from related tasks. Recent approaches leverage the scalability of transformer architectures to model behavior sequences and...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/62096">ICML</a> · <a href="https://openreview.net/forum?id=jqLPUccarO">OpenReview</a> · <a href="https://openreview.net/pdf?id=jqLPUccarO">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">07</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63926">DualCOIL: Offline Imitation Learning from Contrasting Demonstrations</a>
+          <span class="authors">Huy Hoang, Tien Mai, Pradeep Varakantham, Tanvi Verma</span>
+          <span class="abstract">Offline imitation learning typically learns from expert and unlabeled demonstrations, yet often overlooks the valuable signal in explicitly undesirable behaviors. In this work, we study offline imitation learning from contrasting behaviors, where the dataset...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/63926">ICML</a> · <a href="https://openreview.net/forum?id=SUyEjfEbHh">OpenReview</a> · <a href="https://openreview.net/pdf?id=SUyEjfEbHh">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">08</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63115">Expected Returns and Policy Inconsistency-Aware Offline Federated Deep Reinforcement Learning</a>
+          <span class="authors">Meng XU, Zhongying Chen, Weiwei Fu, Yan Li, Shuguang Wang, Jianping Wang</span>
+          <span class="abstract">Offline Federated Deep Reinforcement Learning (FDRL) methods aggregate multiple client-side offline Deep Reinforcement Learning (DRL) models, each trained locally, to facilitate knowledge sharing while preserving privacy. Existing offline FDRL methods assign...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/63115">ICML</a> · <a href="https://openreview.net/forum?id=ZxMHQCFYr1">OpenReview</a> · <a href="https://openreview.net/pdf?id=ZxMHQCFYr1">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">09</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/66531">Fast and Highly Expressive Policy Learning for Offline Reinforcement Learning via Bootstrapped Flow Q-Learning</a>
+          <span class="authors">Thanh Nguyen, Tri Ton, Hongbin Choe, Minh-Tung Luu, Chang Yoo</span>
+          <span class="abstract">Diffusion-based Q-learning has emerged as a powerful paradigm for offline reinforcement learning, but its reliance on multi-step denoising makes both training and inference computationally expensive and brittle. Recent efforts to accelerate diffusion...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/66531">ICML</a> · <a href="https://openreview.net/forum?id=2rGr38p5az">OpenReview</a> · <a href="https://openreview.net/pdf?id=2rGr38p5az">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">10</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61312">Frictional Q-Learning</a>
+          <span class="authors">Hyunwoo Kim, Hyo Kyung Lee</span>
+          <span class="abstract">Off-policy reinforcement learning suffers from extrapolation errors when a learned policy selects actions that are weakly supported in the replay buffer. In this study, we address this issue by drawing an analogy to static friction in classical mechanics...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/61312">ICML</a> · <a href="https://openreview.net/forum?id=rSEdPcvrme">OpenReview</a> · <a href="https://openreview.net/pdf?id=rSEdPcvrme">PDF</a> · <a href="https://github.com/hwya0327/fql">Code</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">11</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61243">From Reward-Free Representations to Preferences: Rethinking Offline Preference-Based Reinforcement Learning</a>
+          <span class="authors">Jun-Jie Yang, Chia-Heng Hsu, Kui-Yuan Chen, Ping-Chun Hsieh</span>
+          <span class="abstract">Preference-based reinforcement learning (PbRL) avoids explicit reward engineering by learning from pairwise human preference feedback. Existing offline PbRL methods typically follow a two-stage pipeline, first learning a reward or preference model from...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/61243">ICML</a> · <a href="https://openreview.net/forum?id=sGOmm03F40">OpenReview</a> · <a href="https://openreview.net/pdf?id=sGOmm03F40">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">12</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/60708">Geometric Control of Out-of-Distribution Shift in Safe Offline RL</a>
+          <span class="authors">Zhiqi Zhuang, di wu, Benoit Boulet</span>
+          <span class="abstract">Safe offline reinforcement learning (RL) requires optimizing policies within the support of static datasets while satisfying strict safety constraints. Although recent latent generative policies achieve strong empirical performance, they rely heavily on...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/60708">ICML</a> · <a href="https://openreview.net/forum?id=xLcOW4q39R">OpenReview</a> · <a href="https://openreview.net/pdf?id=xLcOW4q39R">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">13</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63033">HTAC: Hierarchical Task-Aware Composition for Continual Offline Reinforcement Learning</a>
+          <span class="authors">Qiyang Zhou, Xu Ruihang, Peng Wang, Wenjie Lu, Xiaochun Cao, et al. (7 authors)</span>
+          <span class="abstract">Continual Offline Reinforcement Learning (CORL) enables building long-term autonomous agents from static datasets. However, it faces heterogeneity in environment dynamics, reward functions, and behavior policies across tasks. Combined with the inherent...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/63033">ICML</a> · <a href="https://openreview.net/forum?id=akfJfpUEBj">OpenReview</a> · <a href="https://openreview.net/pdf?id=akfJfpUEBj">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">14</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61137">Improving Diffusion Planners by Self-Supervised Action Gating with Energies</a>
+          <span class="authors">Yuan Lu, Dongqi Han, Yansen Wang, Dongsheng Li</span>
+          <span class="abstract">Diffusion planners are a strong approach for offline reinforcement learning, but they can fail when value-guided selection favours trajectories that score well yet are locally inconsistent with the environment dynamics, resulting in brittle execution. We...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/61137">ICML</a> · <a href="https://openreview.net/forum?id=tLW4Tc7Zn9">OpenReview</a> · <a href="https://openreview.net/pdf?id=tLW4Tc7Zn9">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">15</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65235">Improving LLM-Based Recommenders with Conservative Generative Flow Networks</a>
+          <span class="authors">Xuan Yu, Feng Niu, Rui Zhu, Yudong Zhang, Xu Wang, Yang Wang</span>
+          <span class="abstract">Generative Flow Networks (GFlowNets) have recently been used to improve diversity and mitigate popularity bias in LLM-based recommender systems, yet most objectives are developed under online-style assumptions. In offline LLM-based recommendation, learning...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/65235">ICML</a> · <a href="https://openreview.net/forum?id=FXIy6qfQIR">OpenReview</a> · <a href="https://openreview.net/pdf?id=FXIy6qfQIR">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">16</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61589">Latent Representation Alignment for Offline Goal-Conditioned Reinforcement Learning</a>
+          <span class="authors">Hyungkyu Kang, Byeongchan Kim, Min-hwan Oh</span>
+          <span class="abstract">Offline goal-conditioned reinforcement learning (GCRL) provides a practical framework for obtaining goal-reaching policies from fixed datasets. However, learning a reliable goal-conditioned value function in long-horizon tasks remains challenging. In this...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/61589">ICML</a> · <a href="https://openreview.net/forum?id=oddGER4AzK">OpenReview</a> · <a href="https://openreview.net/pdf?id=oddGER4AzK">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">17</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64471">Long-Horizon Model-Based Offline Reinforcement Learning Without Conservatism</a>
+          <span class="authors">Tianwei Ni, Esther Derman, Vineet Jain, Vincent Taboga, Siamak Ravanbakhsh, Pierre-Luc Bacon</span>
+          <span class="abstract">Popular offline reinforcement learning (RL) methods rely on conservatism, penalizing out-of-dataset actions or restricting rollout horizons. We question the universality of this principle and revisit a complementary Bayesian perspective. By modeling a...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/64471">ICML</a> · <a href="https://openreview.net/forum?id=NHu6haXTM9">OpenReview</a> · <a href="https://openreview.net/pdf?id=NHu6haXTM9">PDF</a> · <a href="https://twni2016.github.io/blogs/policyprior/main.html">Project</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">18</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61194">Off-Policy Learning in Large Action Spaces: Optimization Matters More Than Estimation</a>
+          <span class="authors">Imad AOUALI, Otmane Sakhi</span>
+          <span class="abstract">Off-policy evaluation (OPE) and off-policy learning (OPL) are foundational for decision-making in offline contextual bandits. Recent advances in OPL primarily optimize OPE estimators with improved statistical properties, assuming that better estimators...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/61194">ICML</a> · <a href="https://openreview.net/forum?id=srIStBTJiu">OpenReview</a> · <a href="https://openreview.net/pdf?id=srIStBTJiu">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">19</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64599">Offline Reinforcement Learning with Generative Trajectory Policies</a>
+          <span class="authors">Xinsong Feng, Leshu Tang, Chenan Wang, Haipeng Chen</span>
+          <span class="abstract">Generative models have emerged as a powerful class of policies for offline reinforcement learning (RL) due to their ability to capture complex, multi-modal behaviors. However, existing methods face a stark trade-off: slow, iterative models like diffusion...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/64599">ICML</a> · <a href="https://openreview.net/forum?id=LpqtiYpHzn">OpenReview</a> · <a href="https://openreview.net/pdf?id=LpqtiYpHzn">PDF</a> · <a href="https://github.com/wmd3i/gtp">Code</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">20</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65156">Offline Reinforcement Learning with Universal Horizon Models</a>
+          <span class="authors">Hojun Chung, Junseo Lee, Songhwai Oh</span>
+          <span class="abstract">Model-based reinforcement learning (RL) offers a compelling approach to offline RL by enabling value learning on imagined on-policy trajectories. However, it often suffers from compounding errors due to repeated model inference. While geometric horizon...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/65156">ICML</a> · <a href="https://openreview.net/forum?id=GFmJ5XcGWl">OpenReview</a> · <a href="https://openreview.net/pdf?id=GFmJ5XcGWl">PDF</a> · <a href="https://rllab-snu.github.io/projects/UHM/">Project</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">21</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62695">Policy-Driven World Model Adaptation for Robust Offline Model-based Reinforcement Learning</a>
+          <span class="authors">Jiayu Chen, Le Xu, Aravind Venugopal, Jeff Schneider</span>
+          <span class="abstract">Offline reinforcement learning (RL) offers a powerful paradigm for data-driven control. Compared to model-free approaches, offline model-based RL (MBRL) explicitly learns a world model from a static dataset and uses it as a surrogate simulator, improving...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/62695">ICML</a> · <a href="https://openreview.net/forum?id=eB5i7caric">OpenReview</a> · <a href="https://openreview.net/pdf?id=eB5i7caric">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">22</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61595">Q-Flow: Stable and Expressive Reinforcement Learning with Flow-based Policy</a>
+          <span class="authors">JaeHyeok Doo, Byeongguk Jeon, Seonghyeon Ye, Kimin Lee, Minjoon Seo</span>
+          <span class="abstract">There is growing interest in utilizing flow-based models as decision-making policies in reinforcement learning due to their high expressive capacity. However, effectively leveraging this expressivity for value maximization remains challenging, as naive...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/61595">ICML</a> · <a href="https://openreview.net/forum?id=oZqOS1N6Ag">OpenReview</a> · <a href="https://openreview.net/pdf?id=oZqOS1N6Ag">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">23</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62421">RAMAC: Multimodal Risk-Aware Offline Reinforcement Learning and the Role of Behavior Regularization</a>
+          <span class="authors">Kai Fukazawa, Kunal Mundada, Iman Soltani</span>
+          <span class="abstract">In safety-critical domains where online data collection is infeasible, offline reinforcement learning (RL) is attractive only if policies achieve high returns without catastrophic lower-tail risk. Prior work on risk-averse offline RL achieves safety at the...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/62421">ICML</a> · <a href="https://openreview.net/forum?id=gmAT5E9dCE">OpenReview</a> · <a href="https://openreview.net/pdf?id=gmAT5E9dCE">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">24</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/60945">Regularized Offline Policy Optimization with Posterior Hybrid Bayesian Belief</a>
+          <span class="authors">Hongqiang Lin, Pengfei Wang, Nenggan Zheng</span>
+          <span class="abstract">Offline reinforcement learning (RL) aims to optimize policies from pre-collected datasets. A bottleneck of this paradigm is managing epistemic uncertainty, which arises from limited data coverage (sample-level) and the ambiguity in identifying transition...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/60945">ICML</a> · <a href="https://openreview.net/forum?id=v8BF1g3u8r">OpenReview</a> · <a href="https://openreview.net/pdf?id=v8BF1g3u8r">PDF</a> · <a href="https://github.com/HQ-Lin/PhyB">Code</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">25</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62141">Return-to-Go Is More Than a Number: Q-Guided Alignment for Return-Conditioned Supervised Learning</a>
+          <span class="authors">Yuxiao Yang, Weitong Zhang</span>
+          <span class="abstract">Conditioned Sequence Models (CSMs) learn policies by treating return-to-go (RTG) as a control signal. However, existing CSMs often treat the RTGs as simple numerical inputs rather than aligning them with the performance of their policies. In this paper, we...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/62141">ICML</a> · <a href="https://openreview.net/forum?id=jSOVSYO6YX">OpenReview</a> · <a href="https://openreview.net/pdf?id=jSOVSYO6YX">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">26</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61480">Reward Shaping Control Variates for Off-Policy Evaluation Under Sparse Rewards</a>
+          <span class="authors">Ritam Majumdar, Finale Doshi-Velez, Sonali Parbhoo</span>
+          <span class="abstract">Off-policy evaluation (OPE) is essential for deploying reinforcement learning in safety-critical settings, yet existing estimators such as importance sampling and doubly robust (DR) often exhibit prohibitively high variance when rewards are sparse. In this...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/61480">ICML</a> · <a href="https://openreview.net/forum?id=potpaozpjv">OpenReview</a> · <a href="https://openreview.net/pdf?id=potpaozpjv">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">27</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/66163">Reward-Preserving Counterfactual State Editing for Offline Reinforcement Learning</a>
+          <span class="authors">Siyu Wang, Xiaocong Chen, Mingming Gong, Yong Li, Quan Sheng, Lina Yao</span>
+          <span class="abstract">Transformer sequence models such as Decision Transformer can learn strong offline policies from logged trajectories, but they can suffer from causal confusion: reliance on spurious correlations that predict reward in the data but do not reflect the true...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/66163">ICML</a> · <a href="https://openreview.net/forum?id=6D3IJpBGBW">OpenReview</a> · <a href="https://openreview.net/pdf?id=6D3IJpBGBW">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">28</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64368">SMAC: Score-Matched Actor-Critics for Robust Offline-to-Online Transfer</a>
+          <span class="authors">Nathan S. de Lara, Florian Shkurti</span>
+          <span class="abstract">Modern offline Reinforcement Learning (RL) methods find performant actor-critics, however, fine-tuning these actor-critics online with value-based RL algorithms typically causes immediate drops in performance. We provide evidence consistent with the...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/64368">ICML</a> · <a href="https://openreview.net/forum?id=OJSCaDIIJK">OpenReview</a> · <a href="https://openreview.net/pdf?id=OJSCaDIIJK">PDF</a> · <a href="https://delara38.github.io/smac/">Project</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">29</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63368">SPAR: Support-Preserving Action Rectification</a>
+          <span class="authors">Jiaxin Zhao, Weihang Pan, xun liang, Binbin Lin</span>
+          <span class="abstract">Offline policy improvement faces an inherent conflict between maximizing value and fitting the data distribution. While in-sample weighted regression is stable, it suffers from over-conservatism that suppresses high-value actions in the distribution tail...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/63368">ICML</a> · <a href="https://openreview.net/forum?id=XiaqvkSnWk">OpenReview</a> · <a href="https://openreview.net/pdf?id=XiaqvkSnWk">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">30</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61785">Test-Time Graph Search for Goal-Conditioned Reinforcement Learning</a>
+          <span class="authors">Evgenii Opryshko, Junwei Quan, Claas Voelcker, Yilun Du, Igor Gilitschenski</span>
+          <span class="abstract">Offline goal-conditioned reinforcement learning (GCRL) often struggles with long-horizon tasks, where errors in value estimation accumulate and produce unreliable policies. It is typically assumed that effective long-term planning is infeasible without...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/61785">ICML</a> · <a href="https://openreview.net/forum?id=mxXm8jqgds">OpenReview</a> · <a href="https://openreview.net/pdf?id=mxXm8jqgds">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">31</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64462">Test-time Offline Reinforcement Learning on Goal-related Experience</a>
+          <span class="authors">Marco Bagatella, Mert Albaba, Jonas Hübotter, Georg Martius, Andreas Krause</span>
+          <span class="abstract">Foundation models compress a large amount of information in a single, large neural network, which can then be queried for individual tasks. There are strong parallels between this widespread framework and offline goal-conditioned reinforcement learning...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/64462">ICML</a> · <a href="https://openreview.net/forum?id=NN4DoPVYT2">OpenReview</a> · <a href="https://openreview.net/pdf?id=NN4DoPVYT2">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">32</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65180">Transport or Discard: Robust Unbalanced Optimal Transport for Cross-Domain Policy Adaptation</a>
+          <span class="authors">Wenyu Chen, Yujia Zhang, Jianchao Zeng, Wei Guo, Yanbo Wang, et al. (7 authors)</span>
+          <span class="abstract">Cross-domain offline reinforcement learning leverages a source dataset to improve policy learning in a data-scarce target domain, but dynamics mismatch makes many source transitions kinematically infeasible and can cause negative transfer. Recent...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/65180">ICML</a> · <a href="https://openreview.net/forum?id=G2l7GOwHOV">OpenReview</a> · <a href="https://openreview.net/pdf?id=G2l7GOwHOV">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">33</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61591">When does predictive inverse dynamics outperform behavior cloning?</a>
+          <span class="authors">Lukas Schäfer, Pallavi Choudhury, Abdelhak Lemkhenter, Chris Lovett, Somjit Nath, et al. (13 authors)</span>
+          <span class="abstract">Behavior cloning (BC) is a practical offline imitation learning method, but it often fails when expert demonstrations are limited. Recent works have introduced a class of architectures named predictive inverse dynamics models (PIDM) that combine a future...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/61591">ICML</a> · <a href="https://openreview.net/forum?id=ocLKXXgvp3">OpenReview</a> · <a href="https://openreview.net/pdf?id=ocLKXXgvp3">PDF</a></span>
+        </div>
+      </li>
+    </ol>
+    <div class="nav">
+      <a href="../../../index.html#icml-papers">Back to ICML paper index</a>
+      <span></span>
+      <a href="icml2026_papers_issue_deep_rl.html">Next issue</a>
+    </div>
+  </main>
+</body>
+</html>

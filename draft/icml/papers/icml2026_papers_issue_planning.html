@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ICML 2026 RL Papers - Planning</title>
+  <style>
+    body { margin: 0; background: #f3efe6; color: #1a1a1a; font-family: Georgia, "Times New Roman", Times, serif; line-height: 1.5; }
+    main { max-width: 980px; margin: 0 auto; padding: 44px 24px 72px; }
+    h1 { font-size: 42px; line-height: 1.1; margin: 0 0 8px; font-weight: normal; }
+    h2 { font-size: 22px; line-height: 1.25; margin: 0 0 30px; font-weight: normal; color: #5b5b5b; }
+    a { color: #8a3324; text-decoration: none; border-bottom: 1px solid #8a3324; }
+    .meta { font-family: "Courier New", Courier, monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #5b5b5b; margin-bottom: 18px; }
+    .paper-list { list-style: none; margin: 0; padding: 0; }
+    .paper-list li { border-top: 1px solid #d8d2c1; display: grid; grid-template-columns: 48px 1fr; gap: 18px; padding: 16px 0; }
+    .paper-num { color: #8a3324; font-family: "Courier New", Courier, monospace; font-size: 13px; letter-spacing: 1px; padding-top: 3px; }
+    .authors, .abstract, .paper-meta { display: block; color: #5b5b5b; font-size: 14px; margin-top: 4px; }
+    .abstract { color: #2f2f2f; font-size: 15px; line-height: 1.45; margin-top: 8px; }
+    .paper-meta { font-family: "Courier New", Courier, monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
+    .nav { display: flex; justify-content: space-between; gap: 16px; margin-top: 36px; }
+    @media (max-width: 640px) {
+      h1 { font-size: 32px; }
+      .paper-list li { grid-template-columns: 1fr; gap: 6px; }
+      .nav { display: block; }
+      .nav a { display: inline-block; margin: 8px 14px 0 0; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="meta">The Policy Gradient · ICML 2026 RL Papers</div>
+    <h1>ICML Paper Issue - Planning</h1>
+    <h2>11 papers · Reinforcement Learning-&gt;Planning</h2>
+    <ol class="paper-list">
+      <li>
+        <span class="paper-num">01</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62821">Compositional Planning with Jumpy World Models</a>
+          <span class="authors">Jesse Farebrother, Matteo Pirotta, Andrea Tirinzoni, Marc Bellemare, Alessandro Lazaric, Ahmed Touati</span>
+          <span class="abstract">The ability to plan with temporal abstractions is central to intelligent decision-making. Rather than reasoning over primitive actions, we study agents that compose pre-trained policies as temporally extended actions, enabling solutions to complex tasks that...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Planning · <a href="https://icml.cc/virtual/2026/poster/62821">ICML</a> · <a href="https://openreview.net/forum?id=cwztmjMQ77">OpenReview</a> · <a href="https://openreview.net/pdf?id=cwztmjMQ77">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">02</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63244">Dream-MPC: Gradient-Based Model Predictive Control with Latent Imagination</a>
+          <span class="authors">Jonathan Spieler, Sven Behnke</span>
+          <span class="abstract">State-of-the-art model-based Reinforcement Learning (RL) approaches either use gradient-free, population-based methods for planning, learned policy networks, or a combination of policy networks and planning. Hybrid approaches that combine Model Predictive...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Planning · <a href="https://icml.cc/virtual/2026/poster/63244">ICML</a> · <a href="https://openreview.net/forum?id=Ym6ud8Psx1">OpenReview</a> · <a href="https://openreview.net/pdf?id=Ym6ud8Psx1">PDF</a> · <a href="https://dream-mpc.github.io">Project</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">03</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65400">Efficient Test-time Inference for Generative Planning Models with OCL Search</a>
+          <span class="authors">Robert Gieselmann, Mihai Samson, Federico Pecora, Jeremy Wyatt</span>
+          <span class="abstract">Generative models have emerged as a powerful paradigm for AI planning, yet their performance remains constrained by training data distribution. One approach is to improve generated solutions during inference by scaling test-time compute. A more efficient...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Planning · <a href="https://icml.cc/virtual/2026/poster/65400">ICML</a> · <a href="https://openreview.net/forum?id=E1zQUGzfOZ">OpenReview</a> · <a href="https://openreview.net/pdf?id=E1zQUGzfOZ">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">04</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64058">HiPER: Hierarchical Plan–Execute RL for Multi-Turn LLM Agents</a>
+          <span class="authors">Jiangweizhi Peng, Yuanxin Liu, Ruida Zhou, Charles Fleming, Zhaoran Wang, et al. (7 authors)</span>
+          <span class="abstract">Training LLMs as interactive agents for multi-turn decision-making remains challenging, particularly in long-horizon tasks with sparse and delayed rewards, where agents must execute extended sequences of actions before receiving meaningful feedback. Most...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Planning · <a href="https://icml.cc/virtual/2026/poster/64058">ICML</a> · <a href="https://openreview.net/forum?id=RJWQcgd3hX">OpenReview</a> · <a href="https://openreview.net/pdf?id=RJWQcgd3hX">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">05</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/66153">Laplacian Representations for Decision-Time Planning</a>
+          <span class="authors">Dikshant Shehmar, Matthew Schlegel, Matthew Taylor, Marlos C. Machado</span>
+          <span class="abstract">Planning with a learned model remains a key challenge in model-based reinforcement learning~(RL). In decision-time planning, state representations are critical as they must support local cost computation while preserving long-horizon structure. In this...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Planning · <a href="https://icml.cc/virtual/2026/poster/66153">ICML</a> · <a href="https://openreview.net/forum?id=6JwkAlGLjT">OpenReview</a> · <a href="https://openreview.net/pdf?id=6JwkAlGLjT">PDF</a> · <a href="https://dikshuy.github.io/ALPS/">Project</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">06</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62268">Multi-view Consistent Latent Action Learning for World Modeling and Control</a>
+          <span class="authors">Shenghua Wan, Xiaohai Hu, Xunlan Zhou, lei yuan, Le Gan, De-Chuan Zhan</span>
+          <span class="abstract">The scalability of world models is currently bottlenecked by the scarcity of action annotations. While self-supervised latent action learning offers a potential solution, existing single-view paradigms—relying on information bottlenecks or Vector...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Planning · <a href="https://icml.cc/virtual/2026/poster/62268">ICML</a> · <a href="https://openreview.net/forum?id=i8Ob0TMeMP">OpenReview</a> · <a href="https://openreview.net/pdf?id=i8Ob0TMeMP">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">07</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64851">Parallel Stochastic Gradient-Based Planning for World Models</a>
+          <span class="authors">Michael Psenka, Michael Rabbat, Aditi Krishnapriyan, Yann LeCun, Amir Bar</span>
+          <span class="abstract">World models simulate environment dynamics from raw sensory inputs like video. However, using them for planning can be challenging due to the vast and unstructured search space. We propose a robust and highly parallelizable planner that leverages the...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Planning · <a href="https://icml.cc/virtual/2026/poster/64851">ICML</a> · <a href="https://openreview.net/forum?id=J8lkAoQeYK">OpenReview</a> · <a href="https://openreview.net/pdf?id=J8lkAoQeYK">PDF</a> · <a href="https://www.michaelpsenka.io/grasp">Project</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">08</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/67244">Position: Make Planning Research Rigorous Again!</a>
+          <span class="authors">Michael Katz, Harsha Kokel, Christian Muise, Shirin Sohrabi, Sarath Sreedharan</span>
+          <span class="abstract">In over sixty years since its inception, the field of planning has made significant contributions to both the theory and practice of building planning software that can solve a never-before-seen planning problem. This was done through established practices...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Planning · <a href="https://icml.cc/virtual/2026/poster/67244">ICML</a> · <a href="https://openreview.net/forum?id=1DIUGkYfvY">OpenReview</a> · <a href="https://openreview.net/pdf?id=1DIUGkYfvY">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">09</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/66710">Structure-Induced Information for Rerooting Levin Tree Search</a>
+          <span class="authors">Jake Tuero, Michael Buro, Levi Lelis, Laurent Orseau</span>
+          <span class="abstract">Subgoal-based policy tree search, which uses a policy to guide search, is effective for complex single-agent deterministic problems but often relies on explicit subgoal generation that can incur substantial overhead and hinders scalability. In this paper, we...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Planning · <a href="https://icml.cc/virtual/2026/poster/66710">ICML</a> · <a href="https://openreview.net/forum?id=195EfI9ae5">OpenReview</a> · <a href="https://openreview.net/pdf?id=195EfI9ae5">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">10</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61477">Towards Parameter-Free Temporal Difference Learning</a>
+          <span class="authors">Yunxiang LI, Mark Schmidt, Reza Babanezhad, Sharan Vaswani</span>
+          <span class="abstract">Temporal difference (TD) learning is a fundamental algorithm for estimating value functions in reinforcement learning. Recent finite-time analyses of TD with linear function approximation quantify its theoretical convergence rate. However, they often require...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Planning · <a href="https://icml.cc/virtual/2026/poster/61477">ICML</a> · <a href="https://openreview.net/forum?id=ppIhZgFCTI">OpenReview</a> · <a href="https://openreview.net/pdf?id=ppIhZgFCTI">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">11</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61284">Twice Sequential Monte Carlo for Tree Search</a>
+          <span class="authors">Yaniv Oren, Joery de Vries, Pascal Van der Vaart, Matthijs T. J. Spaan, Wendelin Boehmer</span>
+          <span class="abstract">Model-based reinforcement learning (RL) methods that leverage search are responsible for many milestone breakthroughs in RL. Sequential Monte Carlo (SMC) recently emerged as an alternative to the Monte Carlo Tree Search (MCTS) algorithm which drove these...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Planning · <a href="https://icml.cc/virtual/2026/poster/61284">ICML</a> · <a href="https://openreview.net/forum?id=rmWRfKECEC">OpenReview</a> · <a href="https://openreview.net/pdf?id=rmWRfKECEC">PDF</a></span>
+        </div>
+      </li>
+    </ol>
+    <div class="nav">
+      <a href="../../../index.html#icml-papers">Back to ICML paper index</a>
+      <a href="icml2026_papers_issue_online.html">Previous issue</a>
+      <a href="icml2026_papers_issue_policy_search.html">Next issue</a>
+    </div>
+  </main>
+</body>
+</html>

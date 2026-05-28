@@ -5,9 +5,9 @@ from __future__ import annotations
 
 import html
 import json
-import math
 import re
 import urllib.request
+from collections import defaultdict
 from pathlib import Path
 
 from generate_iclr_poster_issues import ORAL_ISSUES
@@ -19,10 +19,20 @@ ICML_DIR = DRAFT_DIR / "icml" / "papers"
 ICML_DATA_PATH = DRAFT_DIR / "icml2026_papers.json"
 ICML_INDEX_PATH = DRAFT_DIR / "icml2026_paper_drafts_index.md"
 SITE_INDEX_PATH = ROOT / "index.html"
-BATCH_SIZE = 50
 ICML_PAPERS_URL = "https://icml.cc/static/virtual/data/icml-2026-orals-posters.json"
 ICML_ABSTRACTS_URL = "https://icml.cc/static/virtual/data/icml-2026-abstracts.json"
 ICLR_POSTER_DIR = DRAFT_DIR / "posters"
+RL_TOPIC_PREFIX = "Reinforcement Learning->"
+TOPIC_ORDER = [
+    "Batch/Offline",
+    "Deep RL",
+    "Everything Else",
+    "Inverse",
+    "Multi-agent",
+    "Online",
+    "Planning",
+    "Policy Search",
+]
 
 
 def esc(value: str) -> str:
@@ -78,6 +88,18 @@ def external_label(url: str) -> str:
     return "Project"
 
 
+def topic_name(topic: str) -> str:
+    if topic.startswith(RL_TOPIC_PREFIX):
+        return topic[len(RL_TOPIC_PREFIX) :]
+    return topic
+
+
+def slugify(value: str) -> str:
+    value = value.lower().replace("/", " ")
+    value = re.sub(r"[^a-z0-9]+", "_", value)
+    return value.strip("_")
+
+
 def fetch_icml_papers() -> list[dict]:
     data = fetch_json(ICML_PAPERS_URL)
     abstracts = fetch_json(ICML_ABSTRACTS_URL)
@@ -87,7 +109,7 @@ def fetch_icml_papers() -> list[dict]:
         if item.get("eventtype") != "Poster":
             continue
         topic = clean_text(item.get("topic") or "")
-        if not topic.startswith("Reinforcement Learning->"):
+        if not topic.startswith(RL_TOPIC_PREFIX):
             continue
         title = clean_text(item.get("name") or "")
         if not title:
@@ -120,7 +142,8 @@ def fetch_icml_papers() -> list[dict]:
     return papers
 
 
-def render_icml_issue(issue: int, total: int, papers: list[dict]) -> str:
+def render_icml_issue(issue: dict, prev_issue: dict | None, next_issue: dict | None) -> str:
+    papers = issue["papers"]
     items = []
     for index, paper in enumerate(papers, start=1):
         links = [f'<a href="{esc(paper["url"])}">ICML</a>']
@@ -146,7 +169,7 @@ def render_icml_issue(issue: int, total: int, papers: list[dict]) -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ICML 2026 RL Papers - Issue {issue:03d}</title>
+  <title>ICML 2026 RL Papers - {esc(issue["label"])}</title>
   <style>
     body {{ margin: 0; background: #f3efe6; color: #1a1a1a; font-family: Georgia, "Times New Roman", Times, serif; line-height: 1.5; }}
     main {{ max-width: 980px; margin: 0 auto; padding: 44px 24px 72px; }}
@@ -172,20 +195,42 @@ def render_icml_issue(issue: int, total: int, papers: list[dict]) -> str:
 <body>
   <main>
     <div class="meta">The Policy Gradient · ICML 2026 RL Papers</div>
-    <h1>ICML Paper Issue {issue:03d}</h1>
-    <h2>{len(papers)} reinforcement-learning-related papers · issue {issue} of {total}</h2>
+    <h1>ICML Paper Issue - {esc(issue["label"])}</h1>
+    <h2>{len(papers)} papers · {esc(issue["topic"])}</h2>
     <ol class="paper-list">
 {chr(10).join(items)}
     </ol>
     <div class="nav">
       <a href="../../../index.html#icml-papers">Back to ICML paper index</a>
-      {"<a href=\"icml2026_papers_issue%03d.html\">Previous issue</a>" % (issue - 1) if issue > 1 else "<span></span>"}
-      {"<a href=\"icml2026_papers_issue%03d.html\">Next issue</a>" % (issue + 1) if issue < total else "<span></span>"}
+      {f'<a href="{esc(prev_issue["filename"])}">Previous issue</a>' if prev_issue else "<span></span>"}
+      {f'<a href="{esc(next_issue["filename"])}">Next issue</a>' if next_issue else "<span></span>"}
     </div>
   </main>
 </body>
 </html>
 """
+
+
+def build_topic_issues(papers: list[dict]) -> list[dict]:
+    grouped = defaultdict(list)
+    for paper in papers:
+        grouped[topic_name(paper["topic"])].append(paper)
+
+    names = [name for name in TOPIC_ORDER if name in grouped]
+    names.extend(sorted(name for name in grouped if name not in TOPIC_ORDER))
+    issues = []
+    for name in names:
+        topic_papers = sorted(grouped[name], key=lambda paper: paper["title"].casefold())
+        filename = f"icml2026_papers_issue_{slugify(name)}.html"
+        issues.append(
+            {
+                "label": name,
+                "topic": RL_TOPIC_PREFIX + name,
+                "filename": filename,
+                "papers": topic_papers,
+            }
+        )
+    return issues
 
 
 def count_iclr_posters() -> int:
@@ -195,7 +240,7 @@ def count_iclr_posters() -> int:
     return 0
 
 
-def render_site_index(total_icml_issues: int, icml_count: int) -> str:
+def render_site_index(icml_issues: list[dict], icml_count: int) -> str:
     oral_items = "\n".join(
         f"""        <li>
           <a href="{esc(href)}">{esc(title)}</a>
@@ -209,8 +254,11 @@ def render_site_index(total_icml_issues: int, icml_count: int) -> str:
         for index, path in enumerate(poster_files, start=1)
     )
     icml_items = "\n".join(
-        f"""        <li><a href="draft/icml/papers/icml2026_papers_issue{issue:03d}.html">ICML Paper Issue {issue:03d}</a></li>"""
-        for issue in range(1, total_icml_issues + 1)
+        f"""        <li>
+          <a href="draft/icml/papers/{esc(issue["filename"])}">ICML Paper Issue - {esc(issue["label"])}</a>
+          <span class="issue-summary">{len(issue["papers"])} papers</span>
+        </li>"""
+        for issue in icml_issues
     )
     poster_count = count_iclr_posters()
     return f"""<!doctype html>
@@ -250,7 +298,7 @@ def render_site_index(total_icml_issues: int, icml_count: int) -> str:
 <body>
   <div class="page">
     <aside>
-      <div class="meta">Current issue: 10 oral drafts · {len(poster_files)} ICLR RL poster drafts · {total_icml_issues} ICML RL paper drafts</div>
+      <div class="meta">Current issue: 10 oral drafts · {len(poster_files)} ICLR RL poster drafts · {len(icml_issues)} ICML RL topic drafts</div>
       <h1>The Policy Gradient</h1>
       <ul class="tabs">
         <li><a href="#orals">ICLR 2026 Orals</a></li>
@@ -274,7 +322,7 @@ def render_site_index(total_icml_issues: int, icml_count: int) -> str:
       </section>
       <section id="icml-papers">
         <h3>ICML 2026 Papers</h3>
-        <p class="section-note">{icml_count} reinforcement-learning-related ICML papers, batched 50 per issue.</p>
+        <p class="section-note">{icml_count} reinforcement-learning-related ICML papers, grouped by official RL topic.</p>
         <ol class="poster-grid">
 {icml_items}
         </ol>
@@ -292,7 +340,7 @@ def main() -> None:
     rl_papers = fetch_icml_papers()
     ICML_DATA_PATH.write_text(json.dumps(rl_papers, indent=2) + "\n")
 
-    total_issues = math.ceil(len(rl_papers) / BATCH_SIZE)
+    issues = build_topic_issues(rl_papers)
     for old_file in ICML_DIR.glob("icml2026_papers_issue*.html"):
         old_file.unlink()
     index_lines = [
@@ -300,19 +348,21 @@ def main() -> None:
         "",
         "- Source: ICML virtual site official JSON topic metadata",
         f"- RL-topic papers kept: {len(rl_papers)}",
-        f"- Issue size: {BATCH_SIZE}",
+        "- Issue grouping: one issue per official Reinforcement Learning topic",
         "",
     ]
-    for issue in range(1, total_issues + 1):
-        chunk = rl_papers[(issue - 1) * BATCH_SIZE : issue * BATCH_SIZE]
-        filename = f"icml2026_papers_issue{issue:03d}.html"
-        (ICML_DIR / filename).write_text(render_icml_issue(issue, total_issues, chunk))
-        index_lines.append(f"- [Issue {issue:03d}](icml/papers/{filename}) - {len(chunk)} papers")
+    for index, issue in enumerate(issues):
+        prev_issue = issues[index - 1] if index > 0 else None
+        next_issue = issues[index + 1] if index + 1 < len(issues) else None
+        (ICML_DIR / issue["filename"]).write_text(render_icml_issue(issue, prev_issue, next_issue))
+        index_lines.append(
+            f"- [ICML Paper Issue - {issue['label']}](icml/papers/{issue['filename']}) - {len(issue['papers'])} papers"
+        )
 
     ICML_INDEX_PATH.write_text("\n".join(index_lines) + "\n")
-    SITE_INDEX_PATH.write_text(render_site_index(total_issues, len(rl_papers)))
+    SITE_INDEX_PATH.write_text(render_site_index(issues, len(rl_papers)))
     print(f"Kept {len(rl_papers)} ICML RL-topic papers")
-    print(f"Wrote {total_issues} ICML issue files")
+    print(f"Wrote {len(issues)} ICML topic issue files")
 
 
 if __name__ == "__main__":

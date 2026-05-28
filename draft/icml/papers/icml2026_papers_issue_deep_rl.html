@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ICML 2026 RL Papers - Deep RL</title>
+  <style>
+    body { margin: 0; background: #f3efe6; color: #1a1a1a; font-family: Georgia, "Times New Roman", Times, serif; line-height: 1.5; }
+    main { max-width: 980px; margin: 0 auto; padding: 44px 24px 72px; }
+    h1 { font-size: 42px; line-height: 1.1; margin: 0 0 8px; font-weight: normal; }
+    h2 { font-size: 22px; line-height: 1.25; margin: 0 0 30px; font-weight: normal; color: #5b5b5b; }
+    a { color: #8a3324; text-decoration: none; border-bottom: 1px solid #8a3324; }
+    .meta { font-family: "Courier New", Courier, monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #5b5b5b; margin-bottom: 18px; }
+    .paper-list { list-style: none; margin: 0; padding: 0; }
+    .paper-list li { border-top: 1px solid #d8d2c1; display: grid; grid-template-columns: 48px 1fr; gap: 18px; padding: 16px 0; }
+    .paper-num { color: #8a3324; font-family: "Courier New", Courier, monospace; font-size: 13px; letter-spacing: 1px; padding-top: 3px; }
+    .authors, .abstract, .paper-meta { display: block; color: #5b5b5b; font-size: 14px; margin-top: 4px; }
+    .abstract { color: #2f2f2f; font-size: 15px; line-height: 1.45; margin-top: 8px; }
+    .paper-meta { font-family: "Courier New", Courier, monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
+    .nav { display: flex; justify-content: space-between; gap: 16px; margin-top: 36px; }
+    @media (max-width: 640px) {
+      h1 { font-size: 32px; }
+      .paper-list li { grid-template-columns: 1fr; gap: 6px; }
+      .nav { display: block; }
+      .nav a { display: inline-block; margin: 8px 14px 0 0; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="meta">The Policy Gradient · ICML 2026 RL Papers</div>
+    <h1>ICML Paper Issue - Deep RL</h1>
+    <h2>37 papers · Reinforcement Learning-&gt;Deep RL</h2>
+    <ol class="paper-list">
+      <li>
+        <span class="paper-num">01</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62964">Accelerating Q-learning through Efficient Value-sharing across Actions</a>
+          <span class="authors">Prabhat Nagarajan, Brett Daley, Martha White, Marlos C. Machado</span>
+          <span class="abstract">Learning action-values efficiently is central to reinforcement learning (RL), as they underpin many control algorithms such as Q-learning. However, action-value learning can be slow, requiring many updates to move values from their initialization, typically...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/62964">ICML</a> · <a href="https://openreview.net/forum?id=bQXQa5NDpH">OpenReview</a> · <a href="https://openreview.net/pdf?id=bQXQa5NDpH">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">02</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64704">Adaptive Policy Backbone via Shared Network</a>
+          <span class="authors">Bumgeun Park, Donghwan Lee</span>
+          <span class="abstract">Reinforcement learning (RL) has achieved impressive results across various domains, yet the resulting policies often fail to generalize beyond the specific tasks encountered during training. This lack of robustness limits their deployment in real-world...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/64704">ICML</a> · <a href="https://openreview.net/forum?id=KhAUoBv0dJ">OpenReview</a> · <a href="https://openreview.net/pdf?id=KhAUoBv0dJ">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">03</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64172">ASAP: Exploiting the Satisficing Generalization Edge in Neural Combinatorial Optimization</a>
+          <span class="authors">Han Fang, Paul Weng, Yutong Ban</span>
+          <span class="abstract">Deep Reinforcement Learning (DRL) has emerged as a promising approach for solving Combinatorial Optimization (CO) problems, such as the 3D Bin Packing Problem (3D-BPP), Traveling Salesman Problem (TSP), or Vehicle Routing Problem (VRP), but these neural...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/64172">ICML</a> · <a href="https://openreview.net/forum?id=QI139RyR6I">OpenReview</a> · <a href="https://openreview.net/pdf?id=QI139RyR6I">PDF</a> · <a href="https://kasumigaoka-utaha.github.io/asap-web/">Project</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">04</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65423">Autoregressive Direct Preference Optimization</a>
+          <span class="authors">Masanari Oi, Mahiro Ukai, Masahiro Kaneko, Naoaki Okazaki, Nakamasa Inoue</span>
+          <span class="abstract">Direct preference optimization (DPO) has emerged as a promising approach for aligning large language models (LLMs) with human preferences. However, the widespread reliance on the response-level Bradley-Terry (BT) model may limit its full potential, as the...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/65423">ICML</a> · <a href="https://openreview.net/forum?id=DmeFAFUO6f">OpenReview</a> · <a href="https://openreview.net/pdf?id=DmeFAFUO6f">PDF</a> · <a href="https://stjohn2007.github.io/ADPO_project/">Project</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">05</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65271">CoRe: Combined Rewards with Vision-Language Model Feedback for Preference-Aligned Reinforcement Learning</a>
+          <span class="authors">Hexian Ni, Tao Lu, Yinghao Cai</span>
+          <span class="abstract">Reward design remains a central challenge in reinforcement learning (RL). Hand-crafted rewards are often difficult to specify and may lead to suboptimal policies, while learned rewards from preferences can suffer from inefficiency and unstable training...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/65271">ICML</a> · <a href="https://openreview.net/forum?id=FC2LEVsvP5">OpenReview</a> · <a href="https://openreview.net/pdf?id=FC2LEVsvP5">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">06</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/66410">CSPO: Constraint-Sensitive Policy Optimization for Safe Reinforcement Learning</a>
+          <span class="authors">Ayoub Belouadah, Sylvain Kubler, YVES LE TRAON</span>
+          <span class="abstract">Safe reinforcement learning (Safe RL) aims to maximize expected return while satisfying safety constraints, typically modeled as constrained Markov decision processes. While primal-dual methods scale well to deep RL, they often suffer from delayed constraint...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/66410">ICML</a> · <a href="https://openreview.net/forum?id=3ySR3TCMRP">OpenReview</a> · <a href="https://openreview.net/pdf?id=3ySR3TCMRP">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">07</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63694">DF-ExpEnse: Diffusion Filtered Exploration for Sample Efficient Finetuning</a>
+          <span class="authors">Calvin Luo, Chen Sun, shuran song</span>
+          <span class="abstract">A promising recipe towards intelligent robotic decision-making is the finetuning of pretrained generative control policies, which can summarize offline experience effectively through behavior cloning, with reinforcement learning techniques to adapt them to...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/63694">ICML</a> · <a href="https://openreview.net/forum?id=UZF4ssK12K">OpenReview</a> · <a href="https://openreview.net/pdf?id=UZF4ssK12K">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">08</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64018">Direct Flow Q-Learning</a>
+          <span class="authors">Shicheng Cao, Jingrui Jia, Wenyu Li, Feng Duan, Tao Zhang, Shengbo Li</span>
+          <span class="abstract">Flow Matching shows great promise in offline reinforcement learning (RL), yet optimizing these iterative policies via Backpropagation Through Time (BPTT) is unstable. While prevailing paradigms circumvent this by distilling multi-step flows into single-step...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/64018">ICML</a> · <a href="https://openreview.net/forum?id=RdkOaK4q6p">OpenReview</a> · <a href="https://openreview.net/pdf?id=RdkOaK4q6p">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">09</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62759">Dreaming in Code for Curriculum Learning in Open-Ended Worlds</a>
+          <span class="authors">Konstantinos Mitsides, Maxence Faldor, Antoine Cully</span>
+          <span class="abstract">Open-ended learning frames intelligence as emerging from continual interaction with an ever-expanding space of environments. While recent advances have utilized foundation models to programmatically generate diverse environments, these approaches often focus...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/62759">ICML</a> · <a href="https://openreview.net/forum?id=dctdzmYeej">OpenReview</a> · <a href="https://openreview.net/pdf?id=dctdzmYeej">PDF</a> · <a href="https://konstantinosmitsides.github.io/dreaming-in-code">Project</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">10</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63495">From Static Constraints to Dynamic Adaptation: Sample-Level Constraint Release for Offline-to-Online Reinforcement Learning</a>
+          <span class="authors">Lipeng Zu, YU QIAN, Shayok Chakraborty, Xiaonan Zhang</span>
+          <span class="abstract">Offline-to-online reinforcement learning (O2O RL) faces a central challenge between retaining offline conservatism and adapting to online feedback under distribution shift. This challenge arises because data behavior evolves during fine-tuning, rendering...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/63495">ICML</a> · <a href="https://openreview.net/forum?id=WgIwr2k861">OpenReview</a> · <a href="https://openreview.net/pdf?id=WgIwr2k861">PDF</a> · <a href="https://github.com/lpzu/DARE">Code</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">11</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/66113">Identifiable Token Correspondence for World Models</a>
+          <span class="authors">Youngin Kim, Ray Sun, Inho Kim, Bumsoo Park, Hyun Oh Song</span>
+          <span class="abstract">Transformer-based world models have shown strong performance in visual reinforcement learning, but often suffer from temporal inconsistency in long-horizon rollouts, including object duplication, disappearance, and transmutation. A key reason is that most...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/66113">ICML</a> · <a href="https://openreview.net/forum?id=6vKlayY1tV">OpenReview</a> · <a href="https://openreview.net/pdf?id=6vKlayY1tV">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">12</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/66074">Informed Asymmetric Actor-Critic: Leveraging Privileged Signals Beyond Full-State Access</a>
+          <span class="authors">Daniel Ebi, Gaspard Lambrechts, Damien Ernst, Klemens Böhm</span>
+          <span class="abstract">Asymmetric actor-critic methods are widely used in partially observable reinforcement learning, but typically assume full state observability to condition the critic during training, which is often unrealistic in practice. We introduce the informed...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/66074">ICML</a> · <a href="https://openreview.net/forum?id=7G43VVT4SI">OpenReview</a> · <a href="https://openreview.net/pdf?id=7G43VVT4SI">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">13</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/60733">Learning Structured Reasoning via Tractable Trajectory Control</a>
+          <span class="authors">Po-Nien Kung, Zhen Yang, Jeffrey Luo, Cheng-Fu Yang, Haikang Deng, et al. (10 authors)</span>
+          <span class="abstract">Large language models can exhibit emergent reasoning behaviors, often manifested as recurring lexical patterns (e.g., “wait,” indicating verification). However, complex reasoning trajectories remain sparse in unconstrained sampling, and standard RL often...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/60733">ICML</a> · <a href="https://openreview.net/forum?id=x6J7va4BYz">OpenReview</a> · <a href="https://openreview.net/pdf?id=x6J7va4BYz">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">14</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65993">Mean Flow Policy Optimization</a>
+          <span class="authors">Xiaoyi Dong, Xi Zhang, Jian Cheng</span>
+          <span class="abstract">Diffusion models have recently emerged as expressive policy representations for online reinforcement learning (RL). However, their iterative generative processes introduce substantial training and inference overhead. To overcome this limitation, we propose...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/65993">ICML</a> · <a href="https://openreview.net/forum?id=88H3V90Wzo">OpenReview</a> · <a href="https://openreview.net/pdf?id=88H3V90Wzo">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">15</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64495">Mind Dreamer: Untethering Imagination via Active Counterfactual Reasoning on Latent Manifolds</a>
+          <span class="authors">Shaojun Xu, Xiaoling Zhou, Yihan Lin, Yapeng Meng, Xinglong Ji, et al. (7 authors)</span>
+          <span class="abstract">Model-Based Reinforcement Learning (MBRL) leverages latent imagination for sample efficiency, yet remains constrained by **Historical Tethering**: imagination is typically initialized from observed states. This creates a learning asymmetry, where the world...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/64495">ICML</a> · <a href="https://openreview.net/forum?id=N05ha5nVEU">OpenReview</a> · <a href="https://openreview.net/pdf?id=N05ha5nVEU">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">16</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61963">Mind the budget: Accelerating Deep Reinforcement Learning using Early Exit Neural Networks</a>
+          <span class="authors">Julien Brosseit, Jasper Hoffmann, Joschka Boedecker</span>
+          <span class="abstract">Early exit neural networks, which adapt computation to input complexity, have proven effective in supervised learning but remain largely unexplored in deep reinforcement learning (DRL). In this paper, we propose the use of Budgeted EXit Actor (BEXA), which...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/61963">ICML</a> · <a href="https://openreview.net/forum?id=lFaF1Hq2kP">OpenReview</a> · <a href="https://openreview.net/pdf?id=lFaF1Hq2kP">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">17</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65186">Multi-timescale Reinforcement Learning by Value Reconstruction</a>
+          <span class="authors">Zhan Su, Peixi Peng, Xinyu Hu, Cong Li, Yisen Zhao, et al. (8 authors)</span>
+          <span class="abstract">Most reinforcement learning (RL) baselines maximize future cumulative rewards with a fixed single discount factor, which limits their performance in complex sequential decision-making tasks due to a failure to balance short-term objectives and long-term...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/65186">ICML</a> · <a href="https://openreview.net/forum?id=FzTGIdsHFP">OpenReview</a> · <a href="https://openreview.net/pdf?id=FzTGIdsHFP">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">18</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65963">PAMD: Structured Adaptive Distances for Bisimulation Representations in Visual Reinforcement Learning</a>
+          <span class="authors">Daegyeong Roh, Juho Bae, Han-Lim Choi</span>
+          <span class="abstract">Many visual reinforcement learning (RL) algorithms learn representations by matching latent distances to a behavioral distance induced by reward and transition similarity. In practice, the choice of the latent distance can strongly affect performance: using...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/65963">ICML</a> · <a href="https://openreview.net/forum?id=8RKz8AONGV">OpenReview</a> · <a href="https://openreview.net/pdf?id=8RKz8AONGV">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">19</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62693">Prioritized Model Experience Replay</a>
+          <span class="authors">Muxi Tao, jiangtao wen, Yuxing Han</span>
+          <span class="abstract">Model-based reinforcement learning (MBRL) improves sample efficiency by leveraging learned dynamics models, but often suffers from unstable training due to dynamics model learning mismatch: models are trained on data from historical policies while being...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/62693">ICML</a> · <a href="https://openreview.net/forum?id=eDPv55hTQ6">OpenReview</a> · <a href="https://openreview.net/pdf?id=eDPv55hTQ6">PDF</a> · <a href="https://pmer-icml2026.github.io/">Project</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">20</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62372">R2R2: Robust Representation for Intensive Experience Reuse via Redundancy Reduction in Self-Predictive Learning</a>
+          <span class="authors">Sanghyeob Song, Donghyeok Lee, Jinsik Kim, Sungroh Yoon</span>
+          <span class="abstract">For reinforcement learning in data-scarce domains like real-world robotics, intensive data reuse enhances efficiency but induces overfitting. While prior works focus on critic bias, representation-level instability in Self-Predictive Learning (SPL) under...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/62372">ICML</a> · <a href="https://openreview.net/forum?id=hCgb0FIoVa">OpenReview</a> · <a href="https://openreview.net/pdf?id=hCgb0FIoVa">PDF</a> · <a href="https://github.com/songsang7/R2R2">Code</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">21</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61606">Randomized Advantage Transformation (RAT): Computing Natural Policy Gradients via Direct Backpropagation</a>
+          <span class="authors">Mingfei Sun</span>
+          <span class="abstract">Natural policy gradients improve optimization by accounting for the geometry of distribution space, but their practical use is limited by the cost of estimating and inverting the Fisher matrix. We present Randomized Advantage Transformation (RAT), a method...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/61606">ICML</a> · <a href="https://openreview.net/forum?id=oVtiySvpXz">OpenReview</a> · <a href="https://openreview.net/pdf?id=oVtiySvpXz">PDF</a> · <a href="https://github.com/agent-lab/ICML2026-RAT">Code</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">22</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/66199">Return-Critic: Bridging Goal Discrepancy for Efficient Visual Reinforcement Learning</a>
+          <span class="authors">Ruyi Lu, Xuesong Wang, Hengrui Zhang, Yuhu Cheng</span>
+          <span class="abstract">Sample inefficiency remains a challenge in pixel-based visual reinforcement learning (RL), primarily due to ineffective state representation learning. While recent advances employ auxiliary tasks to improve representation learning, their representation goals...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/66199">ICML</a> · <a href="https://openreview.net/forum?id=5pQiAaDN7E">OpenReview</a> · <a href="https://openreview.net/pdf?id=5pQiAaDN7E">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">23</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65281">Revisiting Distribution Correction Estimation for Offline Imitation Learning with Suboptimal Dataset</a>
+          <span class="authors">Quang Anh PHAM, Tien Mai, Akshat Kumar</span>
+          <span class="abstract">Imitation Learning (IL) has demonstrated strong capabilities in learning high-quality policies from expert demonstrations for sequential decision-making tasks. Nonetheless, its effectiveness is significantly constrained in low-expert-data regimes. To...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/65281">ICML</a> · <a href="https://openreview.net/forum?id=F8QazeHrEc">OpenReview</a> · <a href="https://openreview.net/pdf?id=F8QazeHrEc">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">24</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61227">Revisiting Regularized Policy Optimization for Stable and Efficient Reinforcement Learning in Two-Player Games</a>
+          <span class="authors">Kazuki Ota, Takayuki Osa, Motoki Omura, Tatsuya Harada</span>
+          <span class="abstract">Two-player games such as board games have long been used as traditional benchmark for reinforcement learning. This work revisits a regularized policy optimization with reverse Kullback-Leibler divergence and entropy divergence and analyzes this combination...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/61227">ICML</a> · <a href="https://openreview.net/forum?id=sSQdICPJv1">OpenReview</a> · <a href="https://openreview.net/pdf?id=sSQdICPJv1">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">25</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61217">RN-D: Discretized Categorical Actors with Regularized Networks for On-Policy Reinforcement Learning</a>
+          <span class="authors">Yuexin Bian, Jie Feng, Tao Wang, Yijiang Li, Sicun Gao, Yuanyuan Shi</span>
+          <span class="abstract">On-policy deep reinforcement learning remains a dominant paradigm for continuous control, yet standard implementations rely on Gaussian actors and relatively shallow MLP policies, often leading to brittle optimization when gradients are noisy and policy...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/61217">ICML</a> · <a href="https://openreview.net/forum?id=saZwSnt3r9">OpenReview</a> · <a href="https://openreview.net/pdf?id=saZwSnt3r9">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">26</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61251">Robust In-Context Reinforcement Learning Under Reward Poisoning Attacks</a>
+          <span class="authors">Paulius Sasnauskas, Yiğit Yalın, Goran Radanovic</span>
+          <span class="abstract">We study the corruption-robustness of in-context reinforcement learning (ICRL), focusing on the Decision-Pretrained Transformer (DPT, Lee et al., 2023). To address the challenge of reward poisoning attacks targeting the DPT, we propose a novel adversarial...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/61251">ICML</a> · <a href="https://openreview.net/forum?id=s8AbIVtmUg">OpenReview</a> · <a href="https://openreview.net/pdf?id=s8AbIVtmUg">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">27</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61906">Safe In-Context Reinforcement Learning</a>
+          <span class="authors">Amir Moeini, Minjae Kwon, Alper Bozkurt, Yuichi Motai, Rohan Chandra, et al. (7 authors)</span>
+          <span class="abstract">In-context reinforcement learning (ICRL) is an emerging RL paradigm where an agent, after pretraining, can adapt to out-of-distribution test tasks without any parameter updates, instead relying on an expanding context of interaction history. While ICRL has...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/61906">ICML</a> · <a href="https://openreview.net/forum?id=lm4PZa4kjZ">OpenReview</a> · <a href="https://openreview.net/pdf?id=lm4PZa4kjZ">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">28</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62037">Safety Generalization Under Distribution Shift in Safe Reinforcement Learning: A Diabetes Testbed</a>
+          <span class="authors">Minjae Kwon, Josephine Lamp, Lu Feng</span>
+          <span class="abstract">Safe Reinforcement Learning (RL) algorithms are typically evaluated under fixed training conditions. We investigate whether training-time safety guarantees transfer to deployment under distribution shift, using diabetes management as a safety-critical...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/62037">ICML</a> · <a href="https://openreview.net/forum?id=kSUGLBHd0T">OpenReview</a> · <a href="https://openreview.net/pdf?id=kSUGLBHd0T">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">29</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62337">SPHERE: Mitigating the Loss of Spectral Plasticity in Mixture-of-Experts for Deep Reinforcement Learning</a>
+          <span class="authors">Lirui Luo, Guoxi Zhang, Hongming Xu, Cong Fang, Qing Li</span>
+          <span class="abstract">In DRL, an agent is trained from a stream of experience. In a continual learning setting, such agents can suffer from \emph{plasticity loss}: their ability to learn new skills from new experiences diminishes over training. Recently, Mixture-of-Experts (MoE)...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/62337">ICML</a> · <a href="https://openreview.net/forum?id=hXyv6xeHkO">OpenReview</a> · <a href="https://openreview.net/pdf?id=hXyv6xeHkO">PDF</a> · <a href="https://sphere-rl.github.io/">Project</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">30</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62099">Stabilizing PPO via Latent-Space Regularization and KDE-Driven Exploration</a>
+          <span class="authors">Meiyu Du, Yuqing Gao, Wei Wang</span>
+          <span class="abstract">Proximal Policy Optimization (PPO) is widely used in continuous-control tasks, yet its performance is often highly sensitive to training dynamics when neural networks approximate the policy and value functions. This paper introduces SPPO, a drop-in...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/62099">ICML</a> · <a href="https://openreview.net/forum?id=jojs3GoyHq">OpenReview</a> · <a href="https://openreview.net/pdf?id=jojs3GoyHq">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">31</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63664">Stabilizing the Q-Gradient Field for Policy Smoothness in Actor-Critic Methods</a>
+          <span class="authors">Jeong Woon Lee, Kyoleen Kwak, Daeho Kim, Hyoseok Hwang</span>
+          <span class="abstract">Policies learned via continuous actor-critic methods often exhibit erratic, high-frequency oscillations, making them unsuitable for physical deployment. Current approaches attempt to enforce smoothness by directly regularizing the policy&#x27;s output. We argue...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/63664">ICML</a> · <a href="https://openreview.net/forum?id=UpA00uD6Ek">OpenReview</a> · <a href="https://openreview.net/pdf?id=UpA00uD6Ek">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">32</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62436">Stable Deep Reinforcement Learning via Isotropic Gaussian Representations</a>
+          <span class="authors">Ali Saheb pasand, Johan Obando-Ceron, Aaron Courville, Pouya Bashivan, Pablo Samuel Castro</span>
+          <span class="abstract">Deep reinforcement learning systems often suffer from unstable training dynamics due to non-stationarity, where learning objectives and data distributions evolve over time. We show that under non-stationary targets, isotropic Gaussian embeddings are provably...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/62436">ICML</a> · <a href="https://openreview.net/forum?id=gc7Gg18ejz">OpenReview</a> · <a href="https://openreview.net/pdf?id=gc7Gg18ejz">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">33</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65299">Task-Aware Exploration via a Predictive Bisimulation Metric</a>
+          <span class="authors">Dayang Liang, Ruihan LIU, Lipeng Wan, Yunlong Liu, Bo An</span>
+          <span class="abstract">Accelerating exploration in visual reinforcement learning under sparse rewards remains challenging due to the substantial task-irrelevant variations. Despite advances in intrinsic exploration, many methods either assume access to low-dimensional states or...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/65299">ICML</a> · <a href="https://openreview.net/forum?id=EyxlSrJWT5">OpenReview</a> · <a href="https://openreview.net/pdf?id=EyxlSrJWT5">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">34</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61935">TraCeS: Learning Per-Timestep Constraint-Violation Credit from Sparse Trajectory-Level Labels</a>
+          <span class="authors">Siow Meng Low, Ze Gong, Akshat Kumar</span>
+          <span class="abstract">Ensuring safe behavior in reinforcement learning (RL) is challenging when safety constraints are implicit and cannot be densely measured. In many settings, supervision is limited to coarse approvals or rejections of whole trajectories (e.g., whether a...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/61935">ICML</a> · <a href="https://openreview.net/forum?id=lXnoKG4jFU">OpenReview</a> · <a href="https://openreview.net/pdf?id=lXnoKG4jFU">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">35</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64857">Uncertainty-Guided Exploration and Stable Planning for Sparse-Reward Manipulation from Limited Demonstrations</a>
+          <span class="authors">Haowen Sun, Liqi Huang, li mingyang, Sihua Ren, Xinzhe Chen, et al. (9 authors)</span>
+          <span class="abstract">Reinforcement learning from demonstrations (RLfD) offers a promising method for robotic manipulation with sparse rewards. However, limited demonstrations often cause agents to encounter out-of-distribution states where world models produce poor predictions...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/64857">ICML</a> · <a href="https://openreview.net/forum?id=J5IGUfqsIL">OpenReview</a> · <a href="https://openreview.net/pdf?id=J5IGUfqsIL">PDF</a> · <a href="https://quest-official.github.io/QUEST/">Project</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">36</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65393">ViSurf: Visual Supervised-and-Reinforcement Fine-Tuning for Large Vision-and-Language Models</a>
+          <span class="authors">Yuqi Liu, Liangyu Chen, Jiazhen Liu, Mingkang Zhu, Zhisheng Zhong, et al. (7 authors)</span>
+          <span class="abstract">Post-training Large Vision-and-Language Models (LVLMs) typically involves Supervised Fine-Tuning (SFT) for knowledge injection or Reinforcement Learning with Verifiable Rewards (RLVR) for performance enhancement. However, SFT often leads to sub-optimal...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/65393">ICML</a> · <a href="https://openreview.net/forum?id=E88ye5tTF8">OpenReview</a> · <a href="https://openreview.net/pdf?id=E88ye5tTF8">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">37</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/60509">What You Think is What You See: Driving Exploration in VLM Agents via Visual-Linguistic Curiosity</a>
+          <span class="authors">Haoxi Li, Qinglin Hou, Jianfei Ma, Jinxiang Lai, Tao Han, et al. (9 authors)</span>
+          <span class="abstract">To navigate partially observable visual environments, recent VLM agents increasingly internalize world modeling capabilities directly into their policies via explicit CoT reasoning with reinforcement learning (RL). However, mere passive exploitation of...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/60509">ICML</a> · <a href="https://openreview.net/forum?id=zWStW3hrfW">OpenReview</a> · <a href="https://openreview.net/pdf?id=zWStW3hrfW">PDF</a></span>
+        </div>
+      </li>
+    </ol>
+    <div class="nav">
+      <a href="../../../index.html#icml-papers">Back to ICML paper index</a>
+      <a href="icml2026_papers_issue_batch_offline.html">Previous issue</a>
+      <a href="icml2026_papers_issue_everything_else.html">Next issue</a>
+    </div>
+  </main>
+</body>
+</html>

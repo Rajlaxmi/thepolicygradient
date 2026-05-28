@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ICML 2026 RL Papers - Multi-agent</title>
+  <style>
+    body { margin: 0; background: #f3efe6; color: #1a1a1a; font-family: Georgia, "Times New Roman", Times, serif; line-height: 1.5; }
+    main { max-width: 980px; margin: 0 auto; padding: 44px 24px 72px; }
+    h1 { font-size: 42px; line-height: 1.1; margin: 0 0 8px; font-weight: normal; }
+    h2 { font-size: 22px; line-height: 1.25; margin: 0 0 30px; font-weight: normal; color: #5b5b5b; }
+    a { color: #8a3324; text-decoration: none; border-bottom: 1px solid #8a3324; }
+    .meta { font-family: "Courier New", Courier, monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #5b5b5b; margin-bottom: 18px; }
+    .paper-list { list-style: none; margin: 0; padding: 0; }
+    .paper-list li { border-top: 1px solid #d8d2c1; display: grid; grid-template-columns: 48px 1fr; gap: 18px; padding: 16px 0; }
+    .paper-num { color: #8a3324; font-family: "Courier New", Courier, monospace; font-size: 13px; letter-spacing: 1px; padding-top: 3px; }
+    .authors, .abstract, .paper-meta { display: block; color: #5b5b5b; font-size: 14px; margin-top: 4px; }
+    .abstract { color: #2f2f2f; font-size: 15px; line-height: 1.45; margin-top: 8px; }
+    .paper-meta { font-family: "Courier New", Courier, monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
+    .nav { display: flex; justify-content: space-between; gap: 16px; margin-top: 36px; }
+    @media (max-width: 640px) {
+      h1 { font-size: 32px; }
+      .paper-list li { grid-template-columns: 1fr; gap: 6px; }
+      .nav { display: block; }
+      .nav a { display: inline-block; margin: 8px 14px 0 0; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="meta">The Policy Gradient · ICML 2026 RL Papers</div>
+    <h1>ICML Paper Issue - Multi-agent</h1>
+    <h2>28 papers · Reinforcement Learning-&gt;Multi-agent</h2>
+    <ol class="paper-list">
+      <li>
+        <span class="paper-num">01</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65122">Achieving Logarithmic Regret in KL-Regularized Zero-Sum Markov Games</a>
+          <span class="authors">Anupam Nayak, Tong Yang, Osman Yagan, Gauri Joshi, Yuejie Chi</span>
+          <span class="abstract">Reverse Kullback–Leibler (KL) divergence-based regularization with respect to a fixed reference policy is widely used in modern reinforcement learning to preserve the desired traits of the reference policy and sometimes to promote exploration (using uniform...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/65122">ICML</a> · <a href="https://openreview.net/forum?id=GcCBoFM8u9">OpenReview</a> · <a href="https://openreview.net/pdf?id=GcCBoFM8u9">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">02</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65501">Agent Primitives: Reuseable Latent Building Blocks for Multi-Agent Systems</a>
+          <span class="authors">Haibo Jin, Peng Kuang, Ye Yu, Xiaopeng Yuan, Haohan Wang</span>
+          <span class="abstract">While existing multi-agent systems (MAS) can handle complex problems by enabling collaboration among multiple agents, they are often highly task-specific, relying on manually crafted agent roles and interaction prompts, which leads to increased architectural...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/65501">ICML</a> · <a href="https://openreview.net/forum?id=CzShhpY2qU">OpenReview</a> · <a href="https://openreview.net/pdf?id=CzShhpY2qU">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">03</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63254">Automata-Conditioned Cooperative Multi-Agent Reinforcement Learning</a>
+          <span class="authors">Beyazit Yalcinkaya, Marcell Vazquez-Chanlatte, Ameesh Shah, Hanna Krasowski, Sanjit Seshia</span>
+          <span class="abstract">We study learning multi-task, multi-agent policies for cooperative, temporal objectives, under centralized training, decentralized execution. In this setting, using automata to represent tasks assigned to agents enables breaking down a team-level objective...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/63254">ICML</a> · <a href="https://openreview.net/forum?id=Yi1W13sPsR">OpenReview</a> · <a href="https://openreview.net/pdf?id=Yi1W13sPsR">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">04</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63397">Cardinality-Invariant Neural Operator Policies for Scalable PDE Control</a>
+          <span class="authors">Pietro Zanotta, Dibakar Sarkar, Honghui Zheng, Somdatta Goswami, Jan Drgona</span>
+          <span class="abstract">Controlling partial differential equations (PDEs) with learning-based policies remains fundamentally limited by fixed-dimensional representations: policies trained for a specific sensor, actuator, or agent configuration typically fail when the configuration...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/63397">ICML</a> · <a href="https://openreview.net/forum?id=XWYU5FTRxM">OpenReview</a> · <a href="https://openreview.net/pdf?id=XWYU5FTRxM">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">05</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63505">Conversation for Non-verifiable Learning: Self-Evolving Large Language Models through Meta-Evaluation</a>
+          <span class="authors">Yuan Sui, Bryan Hooi</span>
+          <span class="abstract">Training large language models (LLMs) for non-verifiable tasks—such as creative writing, dialogue, and ethical reasoning—remains challenging due to the absence of ground-truth labels. While LLM-as-Judge approaches offer a scalable alternative to human...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/63505">ICML</a> · <a href="https://openreview.net/forum?id=Wba6w3pzbj">OpenReview</a> · <a href="https://openreview.net/pdf?id=Wba6w3pzbj">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">06</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61278">Decentralized and Disentangled Task–Role Representation Learning for Generalizable Offline Multi-Agent Meta Reinforcement Learning</a>
+          <span class="authors">lei yuan, Ruiqi Xue, Yang Yu</span>
+          <span class="abstract">Offline meta reinforcement learning (RL) enables agents to learn a unified policy from multi-task offline data to support generalization in out-of-distribution (OOD) tasks. Recent approaches in single-agent RL tackle this by learning an efficient task...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/61278">ICML</a> · <a href="https://openreview.net/forum?id=rv1vx7zf2U">OpenReview</a> · <a href="https://openreview.net/pdf?id=rv1vx7zf2U">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">07</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65653">Epistemic Gain, Aleatoric Cost: Uncertainty Decomposition in Multi-Agent Debate for Math Reasoning</a>
+          <span class="authors">Dan Qiao, Binbin Chen, Fengyu Cai, Jianlong Chen, Wenhao Li, et al. (10 authors)</span>
+          <span class="abstract">Multi-Agent Debate (MAD) has shown promise in leveraging collective intelligence to improve reasoning and reduce hallucinations, yet it remains unclear how information exchange shapes the underlying ability. Empirically, MAD exhibits paradoxical phenomena...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/65653">ICML</a> · <a href="https://openreview.net/forum?id=BW16CkVDnq">OpenReview</a> · <a href="https://openreview.net/pdf?id=BW16CkVDnq">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">08</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62462">Factored Value Functions for Graph-Based Multi-Agent Reinforcement Learning</a>
+          <span class="authors">Ahmed Rashwan, Keith Briggs, Chris Budd, Lisa Kreusser</span>
+          <span class="abstract">Credit assignment is a core challenge in multi-agent reinforcement learning (MARL), especially in large-scale systems with structured, local interactions. Graph-based Markov decision processes (GMDPs) capture such settings via an influence graph, but...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/62462">ICML</a> · <a href="https://openreview.net/forum?id=gNwwzeqPF0">OpenReview</a> · <a href="https://openreview.net/pdf?id=gNwwzeqPF0">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">09</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65471">Global Policy-Space Response Oracles for Two-Player Zero-Sum Games</a>
+          <span class="authors">Junyu Zhang, Feihong Yang, Jian Wang, Chao Wang, Xudong Zhang</span>
+          <span class="abstract">The Policy-Space Response Oracles (PSRO) framework scales equilibrium computation to large zero-sum games by iteratively expanding a restricted strategy set using deep reinforcement learning (DRL). A central challenge is to construct, under limited...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/65471">ICML</a> · <a href="https://openreview.net/forum?id=DIytYt7tdI">OpenReview</a> · <a href="https://openreview.net/pdf?id=DIytYt7tdI">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">10</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65345">HyPOLE: Hyperproperty-Guided Multi-Agent Reinforcement Learning under Partial Observation</a>
+          <span class="authors">Arshia Rafieioskouei, Tzu-Han Hsu, Matthew Lucas, Borzoo Bonakdarpour</span>
+          <span class="abstract">Formal specification is a powerful tool to guide the learning process and provides significant advantages over ad-hoc reward shaping: (1) mathematical rigor; (2) expressiveness to specify objectives and constraints, and (3) the ability to define strategies...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/65345">ICML</a> · <a href="https://openreview.net/forum?id=EVoPYB6ss3">OpenReview</a> · <a href="https://openreview.net/pdf?id=EVoPYB6ss3">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">11</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61001">Interaction-Breaking Adversarial Learning Framework for Robust Multi-Agent Reinforcement Learning</a>
+          <span class="authors">Sunwoo Lee, Mingu Kang, Yonghyeon Jo, Seungyul Han</span>
+          <span class="abstract">Cooperation is central to multi-agent reinforcement learning (MARL), yet learned coordination can be fragile when external perturbations disrupt inter-agent interactions. Prior robust MARL methods have primarily considered value-oriented attacks, leaving a...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/61001">ICML</a> · <a href="https://openreview.net/forum?id=ugeI4yowce">OpenReview</a> · <a href="https://openreview.net/pdf?id=ugeI4yowce">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">12</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65244">Investigating Component Contributions in Multi-Agent ML Systems</a>
+          <span class="authors">Junsung Kim, Ilia Mireskandari, Seungwan Son, Yifan Zhou, Khizer Shahid, Dylan Dai</span>
+          <span class="abstract">Autonomous agents for machine learning engineering have advanced rapidly, yet comparing their effectiveness remains difficult. Existing systems combine different techniques---multi-agent decomposition, iterative refinement, memory management, and...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/65244">ICML</a> · <a href="https://openreview.net/forum?id=FOfvTwBGUX">OpenReview</a> · <a href="https://openreview.net/pdf?id=FOfvTwBGUX">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">13</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62068">Learning Decentralized LLM Collaboration with Multi-Agent Actor Critic</a>
+          <span class="authors">Shuo Liu, Tianle Chen, Ryan Amiri, Christopher Amato</span>
+          <span class="abstract">Recent work has explored optimizing LLM collaboration through Multi-Agent Reinforcement Learning (MARL). However, most MARL fine-tuning approaches rely on predefined execution protocols, which often require centralized execution. Decentralized LLM...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/62068">ICML</a> · <a href="https://openreview.net/forum?id=k9OuSat5IR">OpenReview</a> · <a href="https://openreview.net/pdf?id=k9OuSat5IR">PDF</a> · <a href="https://github.com/OpenMLRL/CoMLRL">Code</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">14</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61713">Learning Disentangled Multi-Agent World Model for Decentralized Control</a>
+          <span class="authors">Di Xue, Jing Jiang, Shaowei Zhang, Wenhao Guo, lei yuan, et al. (7 authors)</span>
+          <span class="abstract">World models enable learning policies via latent imagination, offering benefits such as history compression and sample efficiency. The primary challenge in applying world models to multi-agent tasks is that modeling multi-agent dynamics in latent space...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/61713">ICML</a> · <a href="https://openreview.net/forum?id=nYyfpPubnW">OpenReview</a> · <a href="https://openreview.net/pdf?id=nYyfpPubnW">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">15</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62890">Learning to Share: Selective Memory for Efficient Parallel Agentic Systems</a>
+          <span class="authors">Joseph Fioresi, Ashmal Vayani, Parth Parag Kulkarni, Song Wang, Mubarak Shah</span>
+          <span class="abstract">Agentic systems solve complex tasks by coordinating multiple agents that iteratively reason, invoke tools, and exchange intermediate results. To improve robustness and solution quality, recent approaches deploy multiple agent teams running in parallel to...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/62890">ICML</a> · <a href="https://openreview.net/forum?id=cCFyY2LmF5">OpenReview</a> · <a href="https://openreview.net/pdf?id=cCFyY2LmF5">PDF</a> · <a href="https://joefioresi718.github.io/LTS_webpage/">Project</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">16</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61721">LLM-Guided Communication for Cooperative Multi-Agent Reinforcement Learning</a>
+          <span class="authors">Seungyul Han, Sangjun Bae, Yisak Park, Sanghyeon Lee</span>
+          <span class="abstract">Communication is a key component in multi-agent reinforcement learning (MARL) for mitigating partial observability, yet prior approaches often rely on inefficient information exchange or fail to transmit sufficient state information. To address this, we...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/61721">ICML</a> · <a href="https://openreview.net/forum?id=nVOzKXVvPu">OpenReview</a> · <a href="https://openreview.net/pdf?id=nVOzKXVvPu">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">17</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64499">MEAL: A Benchmark for Continual Multi-Agent Reinforcement Learning</a>
+          <span class="authors">Tristan Tomilin, Luka van den Boogaard, Samuel Garcin, Constantin Ruhdorfer, Bram Grooten, et al. (10 authors)</span>
+          <span class="abstract">Benchmarks play a central role in reinforcement learning (RL) research, yet their computational constraints often shape what is studied. Despite the motivation of lifelong learning, most continual RL papers consider only 3–10 sequential tasks, as CPU-bound...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/64499">ICML</a> · <a href="https://openreview.net/forum?id=Mxg6mo1Xzj">OpenReview</a> · <a href="https://openreview.net/pdf?id=Mxg6mo1Xzj">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">18</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65128">Milestone-Guided Policy Learning for Long-Horizon Language Agents</a>
+          <span class="authors">Zixuan Wang, Yuchen Yan, Hongxing Li, Teng Pan, Dingming Li, et al. (10 authors)</span>
+          <span class="abstract">While long-horizon agentic tasks require language agents to perform dozens of sequential decisions, training such agents with reinforcement learning remains challenging. We identify two root causes: credit misattribution, where correct early actions are...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/65128">ICML</a> · <a href="https://openreview.net/forum?id=Ga3AR4EF6R">OpenReview</a> · <a href="https://openreview.net/pdf?id=Ga3AR4EF6R">PDF</a> · <a href="https://zju-real.github.io/BEACON/">Project</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">19</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/66211">Offline Multi-agent Continual Cooperation via Skill Partition and Reuse</a>
+          <span class="authors">Yuchen Xiao, lei yuan, Ruiqi Xue, Tieyue Yin, Yang Yu</span>
+          <span class="abstract">Extracting skills from multi-agent offline dataset improves learning efficiency via sharing task-invariant coordination skills among tasks. In settings where tasks occur sequentially and the space of skills grows exponentially, existing approaches that rely...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/66211">ICML</a> · <a href="https://openreview.net/forum?id=5kteupXJ7B">OpenReview</a> · <a href="https://openreview.net/pdf?id=5kteupXJ7B">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">20</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64191">Offline Multi-Agent Reinforcement Learning via Sequential Score Decomposition</a>
+          <span class="authors">Dan Qiao, Wenhao Li, Shanchao Yang, Hongyuan Zha, Baoxiang Wang</span>
+          <span class="abstract">Offline cooperative multi-agent reinforcement learning (MARL) faces unique challenges due to the distribution shift between online and offline data collection. While online MARL typically converges to a single coordinated joint policy, offline datasets are...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/64191">ICML</a> · <a href="https://openreview.net/forum?id=Q6Kt8mROxg">OpenReview</a> · <a href="https://openreview.net/pdf?id=Q6Kt8mROxg">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">21</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65131">PrivAct: Internalizing Contextual Privacy Preservation via Multi-Agent Preference Training</a>
+          <span class="authors">Yuhan Cheng, Hancheng Ye, Hai Li, Jingwei Sun, Yiran Chen</span>
+          <span class="abstract">Large language model (LLM) agents are increasingly deployed in personalized tasks involving sensitive, context-dependent information, where privacy violations may arise in agents&#x27; action due to the implicitness of contextual privacy. Existing approaches rely...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/65131">ICML</a> · <a href="https://openreview.net/forum?id=GWYR0NqMZw">OpenReview</a> · <a href="https://openreview.net/pdf?id=GWYR0NqMZw">PDF</a> · <a href="https://github.com/chengyh23/PrivAct">Code</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">22</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63318">Scalable Traffic Signal Control with Shared Policy Framework</a>
+          <span class="authors">Haolun MA, Yanchen ZHU, Zizhuo Xu, Weijie Shi, Jiajie Xu, Lei Li</span>
+          <span class="abstract">Learning-based Traffic Signal Control (TSC) achieves satisfactory performance in small networks, but its effectiveness often deteriorates in larger networks under dynamic traffic patterns and intersection heterogeneity. In this work, we propose SLight, a...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/63318">ICML</a> · <a href="https://openreview.net/forum?id=Y8dBzpAdkt">OpenReview</a> · <a href="https://openreview.net/pdf?id=Y8dBzpAdkt">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">23</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65768">Small Agent Group is the Future of Digital Health</a>
+          <span class="authors">Yuqiao Meng, Luoxi Tang, Dazheng Zhang, Rafael Brens, Elvys Romero, et al. (8 authors)</span>
+          <span class="abstract">The rapid adoption of large language models (LLMs) in digital health has been driven by a &quot;scaling-first&quot; philosophy, i.e., the assumption that clinical intelligence increases with model size and data. However, real-world clinical needs include not only...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/65768">ICML</a> · <a href="https://openreview.net/forum?id=ALVnRcngPb">OpenReview</a> · <a href="https://openreview.net/pdf?id=ALVnRcngPb">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">24</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65907">Sparse Topology-Aware Pairwise Scoring for Large-Scale Multi-Agent Reinforcement Learning</a>
+          <span class="authors">Zhibo Deng, Feng Liang, Yong Zhang, Xiaoxi Zhang, Xiping Hu</span>
+          <span class="abstract">In multi-agent reinforcement learning (MARL), communication enables agents to mitigate partial observability and stochasticity through information sharing, but large-scale systems inherently lead to a rapidly growing number of pairwise interactions. Previous...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/65907">ICML</a> · <a href="https://openreview.net/forum?id=91GdjfPm7f">OpenReview</a> · <a href="https://openreview.net/pdf?id=91GdjfPm7f">PDF</a> · <a href="https://github.com/DistriAI/SOPS/">Code</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">25</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62035">TABX: A High-Throughput Sandbox Battle Simulator for Multi-Agent Reinforcement Learning</a>
+          <span class="authors">Hayeong Lee, JunHyeok Oh, Byung-Jun Lee</span>
+          <span class="abstract">The design of environments plays a critical role in shaping the development and evaluation of cooperative multi-agent reinforcement learning (MARL) algorithms. While existing benchmarks highlight critical challenges, they often lack the modularity required...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/62035">ICML</a> · <a href="https://openreview.net/forum?id=kTOxGQJkwt">OpenReview</a> · <a href="https://openreview.net/pdf?id=kTOxGQJkwt">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">26</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64327">Towards Complete Multi-Agent Coordination Policy Learning via Denoising Maximum Entropy Optimization</a>
+          <span class="authors">Guanghao Li, lei yuan, Ruiqi Xue, Hengchang Zhang, Jianhong Wang, et al. (7 authors)</span>
+          <span class="abstract">Parameter sharing is a widely used technique in Multi-Agent Reinforcement Learning (MARL) that enhances sample efficiency by equipping agents with a unified policy. While effective in homogeneous settings, it often struggles in heterogeneous environments...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/64327">ICML</a> · <a href="https://openreview.net/forum?id=OiOBtT157H">OpenReview</a> · <a href="https://openreview.net/pdf?id=OiOBtT157H">PDF</a> · <a href="https://github.com/tlxxx/Dspic_code">Code</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">27</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/66728">Unsupervised Partner Design Enables Robust Ad-hoc Teamwork</a>
+          <span class="authors">Constantin Ruhdorfer, Matteo Bortoletto, Victor Oei, Anna Penzkofer, Andreas Bulling</span>
+          <span class="abstract">We introduce Unsupervised Partner Design (UPD), a population-free multi-agent reinforcement learning method for robust ad-hoc teamwork. UPD generates training partners on-the-fly and selects them adaptively based on a learnability criterion, removing the...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/66728">ICML</a> · <a href="https://openreview.net/forum?id=0xtMUL0eiF">OpenReview</a> · <a href="https://openreview.net/pdf?id=0xtMUL0eiF">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">28</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/60481">Why Specialist Models Still Matter: A Heterogeneous Multi-Agent Paradigm for Medical Artificial Intelligence</a>
+          <span class="authors">Yanan Wang, Shuaicong Hu, Jian Liu, Guohui Zhou, Aiguo Wang, Cuiwei Yang</span>
+          <span class="abstract">The impressive performance of generalist large language models (LLMs) such as GPT-4 and Claude in healthcare raises a critical question: will domain-specific medical specialist models become obsolete? We argue that the future of medical artificial...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/60481">ICML</a> · <a href="https://openreview.net/forum?id=zrVSSx6348">OpenReview</a> · <a href="https://openreview.net/pdf?id=zrVSSx6348">PDF</a></span>
+        </div>
+      </li>
+    </ol>
+    <div class="nav">
+      <a href="../../../index.html#icml-papers">Back to ICML paper index</a>
+      <a href="icml2026_papers_issue_inverse.html">Previous issue</a>
+      <a href="icml2026_papers_issue_online.html">Next issue</a>
+    </div>
+  </main>
+</body>
+</html>

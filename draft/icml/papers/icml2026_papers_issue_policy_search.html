@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ICML 2026 RL Papers - Policy Search</title>
+  <style>
+    body { margin: 0; background: #f3efe6; color: #1a1a1a; font-family: Georgia, "Times New Roman", Times, serif; line-height: 1.5; }
+    main { max-width: 980px; margin: 0 auto; padding: 44px 24px 72px; }
+    h1 { font-size: 42px; line-height: 1.1; margin: 0 0 8px; font-weight: normal; }
+    h2 { font-size: 22px; line-height: 1.25; margin: 0 0 30px; font-weight: normal; color: #5b5b5b; }
+    a { color: #8a3324; text-decoration: none; border-bottom: 1px solid #8a3324; }
+    .meta { font-family: "Courier New", Courier, monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #5b5b5b; margin-bottom: 18px; }
+    .paper-list { list-style: none; margin: 0; padding: 0; }
+    .paper-list li { border-top: 1px solid #d8d2c1; display: grid; grid-template-columns: 48px 1fr; gap: 18px; padding: 16px 0; }
+    .paper-num { color: #8a3324; font-family: "Courier New", Courier, monospace; font-size: 13px; letter-spacing: 1px; padding-top: 3px; }
+    .authors, .abstract, .paper-meta { display: block; color: #5b5b5b; font-size: 14px; margin-top: 4px; }
+    .abstract { color: #2f2f2f; font-size: 15px; line-height: 1.45; margin-top: 8px; }
+    .paper-meta { font-family: "Courier New", Courier, monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
+    .nav { display: flex; justify-content: space-between; gap: 16px; margin-top: 36px; }
+    @media (max-width: 640px) {
+      h1 { font-size: 32px; }
+      .paper-list li { grid-template-columns: 1fr; gap: 6px; }
+      .nav { display: block; }
+      .nav a { display: inline-block; margin: 8px 14px 0 0; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="meta">The Policy Gradient · ICML 2026 RL Papers</div>
+    <h1>ICML Paper Issue - Policy Search</h1>
+    <h2>4 papers · Reinforcement Learning-&gt;Policy Search</h2>
+    <ol class="paper-list">
+      <li>
+        <span class="paper-num">01</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/60524">A KL-regularization framework for learning to plan with adaptive priors</a>
+          <span class="authors">Álvaro Serra-Gómez, Daniel Jarne Ornia, Dhruva Tirumala, Thomas M Moerland</span>
+          <span class="abstract">Effective exploration remains a key challenge in model-based reinforcement learning (MBRL), especially in high-dimensional continuous control tasks where sample efficiency is critical. Recent work addresses this by using learned policies as proposal...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Policy Search · <a href="https://icml.cc/virtual/2026/poster/60524">ICML</a> · <a href="https://openreview.net/forum?id=zO8vzSGgTn">OpenReview</a> · <a href="https://openreview.net/pdf?id=zO8vzSGgTn">PDF</a> · <a href="https://github.com/alvaro-serra/pompc.git">Code</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">02</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61426">Joint-Space Empowerment as a Theory of Dexterous Motor Coordination</a>
+          <span class="authors">James Heald, Vittorio Caggiano, Vikash Kumar, Maneesh Sahani</span>
+          <span class="abstract">Searching for effective policies in high-dimensional action spaces is notoriously challenging. This difficulty is compounded in overactuated musculoskeletal systems, where multiple muscles span each joint, and individual muscles actuate multiple joints...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Policy Search · <a href="https://icml.cc/virtual/2026/poster/61426">ICML</a> · <a href="https://openreview.net/forum?id=qI2eHwfNfh">OpenReview</a> · <a href="https://openreview.net/pdf?id=qI2eHwfNfh">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">03</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65267">Success-Conditioning as Policy Improvement: The Optimization Problem Solved by Imitating Success</a>
+          <span class="authors">Daniel Russo</span>
+          <span class="abstract">A widely used technique for improving policies is success conditioning, in which one collects trajectories, identifies those that achieve a desired outcome, and updates the policy to imitate the actions taken along successful trajectories. This principle...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Policy Search · <a href="https://icml.cc/virtual/2026/poster/65267">ICML</a> · <a href="https://openreview.net/forum?id=FEmXFeqYNZ">OpenReview</a> · <a href="https://openreview.net/pdf?id=FEmXFeqYNZ">PDF</a></span>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">04</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63538">UDM-GRPO: Stable and Efficient Group Relative Policy Optimization for Uniform Discrete Diffusion Models</a>
+          <span class="authors">Jiaqi Wang, Haoge Deng, Ting Pan, Yang Liu, Chengyuan Wang, et al. (8 authors)</span>
+          <span class="abstract">Uniform Discrete Diffusion (UDM) has recently emerged as a promising paradigm for discrete generative modeling; however, its integration with reinforcement learning remains largely unexplored. We observe that naively adapting GRPO to UDM leads to unstable...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Policy Search · <a href="https://icml.cc/virtual/2026/poster/63538">ICML</a> · <a href="https://openreview.net/forum?id=WJcFtJriqv">OpenReview</a> · <a href="https://openreview.net/pdf?id=WJcFtJriqv">PDF</a> · <a href="https://yovecent.github.io/UDM-GRPO.github.io/">Project</a></span>
+        </div>
+      </li>
+    </ol>
+    <div class="nav">
+      <a href="../../../index.html#icml-papers">Back to ICML paper index</a>
+      <a href="icml2026_papers_issue_planning.html">Previous issue</a>
+      <span></span>
+    </div>
+  </main>
+</body>
+</html>
