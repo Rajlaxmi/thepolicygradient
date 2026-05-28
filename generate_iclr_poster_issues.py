@@ -11,6 +11,8 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
+from generate_iclr_oral_drafts import is_rl_related
+
 
 ROOT = Path(__file__).resolve().parent
 DRAFT_DIR = ROOT / "draft"
@@ -216,7 +218,7 @@ def render_poster_issue(issue: int, total: int, papers: list[dict]) -> str:
 """
 
 
-def render_site_index(total_poster_issues: int) -> str:
+def render_site_index(total_poster_issues: int, poster_count: int) -> str:
     oral_items = "\n".join(
         f"""        <li>
           <a href="{esc(href)}">{esc(title)}</a>
@@ -251,6 +253,7 @@ def render_site_index(total_poster_issues: int) -> str:
     .issue-list {{ list-style-position: outside; }}
     .issue-list li {{ margin: 18px 0; }}
     .issue-summary {{ color: #5b5b5b; display: block; font-size: 15px; line-height: 1.45; margin-top: 4px; }}
+    .section-note {{ color: #5b5b5b; font-size: 16px; margin: 0 0 18px; }}
     .poster-grid {{ columns: 3 180px; column-gap: 28px; }}
     .poster-grid li {{ break-inside: avoid; font-size: 15px; margin: 7px 0; }}
     @media (max-width: 760px) {{
@@ -264,7 +267,7 @@ def render_site_index(total_poster_issues: int) -> str:
 <body>
   <div class="page">
     <aside>
-      <div class="meta">Current issue: 10 oral drafts · {total_poster_issues} poster drafts</div>
+      <div class="meta">Current issue: 10 oral drafts · {total_poster_issues} RL poster drafts</div>
       <h1>The Policy Gradient</h1>
       <ul class="tabs">
         <li><a href="#orals">ICLR 2026 Orals</a></li>
@@ -280,6 +283,7 @@ def render_site_index(total_poster_issues: int) -> str:
       </section>
       <section id="posters">
         <h3>ICLR 2026 Posters</h3>
+        <p class="section-note">{poster_count} reinforcement-learning-related poster papers, batched 50 per issue.</p>
         <ol class="poster-grid">
 {poster_items}
         </ol>
@@ -293,7 +297,8 @@ def render_site_index(total_poster_issues: int) -> str:
 
 def main():
     POSTER_DIR.mkdir(parents=True, exist_ok=True)
-    posters = fetch_posters()
+    all_posters = fetch_posters()
+    posters = [poster for poster in all_posters if is_rl_related(poster)]
     POSTER_DATA_PATH.write_text(json.dumps(posters, indent=2, ensure_ascii=False), encoding="utf-8")
     for stale in POSTER_DIR.glob("iclr2026_posters_issue*.html"):
         stale.unlink()
@@ -302,7 +307,8 @@ def main():
     index_lines = [
         "# ICLR 2026 Poster Drafts",
         "",
-        f"Generated {total} poster issues from {len(posters)} OpenReview poster papers.",
+        f"Generated {total} poster issues from {len(posters)} RL-related OpenReview poster papers.",
+        f"Filtered out {len(all_posters) - len(posters)} non-RL poster papers.",
         f"Issues contain {BATCH_SIZE} poster papers each, except the final issue.",
         "",
     ]
@@ -312,8 +318,10 @@ def main():
         (POSTER_DIR / filename).write_text(render_poster_issue(issue, total, batch), encoding="utf-8")
         index_lines.append(f"- Poster Issue {issue:03d}: `posters/{filename}` ({len(batch)} papers)")
     POSTER_INDEX_PATH.write_text("\n".join(index_lines) + "\n", encoding="utf-8")
-    SITE_INDEX_PATH.write_text(render_site_index(total), encoding="utf-8")
-    print(f"Fetched {len(posters)} poster papers")
+    SITE_INDEX_PATH.write_text(render_site_index(total, len(posters)), encoding="utf-8")
+    print(f"Fetched {len(all_posters)} poster papers")
+    print(f"Kept {len(posters)} RL-related poster papers")
+    print(f"Filtered out {len(all_posters) - len(posters)} non-RL poster papers")
     print(f"Wrote {total} poster issue pages to {POSTER_DIR}")
     print(f"Updated {SITE_INDEX_PATH}")
 
