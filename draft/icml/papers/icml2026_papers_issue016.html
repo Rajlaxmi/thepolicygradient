@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ICML 2026 RL Papers - Issue 016</title>
+  <style>
+    body { margin: 0; background: #f3efe6; color: #1a1a1a; font-family: Georgia, "Times New Roman", Times, serif; line-height: 1.5; }
+    main { max-width: 980px; margin: 0 auto; padding: 44px 24px 72px; }
+    h1 { font-size: 42px; line-height: 1.1; margin: 0 0 8px; font-weight: normal; }
+    h2 { font-size: 22px; line-height: 1.25; margin: 0 0 30px; font-weight: normal; color: #5b5b5b; }
+    a { color: #8a3324; text-decoration: none; border-bottom: 1px solid #8a3324; }
+    .meta { font-family: "Courier New", Courier, monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #5b5b5b; margin-bottom: 18px; }
+    .paper-list { list-style: none; margin: 0; padding: 0; }
+    .paper-list li { border-top: 1px solid #d8d2c1; display: grid; grid-template-columns: 48px 1fr; gap: 18px; padding: 16px 0; }
+    .paper-num { color: #8a3324; font-family: "Courier New", Courier, monospace; font-size: 13px; letter-spacing: 1px; padding-top: 3px; }
+    .nav { display: flex; justify-content: space-between; gap: 16px; margin-top: 36px; }
+    @media (max-width: 640px) {
+      h1 { font-size: 32px; }
+      .paper-list li { grid-template-columns: 1fr; gap: 6px; }
+      .nav { display: block; }
+      .nav a { display: inline-block; margin: 8px 14px 0 0; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="meta">The Policy Gradient · ICML 2026 RL Papers</div>
+    <h1>ICML Paper Issue 016</h1>
+    <h2>50 reinforcement-learning-related papers · issue 16 of 19</h2>
+    <ol class="paper-list">
+      <li>
+        <span class="paper-num">01</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/60951">Spectral Guidance for Flexible and Efficient Control of Diffusion Models</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">02</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62253">Speedup Patch: Learning a Plug-and-Play Policy to Accelerate Embodied Manipulation</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">03</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62337">SPHERE: Mitigating the Loss of Spectral Plasticity in Mixture-of-Experts for Deep Reinforcement Learning</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">04</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65009">Spurious Correlation Learning in Preference Optimization: Mechanisms, Consequences, and Mitigation via Tie Training</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">05</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63951">Spurious Rewards Paradox: Mechanistically Understanding How RLVR Activates Memorization Shortcuts in LLMs</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">06</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61082">Spurious Rewards: Rethinking Training Signals in RLVR</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">07</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62516">Squeezing More from the Stream : Learning Representation Online for Streaming Reinforcement Learning</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">08</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64480">SRPO: Self-Reflective Policy Optimization for Long-Horizon Reasoning</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">09</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63177">Stabilizing MoE Reinforcement Learning by Aligning Training and Inference Routers</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">10</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62099">Stabilizing PPO via Latent-Space Regularization and KDE-Driven Exploration</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">11</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63228">Stabilizing Reinforcement Learning for Diffusion Language Models</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">12</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63664">Stabilizing the Q-Gradient Field for Policy Smoothness in Actor-Critic Methods</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">13</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62012">Stable Asynchrony: Variance-Controlled Off-Policy RL for LLMs</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">14</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62436">Stable Deep Reinforcement Learning via Isotropic Gaussian Representations</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">15</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64302">Stable-GFlowNet: Toward Diverse and Robust LLM Red-Teaming via Contrastive Trajectory Balance</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">16</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61782">Star Elastic: Many-in-One Reasoning LLMs with Efficient Budget Control</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">17</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61958">STAR-KV: Low-Rank KV Cache Compression via Soft Thresholding for Adaptive Rank Control</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">18</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61348">Steering at the Source: Style Modulation Heads for Robust Persona Control</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">19</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/66738">StepCodeReasoner: Aligning Code Reasoning with Stepwise Execution Traces via Reinforcement Learning</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">20</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63490">STFlow: Data-Coupled Flow Matching for Geometric Trajectory Simulation</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">21</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64924">StitchCUDA: An Automated Multi-Agents End-to-End GPU Programing Framework with Rubric-based Agentic Reinforcement Learning</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">22</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64708">Stochastic Linear Bandits with Parameter Noise</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">23</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64017">Stochastic Minimum-Cost Reach-Avoid Reinforcement Learning</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">24</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63159">Stratified GRPO: Handling Structural Heterogeneity in Reinforcement Learning of LLM Search Agents</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">25</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65751">Structure Abstraction and Generalization in a Hippocampus-Entorhinal Inspired World Model</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">26</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63054">Structured 4D Latent World Model for Robot Planning</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">27</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/66279">Structured Expert Routing with Multi-View Task Priors for Offline Meta-Reinforcement Learning</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">28</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61425">SVL: Goal-Conditioned Reinforcement Learning as Survival Learning</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">29</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61850">SWE-MiniSandbox: Container-Free Reinforcement Learning for Building Software Engineering Agents</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">30</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/68790">Synthesizing world models for bilevel planning</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">31</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63090">T$^2$PO: Uncertainty-Guided Exploration Control for Stable Multi-Turn Agentic Reinforcement Learning</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">32</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/62035">TABX: A High-Throughput Sandbox Battle Simulator for Multi-Agent Reinforcement Learning</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">33</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61369">Tackling Length Inflation Without Trade-offs: Group Relative Reward Rescaling for Reinforcement Learning</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">34</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/66706">TACTIC: Task-Aware Sparse Coordination Graphs for Multi-Task Multi-agent Reinforcement Learning</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">35</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64473">TAGRPO: Boosting GRPO on Image-to-Video Generation with Direct Trajectory Alignment</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">36</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/66527">Taming the Aleatoric Impulse in Off-Policy Reinforcement Learning</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">37</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/66238">Target-Aware Bandit Allocation for Scalable Surrogate Optimization in Chemical Space</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">38</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/66587">Target-Driven Policy Optimization for Sequential Counterfactual Outcome Control</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">39</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65299">Task-Aware Exploration via a Predictive Bisimulation Metric</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">40</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/65082">Task-Aware Preference Calibration for Direct Preference Optimization</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">41</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64665">TaskLoom: Weaving Knowledge Across Tasks in World Models</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">42</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/68777">Temporal Difference Learning with Compressed Updates: Error-Feedback meets Reinforcement Learning</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">43</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63553">Temporal Preference Optimization for Unsupervised Retrieval</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">44</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64904">Temporal Straightening for Latent Planning</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">45</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/61785">Test-Time Graph Search for Goal-Conditioned Reinforcement Learning</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">46</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/64462">Test-time Offline Reinforcement Learning on Goal-related Experience</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">47</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/63456">Test-Time Reinforcement Learning for Flow Matching</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">48</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/66046">TetraJet-v2: Accurate NVFP4 Training for Large Language Models with Oscillation Suppression and Outlier Control</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">49</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/66614">Text Before Vision: Staged Knowledge Injection Matters for Agentic RLVR in Ultra-High-Resolution Remote Sensing Understanding</a>
+        </div>
+      </li>
+      <li>
+        <span class="paper-num">50</span>
+        <div>
+          <a href="https://icml.cc/virtual/2026/poster/66391">Text Generation as Continuous Latent Dynamics via Reinforcement Learning</a>
+        </div>
+      </li>
+    </ol>
+    <div class="nav">
+      <a href="../../../index.html#icml-papers">Back to ICML paper index</a>
+      <a href="icml2026_papers_issue015.html">Previous issue</a>
+      <a href="icml2026_papers_issue017.html">Next issue</a>
+    </div>
+  </main>
+</body>
+</html>
