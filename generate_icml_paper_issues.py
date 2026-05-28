@@ -21,6 +21,7 @@ ICML_INDEX_PATH = DRAFT_DIR / "icml2026_paper_drafts_index.md"
 SITE_INDEX_PATH = ROOT / "index.html"
 BATCH_SIZE = 50
 ICML_PAPERS_URL = "https://icml.cc/static/virtual/data/icml-2026-orals-posters.json"
+ICML_ABSTRACTS_URL = "https://icml.cc/static/virtual/data/icml-2026-abstracts.json"
 ICLR_POSTER_DIR = DRAFT_DIR / "posters"
 
 
@@ -39,16 +40,47 @@ def author_line(authors: list[str]) -> str:
     return ", ".join(authors[:5]) + f", et al. ({len(authors)} authors)"
 
 
-def fetch_icml_papers() -> list[dict]:
+def truncate(value: str, limit: int = 260) -> str:
+    value = clean_text(value)
+    if len(value) <= limit:
+        return value
+    cut = value[: limit - 1].rsplit(" ", 1)[0]
+    return cut.rstrip(".,;:") + "..."
+
+
+def fetch_json(url: str) -> dict:
     request = urllib.request.Request(
-        ICML_PAPERS_URL,
+        url,
         headers={
             "User-Agent": "Mozilla/5.0 (Policy Gradient draft generator)",
             "Accept": "application/json",
         },
     )
     with urllib.request.urlopen(request, timeout=90) as response:
-        data = json.load(response)
+        return json.load(response)
+
+
+def openreview_pdf_url(paper_url: str) -> str:
+    match = re.search(r"openreview\.net/forum\?id=([^&#]+)", paper_url or "")
+    if not match:
+        return ""
+    return f"https://openreview.net/pdf?id={match.group(1)}"
+
+
+def external_label(url: str) -> str:
+    lowered = (url or "").lower()
+    if "arxiv.org" in lowered:
+        return "arXiv"
+    if "github.com" in lowered:
+        return "Code"
+    if "zenodo.org" in lowered:
+        return "Data"
+    return "Project"
+
+
+def fetch_icml_papers() -> list[dict]:
+    data = fetch_json(ICML_PAPERS_URL)
+    abstracts = fetch_json(ICML_ABSTRACTS_URL)
 
     papers = []
     for item in data.get("results", []):
@@ -61,11 +93,15 @@ def fetch_icml_papers() -> list[dict]:
         if not title:
             continue
         path = item.get("virtualsite_url") or f"/virtual/2026/poster/{item['id']}"
+        paper_url = item.get("paper_url") or ""
+        pdf_url = item.get("paper_pdf_url") or openreview_pdf_url(paper_url)
+        external_url = item.get("url") or ""
         papers.append(
             {
                 "id": str(item["id"]),
                 "title": title,
                 "url": "https://icml.cc" + path,
+                "paper_url": paper_url,
                 "authors": [
                     clean_text(author.get("fullname", ""))
                     for author in item.get("authors", [])
@@ -73,7 +109,10 @@ def fetch_icml_papers() -> list[dict]:
                 ],
                 "topic": topic,
                 "keywords": [clean_text(keyword) for keyword in item.get("keywords", []) if clean_text(keyword)],
-                "pdf": item.get("paper_pdf_url") or "",
+                "abstract": clean_text(abstracts.get(str(item["id"]), "")),
+                "pdf": pdf_url,
+                "external_url": external_url,
+                "external_label": external_label(external_url) if external_url else "",
             }
         )
 
@@ -84,16 +123,21 @@ def fetch_icml_papers() -> list[dict]:
 def render_icml_issue(issue: int, total: int, papers: list[dict]) -> str:
     items = []
     for index, paper in enumerate(papers, start=1):
-        pdf = paper.get("pdf")
-        pdf_url = pdf if str(pdf).startswith("http") else "https://icml.cc" + str(pdf)
-        pdf_link = f' · <a href="{esc(pdf_url)}">PDF</a>' if pdf else ""
+        links = [f'<a href="{esc(paper["url"])}">ICML</a>']
+        if paper.get("paper_url"):
+            links.append(f'<a href="{esc(paper["paper_url"])}">OpenReview</a>')
+        if paper.get("pdf"):
+            links.append(f'<a href="{esc(paper["pdf"])}">PDF</a>')
+        if paper.get("external_url"):
+            links.append(f'<a href="{esc(paper["external_url"])}">{esc(paper["external_label"])}</a>')
         items.append(
             f"""      <li>
         <span class="paper-num">{index:02d}</span>
         <div>
           <a href="{esc(paper['url'])}">{esc(paper['title'])}</a>
           <span class="authors">{esc(author_line(paper.get('authors', [])))}</span>
-          <span class="paper-meta">{esc(paper.get('topic', ''))}{pdf_link}</span>
+          <span class="abstract">{esc(truncate(paper.get('abstract', '')))}</span>
+          <span class="paper-meta">{esc(paper.get('topic', ''))} · {" · ".join(links)}</span>
         </div>
       </li>"""
         )
@@ -113,7 +157,8 @@ def render_icml_issue(issue: int, total: int, papers: list[dict]) -> str:
     .paper-list {{ list-style: none; margin: 0; padding: 0; }}
     .paper-list li {{ border-top: 1px solid #d8d2c1; display: grid; grid-template-columns: 48px 1fr; gap: 18px; padding: 16px 0; }}
     .paper-num {{ color: #8a3324; font-family: "Courier New", Courier, monospace; font-size: 13px; letter-spacing: 1px; padding-top: 3px; }}
-    .authors, .paper-meta {{ display: block; color: #5b5b5b; font-size: 14px; margin-top: 4px; }}
+    .authors, .abstract, .paper-meta {{ display: block; color: #5b5b5b; font-size: 14px; margin-top: 4px; }}
+    .abstract {{ color: #2f2f2f; font-size: 15px; line-height: 1.45; margin-top: 8px; }}
     .paper-meta {{ font-family: "Courier New", Courier, monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }}
     .nav {{ display: flex; justify-content: space-between; gap: 16px; margin-top: 36px; }}
     @media (max-width: 640px) {{

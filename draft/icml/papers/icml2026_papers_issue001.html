@@ -14,7 +14,8 @@
     .paper-list { list-style: none; margin: 0; padding: 0; }
     .paper-list li { border-top: 1px solid #d8d2c1; display: grid; grid-template-columns: 48px 1fr; gap: 18px; padding: 16px 0; }
     .paper-num { color: #8a3324; font-family: "Courier New", Courier, monospace; font-size: 13px; letter-spacing: 1px; padding-top: 3px; }
-    .authors, .paper-meta { display: block; color: #5b5b5b; font-size: 14px; margin-top: 4px; }
+    .authors, .abstract, .paper-meta { display: block; color: #5b5b5b; font-size: 14px; margin-top: 4px; }
+    .abstract { color: #2f2f2f; font-size: 15px; line-height: 1.45; margin-top: 8px; }
     .paper-meta { font-family: "Courier New", Courier, monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
     .nav { display: flex; justify-content: space-between; gap: 16px; margin-top: 36px; }
     @media (max-width: 640px) {
@@ -36,7 +37,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/65617">$\text{DT}^\text{2}$: Decision-Targeted Digital Twins</a>
           <span class="authors">Harry Amad, Mihaela van der Schaar</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
+          <span class="abstract">A digital twin (DT) is a virtual model of a real-world system that can assist decision-making by simulating scenarios induced by different policies. However, the typical design process of machine learning-based DTs does not optimise for this objective. We...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/65617">ICML</a> · <a href="https://openreview.net/forum?id=BoQg93y6iT">OpenReview</a> · <a href="https://openreview.net/pdf?id=BoQg93y6iT">PDF</a></span>
         </div>
       </li>
       <li>
@@ -44,7 +46,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/60524">A KL-regularization framework for learning to plan with adaptive priors</a>
           <span class="authors">Álvaro Serra-Gómez, Daniel Jarne Ornia, Dhruva Tirumala, Thomas M Moerland</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Policy Search</span>
+          <span class="abstract">Effective exploration remains a key challenge in model-based reinforcement learning (MBRL), especially in high-dimensional continuous control tasks where sample efficiency is critical. Recent work addresses this by using learned policies as proposal...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Policy Search · <a href="https://icml.cc/virtual/2026/poster/60524">ICML</a> · <a href="https://openreview.net/forum?id=zO8vzSGgTn">OpenReview</a> · <a href="https://openreview.net/pdf?id=zO8vzSGgTn">PDF</a> · <a href="https://github.com/alvaro-serra/pompc.git">Code</a></span>
         </div>
       </li>
       <li>
@@ -52,7 +55,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/62964">Accelerating Q-learning through Efficient Value-sharing across Actions</a>
           <span class="authors">Prabhat Nagarajan, Brett Daley, Martha White, Marlos C. Machado</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL</span>
+          <span class="abstract">Learning action-values efficiently is central to reinforcement learning (RL), as they underpin many control algorithms such as Q-learning. However, action-value learning can be slow, requiring many updates to move values from their initialization, typically...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/62964">ICML</a> · <a href="https://openreview.net/forum?id=bQXQa5NDpH">OpenReview</a> · <a href="https://openreview.net/pdf?id=bQXQa5NDpH">PDF</a></span>
         </div>
       </li>
       <li>
@@ -60,7 +64,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/65122">Achieving Logarithmic Regret in KL-Regularized Zero-Sum Markov Games</a>
           <span class="authors">Anupam Nayak, Tong Yang, Osman Yagan, Gauri Joshi, Yuejie Chi</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent</span>
+          <span class="abstract">Reverse Kullback–Leibler (KL) divergence-based regularization with respect to a fixed reference policy is widely used in modern reinforcement learning to preserve the desired traits of the reference policy and sometimes to promote exploration (using uniform...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/65122">ICML</a> · <a href="https://openreview.net/forum?id=GcCBoFM8u9">OpenReview</a> · <a href="https://openreview.net/pdf?id=GcCBoFM8u9">PDF</a></span>
         </div>
       </li>
       <li>
@@ -68,7 +73,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/64704">Adaptive Policy Backbone via Shared Network</a>
           <span class="authors">Bumgeun Park, Donghwan Lee</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL</span>
+          <span class="abstract">Reinforcement learning (RL) has achieved impressive results across various domains, yet the resulting policies often fail to generalize beyond the specific tasks encountered during training. This lack of robustness limits their deployment in real-world...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/64704">ICML</a> · <a href="https://openreview.net/forum?id=KhAUoBv0dJ">OpenReview</a> · <a href="https://openreview.net/pdf?id=KhAUoBv0dJ">PDF</a></span>
         </div>
       </li>
       <li>
@@ -76,7 +82,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/62398">Advancing LLM Reasoning with Natural Language and Numerical Feedback</a>
           <span class="authors">Xiaoying Zhang, Yipeng Zhang, Hao Sun, Kaituo Feng, Chaochao Lu, et al. (7 authors)</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Online</span>
+          <span class="abstract">Recent advances in reinforcement learning (RL) using numerical rewards have significantly enhanced the complex reasoning capabilities of large language models (LLMs). However, we identify three fundamental limitations of purely numerical feedback...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Online · <a href="https://icml.cc/virtual/2026/poster/62398">ICML</a> · <a href="https://openreview.net/forum?id=gz7hVnrRWq">OpenReview</a> · <a href="https://openreview.net/pdf?id=gz7hVnrRWq">PDF</a> · <a href="https://github.com/zhangxy-2019/critique-GRPO">Code</a></span>
         </div>
       </li>
       <li>
@@ -84,7 +91,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/65501">Agent Primitives: Reuseable Latent Building Blocks for Multi-Agent Systems</a>
           <span class="authors">Haibo Jin, Peng Kuang, Ye Yu, Xiaopeng Yuan, Haohan Wang</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent</span>
+          <span class="abstract">While existing multi-agent systems (MAS) can handle complex problems by enabling collaboration among multiple agents, they are often highly task-specific, relying on manually crafted agent roles and interaction prompts, which leads to increased architectural...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/65501">ICML</a> · <a href="https://openreview.net/forum?id=CzShhpY2qU">OpenReview</a> · <a href="https://openreview.net/pdf?id=CzShhpY2qU">PDF</a></span>
         </div>
       </li>
       <li>
@@ -92,7 +100,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/64172">ASAP: Exploiting the Satisficing Generalization Edge in Neural Combinatorial Optimization</a>
           <span class="authors">Han Fang, Paul Weng, Yutong Ban</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL</span>
+          <span class="abstract">Deep Reinforcement Learning (DRL) has emerged as a promising approach for solving Combinatorial Optimization (CO) problems, such as the 3D Bin Packing Problem (3D-BPP), Traveling Salesman Problem (TSP), or Vehicle Routing Problem (VRP), but these neural...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/64172">ICML</a> · <a href="https://openreview.net/forum?id=QI139RyR6I">OpenReview</a> · <a href="https://openreview.net/pdf?id=QI139RyR6I">PDF</a> · <a href="https://kasumigaoka-utaha.github.io/asap-web/">Project</a></span>
         </div>
       </li>
       <li>
@@ -100,7 +109,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/63254">Automata-Conditioned Cooperative Multi-Agent Reinforcement Learning</a>
           <span class="authors">Beyazit Yalcinkaya, Marcell Vazquez-Chanlatte, Ameesh Shah, Hanna Krasowski, Sanjit Seshia</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent</span>
+          <span class="abstract">We study learning multi-task, multi-agent policies for cooperative, temporal objectives, under centralized training, decentralized execution. In this setting, using automata to represent tasks assigned to agents enables breaking down a team-level objective...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/63254">ICML</a> · <a href="https://openreview.net/forum?id=Yi1W13sPsR">OpenReview</a> · <a href="https://openreview.net/pdf?id=Yi1W13sPsR">PDF</a></span>
         </div>
       </li>
       <li>
@@ -108,7 +118,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/65423">Autoregressive Direct Preference Optimization</a>
           <span class="authors">Masanari Oi, Mahiro Ukai, Masahiro Kaneko, Naoaki Okazaki, Nakamasa Inoue</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL</span>
+          <span class="abstract">Direct preference optimization (DPO) has emerged as a promising approach for aligning large language models (LLMs) with human preferences. However, the widespread reliance on the response-level Bradley-Terry (BT) model may limit its full potential, as the...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/65423">ICML</a> · <a href="https://openreview.net/forum?id=DmeFAFUO6f">OpenReview</a> · <a href="https://openreview.net/pdf?id=DmeFAFUO6f">PDF</a> · <a href="https://stjohn2007.github.io/ADPO_project/">Project</a></span>
         </div>
       </li>
       <li>
@@ -116,7 +127,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/64372">Beyond Rewards in RL for Cyber Defence</a>
           <span class="authors">Elizabeth Bates, Chris Hicks, Vasilios Mavroudis</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Everything Else</span>
+          <span class="abstract">Recent years have seen an explosion of interest in autonomous cyber defence agents trained to defend computer networks using deep reinforcement learning. These agents are typically trained in cyber gym environments using dense, highly engineered reward...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Everything Else · <a href="https://icml.cc/virtual/2026/poster/64372">ICML</a> · <a href="https://openreview.net/forum?id=OFFHV53icH">OpenReview</a> · <a href="https://openreview.net/pdf?id=OFFHV53icH">PDF</a></span>
         </div>
       </li>
       <li>
@@ -124,7 +136,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/62945">Black-Box Combinatorial Optimization with Order-Invariant Reinforcement Learning</a>
           <span class="authors">Olivier Goudet, Quentin Suire, Adrien Goëffon, Frédéric Saubion, sylvain lamprier</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Online</span>
+          <span class="abstract">We introduce an order-invariant reinforcement learning framework for black-box combinatorial optimization. Classical estimation-of-distribution algorithms (EDAs) often rely on learning explicit variable dependency graphs, which can be costly and fail to...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Online · <a href="https://icml.cc/virtual/2026/poster/62945">ICML</a> · <a href="https://openreview.net/forum?id=bcRBqG8FFN">OpenReview</a> · <a href="https://openreview.net/pdf?id=bcRBqG8FFN">PDF</a></span>
         </div>
       </li>
       <li>
@@ -132,7 +145,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/63301">Bridging Scaling Laws to On-Policy Reinforcement Learning via Adaptive Batch Scaling</a>
           <span class="authors">Jongchan Park</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Online</span>
+          <span class="abstract">While the &quot;Scaling Laws&quot; have driven massive success in Computer Vision and NLP through large-scale training with massive batch sizes, Reinforcement Learning (RL) has largely failed to benefit from this paradigm. In RL, increasing batch sizes beyond a modest...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Online · <a href="https://icml.cc/virtual/2026/poster/63301">ICML</a> · <a href="https://openreview.net/forum?id=YI9wSqfz7W">OpenReview</a> · <a href="https://openreview.net/pdf?id=YI9wSqfz7W">PDF</a></span>
         </div>
       </li>
       <li>
@@ -140,7 +154,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/63397">Cardinality-Invariant Neural Operator Policies for Scalable PDE Control</a>
           <span class="authors">Pietro Zanotta, Dibakar Sarkar, Honghui Zheng, Somdatta Goswami, Jan Drgona</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent</span>
+          <span class="abstract">Controlling partial differential equations (PDEs) with learning-based policies remains fundamentally limited by fixed-dimensional representations: policies trained for a specific sensor, actuator, or agent configuration typically fail when the configuration...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/63397">ICML</a> · <a href="https://openreview.net/forum?id=XWYU5FTRxM">OpenReview</a> · <a href="https://openreview.net/pdf?id=XWYU5FTRxM">PDF</a></span>
         </div>
       </li>
       <li>
@@ -148,7 +163,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/64920">Causal Flow Q-Learning for Robust Offline Reinforcement Learning</a>
           <span class="authors">Mingxuan Li, Junzhe Zhang, Elias Bareinboim</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
+          <span class="abstract">Expressive policies based on flow-matching have been successfully applied in reinforcement learning (RL) more recently due to their ability to model complex action distributions from offline data. These algorithms build on standard policy gradients, which...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/64920">ICML</a> · <a href="https://openreview.net/forum?id=IexQEyHm2L">OpenReview</a> · <a href="https://openreview.net/pdf?id=IexQEyHm2L">PDF</a></span>
         </div>
       </li>
       <li>
@@ -156,7 +172,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/65634">CFPO : Counterfactual Policy Optimization For Multimodal Reasoning</a>
           <span class="authors">Zhangyuan Yu, Wanran Sun, Guangjing Yang, Xiaohu Wu, Qicheng Lao</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Everything Else</span>
+          <span class="abstract">Large Vision-Language Models (LVLMs) have demonstrated remarkable capabilities in multimodal reasoning. However, prevailing reinforcement learning (RL) paradigms lack explicit counterfactual enhancement and causal learning mechanisms. This fundamental...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Everything Else · <a href="https://icml.cc/virtual/2026/poster/65634">ICML</a> · <a href="https://openreview.net/forum?id=BfWFCVjsNe">OpenReview</a> · <a href="https://openreview.net/pdf?id=BfWFCVjsNe">PDF</a> · <a href="https://github.com/Raven-July/CFPO">Code</a></span>
         </div>
       </li>
       <li>
@@ -164,7 +181,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/60579">Chunk-Guided Q-Learning</a>
           <span class="authors">Gwanwoo Song, Kwanyoung Park, Youngwoon Lee</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
+          <span class="abstract">In offline reinforcement learning (RL), single-step temporal-difference (TD) learning can suffer from bootstrapping error accumulation over long horizons. Action-chunked TD methods mitigate this by backing up over multiple steps, but can introduce...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/60579">ICML</a> · <a href="https://openreview.net/forum?id=yojuz84NLb">OpenReview</a> · <a href="https://openreview.net/pdf?id=yojuz84NLb">PDF</a> · <a href="https://gwanwoosong.github.io/cgq">Project</a></span>
         </div>
       </li>
       <li>
@@ -172,7 +190,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/61274">Closing the Sim-to-Real Gap in Non-Markovian Spreading Processes via GPU-Accelerated Distributional RL</a>
           <span class="authors">Heman Shakeri</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Everything Else</span>
+          <span class="abstract">Controlling spreading processes on networks such as epidemics, information cascades, product adoption, requires policies that perform on realistic stochastic dynamics, not just tractable approximations. Yet policies trained on standard simplifications...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Everything Else · <a href="https://icml.cc/virtual/2026/poster/61274">ICML</a> · <a href="https://openreview.net/forum?id=rwTtKedEAa">OpenReview</a> · <a href="https://openreview.net/pdf?id=rwTtKedEAa">PDF</a> · <a href="https://github.com/Shakeri-Lab/graph-rl">Code</a></span>
         </div>
       </li>
       <li>
@@ -180,7 +199,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/64640">COLLIE: Guiding Skill Discovery in Semantically Coherent Latent Space</a>
           <span class="authors">Yao Luan, Ni Mu, Hanfei Ge, Yiqin Yang, Bo XU, Qing-Shan Jia</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Online</span>
+          <span class="abstract">Unsupervised skill discovery (USD) aims to learn diverse behaviors without reward functions, but often results in task-irrelevant or hazardous behaviors due to uniform exploration. Guided skill discovery (GSD) addresses this issue by incorporating human...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Online · <a href="https://icml.cc/virtual/2026/poster/64640">ICML</a> · <a href="https://openreview.net/forum?id=LMBt26pQj1">OpenReview</a> · <a href="https://openreview.net/pdf?id=LMBt26pQj1">PDF</a></span>
         </div>
       </li>
       <li>
@@ -188,7 +208,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/62821">Compositional Planning with Jumpy World Models</a>
           <span class="authors">Jesse Farebrother, Matteo Pirotta, Andrea Tirinzoni, Marc Bellemare, Alessandro Lazaric, Ahmed Touati</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Planning</span>
+          <span class="abstract">The ability to plan with temporal abstractions is central to intelligent decision-making. Rather than reasoning over primitive actions, we study agents that compose pre-trained policies as temporally extended actions, enabling solutions to complex tasks that...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Planning · <a href="https://icml.cc/virtual/2026/poster/62821">ICML</a> · <a href="https://openreview.net/forum?id=cwztmjMQ77">OpenReview</a> · <a href="https://openreview.net/pdf?id=cwztmjMQ77">PDF</a></span>
         </div>
       </li>
       <li>
@@ -196,7 +217,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/64324">Compositional Transduction with Latent Analogies for Offline Goal-Conditioned Reinforcement Learning</a>
           <span class="authors">Junseok Kim, Dohyeong Kim, Mineui Hong, Songhwai Oh</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
+          <span class="abstract">In offline goal-conditioned reinforcement learning (GCRL), where one relies on a limited reward-free dataset to learn a generalist goal-reaching agent, compositional generalization becomes essential for reaching unseen goals under novel contextual...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/64324">ICML</a> · <a href="https://openreview.net/forum?id=OjXimqfwlX">OpenReview</a> · <a href="https://openreview.net/pdf?id=OjXimqfwlX">PDF</a></span>
         </div>
       </li>
       <li>
@@ -204,7 +226,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/61224">Continuity-Regularized Flow Matching for Offline Reinforcement Learning</a>
           <span class="authors">Xiaocong Chen, Siyu Wang, Lina Yao</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
+          <span class="abstract">Flow-matching policies have recently emerged as a powerful class of generative models for offline reinforcement learning (RL), capable of capturing complex, multi-modal action distributions from static datasets. However, standard training objectives are...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/61224">ICML</a> · <a href="https://openreview.net/forum?id=sV3bCyzAvH">OpenReview</a> · <a href="https://openreview.net/pdf?id=sV3bCyzAvH">PDF</a></span>
         </div>
       </li>
       <li>
@@ -212,7 +235,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/63505">Conversation for Non-verifiable Learning: Self-Evolving Large Language Models through Meta-Evaluation</a>
           <span class="authors">Yuan Sui, Bryan Hooi</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent</span>
+          <span class="abstract">Training large language models (LLMs) for non-verifiable tasks—such as creative writing, dialogue, and ethical reasoning—remains challenging due to the absence of ground-truth labels. While LLM-as-Judge approaches offer a scalable alternative to human...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/63505">ICML</a> · <a href="https://openreview.net/forum?id=Wba6w3pzbj">OpenReview</a> · <a href="https://openreview.net/pdf?id=Wba6w3pzbj">PDF</a></span>
         </div>
       </li>
       <li>
@@ -220,7 +244,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/65271">CoRe: Combined Rewards with Vision-Language Model Feedback for Preference-Aligned Reinforcement Learning</a>
           <span class="authors">Hexian Ni, Tao Lu, Yinghao Cai</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL</span>
+          <span class="abstract">Reward design remains a central challenge in reinforcement learning (RL). Hand-crafted rewards are often difficult to specify and may lead to suboptimal policies, while learned rewards from preferences can suffer from inefficiency and unstable training...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/65271">ICML</a> · <a href="https://openreview.net/forum?id=FC2LEVsvP5">OpenReview</a> · <a href="https://openreview.net/pdf?id=FC2LEVsvP5">PDF</a></span>
         </div>
       </li>
       <li>
@@ -228,7 +253,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/66410">CSPO: Constraint-Sensitive Policy Optimization for Safe Reinforcement Learning</a>
           <span class="authors">Ayoub Belouadah, Sylvain Kubler, YVES LE TRAON</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL</span>
+          <span class="abstract">Safe reinforcement learning (Safe RL) aims to maximize expected return while satisfying safety constraints, typically modeled as constrained Markov decision processes. While primal-dual methods scale well to deep RL, they often suffer from delayed constraint...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/66410">ICML</a> · <a href="https://openreview.net/forum?id=3ySR3TCMRP">OpenReview</a> · <a href="https://openreview.net/pdf?id=3ySR3TCMRP">PDF</a></span>
         </div>
       </li>
       <li>
@@ -236,7 +262,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/61278">Decentralized and Disentangled Task–Role Representation Learning for Generalizable Offline Multi-Agent Meta Reinforcement Learning</a>
           <span class="authors">lei yuan, Ruiqi Xue, Yang Yu</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent</span>
+          <span class="abstract">Offline meta reinforcement learning (RL) enables agents to learn a unified policy from multi-task offline data to support generalization in out-of-distribution (OOD) tasks. Recent approaches in single-agent RL tackle this by learning an efficient task...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/61278">ICML</a> · <a href="https://openreview.net/forum?id=rv1vx7zf2U">OpenReview</a> · <a href="https://openreview.net/pdf?id=rv1vx7zf2U">PDF</a></span>
         </div>
       </li>
       <li>
@@ -244,7 +271,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/62096">Decision Transformers As Zero-Shot Learners via Text-Behavior Alignment</a>
           <span class="authors">Xin Zhang, Jonathan Martinez, Yanhua Li, Yingxue Zhang</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
+          <span class="abstract">Offline meta-reinforcement learning (meta-RL) aims to train agents that can generalize to unseen tasks using pre-collected data from related tasks. Recent approaches leverage the scalability of transformer architectures to model behavior sequences and...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/62096">ICML</a> · <a href="https://openreview.net/forum?id=jqLPUccarO">OpenReview</a> · <a href="https://openreview.net/pdf?id=jqLPUccarO">PDF</a></span>
         </div>
       </li>
       <li>
@@ -252,7 +280,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/63694">DF-ExpEnse: Diffusion Filtered Exploration for Sample Efficient Finetuning</a>
           <span class="authors">Calvin Luo, Chen Sun, shuran song</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL</span>
+          <span class="abstract">A promising recipe towards intelligent robotic decision-making is the finetuning of pretrained generative control policies, which can summarize offline experience effectively through behavior cloning, with reinforcement learning techniques to adapt them to...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/63694">ICML</a> · <a href="https://openreview.net/forum?id=UZF4ssK12K">OpenReview</a> · <a href="https://openreview.net/pdf?id=UZF4ssK12K">PDF</a></span>
         </div>
       </li>
       <li>
@@ -260,7 +289,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/62491">Differentiable Weightless Controllers: Learning Logic Circuits for Continuous Control</a>
           <span class="authors">Fabian Kresse, Christoph Lampert</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Everything Else</span>
+          <span class="abstract">Controlling autonomous systems under real-world conditions often requires policies that can be evaluated with low latency and low energy requirements. Unfortunately, these conditions are at odds with the use of high-precision deep networks as controllers. In...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Everything Else · <a href="https://icml.cc/virtual/2026/poster/62491">ICML</a> · <a href="https://openreview.net/forum?id=g8OP3bstR2">OpenReview</a> · <a href="https://openreview.net/pdf?id=g8OP3bstR2">PDF</a></span>
         </div>
       </li>
       <li>
@@ -268,7 +298,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/64018">Direct Flow Q-Learning</a>
           <span class="authors">Shicheng Cao, Jingrui Jia, Wenyu Li, Feng Duan, Tao Zhang, Shengbo Li</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL</span>
+          <span class="abstract">Flow Matching shows great promise in offline reinforcement learning (RL), yet optimizing these iterative policies via Backpropagation Through Time (BPTT) is unstable. While prevailing paradigms circumvent this by distilling multi-step flows into single-step...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/64018">ICML</a> · <a href="https://openreview.net/forum?id=RdkOaK4q6p">OpenReview</a> · <a href="https://openreview.net/pdf?id=RdkOaK4q6p">PDF</a></span>
         </div>
       </li>
       <li>
@@ -276,7 +307,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/62655">Doubly Regularized Markov Decision Processes for Robust Reinforcement Learning</a>
           <span class="authors">Yiting He, Zhishuai Liu, Pan Xu</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Online</span>
+          <span class="abstract">Empirical successes show that regularization improves the stability and efficiency of reinforcement learning (RL), with applications in robotics and post-training of large language models. Yet, theoretical analyses of regularized Markov decision processes...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Online · <a href="https://icml.cc/virtual/2026/poster/62655">ICML</a> · <a href="https://openreview.net/forum?id=eeoU8iz7w1">OpenReview</a> · <a href="https://openreview.net/pdf?id=eeoU8iz7w1">PDF</a></span>
         </div>
       </li>
       <li>
@@ -284,7 +316,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/63244">Dream-MPC: Gradient-Based Model Predictive Control with Latent Imagination</a>
           <span class="authors">Jonathan Spieler, Sven Behnke</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Planning</span>
+          <span class="abstract">State-of-the-art model-based Reinforcement Learning (RL) approaches either use gradient-free, population-based methods for planning, learned policy networks, or a combination of policy networks and planning. Hybrid approaches that combine Model Predictive...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Planning · <a href="https://icml.cc/virtual/2026/poster/63244">ICML</a> · <a href="https://openreview.net/forum?id=Ym6ud8Psx1">OpenReview</a> · <a href="https://openreview.net/pdf?id=Ym6ud8Psx1">PDF</a> · <a href="https://dream-mpc.github.io">Project</a></span>
         </div>
       </li>
       <li>
@@ -292,7 +325,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/62759">Dreaming in Code for Curriculum Learning in Open-Ended Worlds</a>
           <span class="authors">Konstantinos Mitsides, Maxence Faldor, Antoine Cully</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL</span>
+          <span class="abstract">Open-ended learning frames intelligence as emerging from continual interaction with an ever-expanding space of environments. While recent advances have utilized foundation models to programmatically generate diverse environments, these approaches often focus...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/62759">ICML</a> · <a href="https://openreview.net/forum?id=dctdzmYeej">OpenReview</a> · <a href="https://openreview.net/pdf?id=dctdzmYeej">PDF</a> · <a href="https://konstantinosmitsides.github.io/dreaming-in-code">Project</a></span>
         </div>
       </li>
       <li>
@@ -300,7 +334,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/63926">DualCOIL: Offline Imitation Learning from Contrasting Demonstrations</a>
           <span class="authors">Huy Hoang, Tien Mai, Pradeep Varakantham, Tanvi Verma</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
+          <span class="abstract">Offline imitation learning typically learns from expert and unlabeled demonstrations, yet often overlooks the valuable signal in explicitly undesirable behaviors. In this work, we study offline imitation learning from contrasting behaviors, where the dataset...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/63926">ICML</a> · <a href="https://openreview.net/forum?id=SUyEjfEbHh">OpenReview</a> · <a href="https://openreview.net/pdf?id=SUyEjfEbHh">PDF</a></span>
         </div>
       </li>
       <li>
@@ -308,7 +343,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/66514">Efficient Preference Poisoning Attack on Offline RLHF</a>
           <span class="authors">Chenye Yang, Weiyu Xu, Lifeng Lai</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Everything Else</span>
+          <span class="abstract">Offline Reinforcement Learning from Human Feedback (RLHF) pipelines such as Direct Preference Optimization (DPO) train on a pre-collected preference dataset, which makes them vulnerable to preference poisoning attack. We study label flip attacks against...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Everything Else · <a href="https://icml.cc/virtual/2026/poster/66514">ICML</a> · <a href="https://openreview.net/forum?id=32XNOcwH1z">OpenReview</a> · <a href="https://openreview.net/pdf?id=32XNOcwH1z">PDF</a></span>
         </div>
       </li>
       <li>
@@ -316,7 +352,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/65400">Efficient Test-time Inference for Generative Planning Models with OCL Search</a>
           <span class="authors">Robert Gieselmann, Mihai Samson, Federico Pecora, Jeremy Wyatt</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Planning</span>
+          <span class="abstract">Generative models have emerged as a powerful paradigm for AI planning, yet their performance remains constrained by training data distribution. One approach is to improve generated solutions during inference by scaling test-time compute. A more efficient...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Planning · <a href="https://icml.cc/virtual/2026/poster/65400">ICML</a> · <a href="https://openreview.net/forum?id=E1zQUGzfOZ">OpenReview</a> · <a href="https://openreview.net/pdf?id=E1zQUGzfOZ">PDF</a></span>
         </div>
       </li>
       <li>
@@ -324,7 +361,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/65653">Epistemic Gain, Aleatoric Cost: Uncertainty Decomposition in Multi-Agent Debate for Math Reasoning</a>
           <span class="authors">Dan Qiao, Binbin Chen, Fengyu Cai, Jianlong Chen, Wenhao Li, et al. (10 authors)</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent</span>
+          <span class="abstract">Multi-Agent Debate (MAD) has shown promise in leveraging collective intelligence to improve reasoning and reduce hallucinations, yet it remains unclear how information exchange shapes the underlying ability. Empirically, MAD exhibits paradoxical phenomena...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/65653">ICML</a> · <a href="https://openreview.net/forum?id=BW16CkVDnq">OpenReview</a> · <a href="https://openreview.net/pdf?id=BW16CkVDnq">PDF</a></span>
         </div>
       </li>
       <li>
@@ -332,7 +370,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/63115">Expected Returns and Policy Inconsistency-Aware Offline Federated Deep Reinforcement Learning</a>
           <span class="authors">Meng XU, Zhongying Chen, Weiwei Fu, Yan Li, Shuguang Wang, Jianping Wang</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
+          <span class="abstract">Offline Federated Deep Reinforcement Learning (FDRL) methods aggregate multiple client-side offline Deep Reinforcement Learning (DRL) models, each trained locally, to facilitate knowledge sharing while preserving privacy. Existing offline FDRL methods assign...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/63115">ICML</a> · <a href="https://openreview.net/forum?id=ZxMHQCFYr1">OpenReview</a> · <a href="https://openreview.net/pdf?id=ZxMHQCFYr1">PDF</a></span>
         </div>
       </li>
       <li>
@@ -340,7 +379,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/62462">Factored Value Functions for Graph-Based Multi-Agent Reinforcement Learning</a>
           <span class="authors">Ahmed Rashwan, Keith Briggs, Chris Budd, Lisa Kreusser</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent</span>
+          <span class="abstract">Credit assignment is a core challenge in multi-agent reinforcement learning (MARL), especially in large-scale systems with structured, local interactions. Graph-based Markov decision processes (GMDPs) capture such settings via an influence graph, but...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/62462">ICML</a> · <a href="https://openreview.net/forum?id=gNwwzeqPF0">OpenReview</a> · <a href="https://openreview.net/pdf?id=gNwwzeqPF0">PDF</a></span>
         </div>
       </li>
       <li>
@@ -348,7 +388,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/64895">Factorized Scheduling Principle: Learning Interpretable and Transferable Policies via Structured Additive Functions</a>
           <span class="authors">Hong Je-Gal, Hyun-Suk Lee</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Everything Else</span>
+          <span class="abstract">Scheduling problems arise from repeatedly selecting one item from a set of candidates based on their states. These problems often reduce to assigning priority scores and choosing the highest-ranked item. In this work, we propose a factorized scheduling...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Everything Else · <a href="https://icml.cc/virtual/2026/poster/64895">ICML</a> · <a href="https://openreview.net/forum?id=ImK3lNmGTW">OpenReview</a> · <a href="https://openreview.net/pdf?id=ImK3lNmGTW">PDF</a></span>
         </div>
       </li>
       <li>
@@ -356,7 +397,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/66531">Fast and Highly Expressive Policy Learning for Offline Reinforcement Learning via Bootstrapped Flow Q-Learning</a>
           <span class="authors">Thanh Nguyen, Tri Ton, Hongbin Choe, Minh-Tung Luu, Chang Yoo</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
+          <span class="abstract">Diffusion-based Q-learning has emerged as a powerful paradigm for offline reinforcement learning, but its reliance on multi-step denoising makes both training and inference computationally expensive and brittle. Recent efforts to accelerate diffusion...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/66531">ICML</a> · <a href="https://openreview.net/forum?id=2rGr38p5az">OpenReview</a> · <a href="https://openreview.net/pdf?id=2rGr38p5az">PDF</a></span>
         </div>
       </li>
       <li>
@@ -364,7 +406,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/61312">Frictional Q-Learning</a>
           <span class="authors">Hyunwoo Kim, Hyo Kyung Lee</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
+          <span class="abstract">Off-policy reinforcement learning suffers from extrapolation errors when a learned policy selects actions that are weakly supported in the replay buffer. In this study, we address this issue by drawing an analogy to static friction in classical mechanics...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/61312">ICML</a> · <a href="https://openreview.net/forum?id=rSEdPcvrme">OpenReview</a> · <a href="https://openreview.net/pdf?id=rSEdPcvrme">PDF</a> · <a href="https://github.com/hwya0327/fql">Code</a></span>
         </div>
       </li>
       <li>
@@ -372,7 +415,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/61243">From Reward-Free Representations to Preferences: Rethinking Offline Preference-Based Reinforcement Learning</a>
           <span class="authors">Jun-Jie Yang, Chia-Heng Hsu, Kui-Yuan Chen, Ping-Chun Hsieh</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
+          <span class="abstract">Preference-based reinforcement learning (PbRL) avoids explicit reward engineering by learning from pairwise human preference feedback. Existing offline PbRL methods typically follow a two-stage pipeline, first learning a reward or preference model from...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/61243">ICML</a> · <a href="https://openreview.net/forum?id=sGOmm03F40">OpenReview</a> · <a href="https://openreview.net/pdf?id=sGOmm03F40">PDF</a></span>
         </div>
       </li>
       <li>
@@ -380,7 +424,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/63495">From Static Constraints to Dynamic Adaptation: Sample-Level Constraint Release for Offline-to-Online Reinforcement Learning</a>
           <span class="authors">Lipeng Zu, YU QIAN, Shayok Chakraborty, Xiaonan Zhang</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL</span>
+          <span class="abstract">Offline-to-online reinforcement learning (O2O RL) faces a central challenge between retaining offline conservatism and adapting to online feedback under distribution shift. This challenge arises because data behavior evolves during fine-tuning, rendering...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL · <a href="https://icml.cc/virtual/2026/poster/63495">ICML</a> · <a href="https://openreview.net/forum?id=WgIwr2k861">OpenReview</a> · <a href="https://openreview.net/pdf?id=WgIwr2k861">PDF</a> · <a href="https://github.com/lpzu/DARE">Code</a></span>
         </div>
       </li>
       <li>
@@ -388,7 +433,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/60708">Geometric Control of Out-of-Distribution Shift in Safe Offline RL</a>
           <span class="authors">Zhiqi Zhuang, di wu, Benoit Boulet</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
+          <span class="abstract">Safe offline reinforcement learning (RL) requires optimizing policies within the support of static datasets while satisfying strict safety constraints. Although recent latent generative policies achieve strong empirical performance, they rely heavily on...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/60708">ICML</a> · <a href="https://openreview.net/forum?id=xLcOW4q39R">OpenReview</a> · <a href="https://openreview.net/pdf?id=xLcOW4q39R">PDF</a></span>
         </div>
       </li>
       <li>
@@ -396,7 +442,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/65471">Global Policy-Space Response Oracles for Two-Player Zero-Sum Games</a>
           <span class="authors">Junyu Zhang, Feihong Yang, Jian Wang, Chao Wang, Xudong Zhang</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent</span>
+          <span class="abstract">The Policy-Space Response Oracles (PSRO) framework scales equilibrium computation to large zero-sum games by iteratively expanding a restricted strategy set using deep reinforcement learning (DRL). A central challenge is to construct, under limited...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent · <a href="https://icml.cc/virtual/2026/poster/65471">ICML</a> · <a href="https://openreview.net/forum?id=DIytYt7tdI">OpenReview</a> · <a href="https://openreview.net/pdf?id=DIytYt7tdI">PDF</a></span>
         </div>
       </li>
       <li>
@@ -404,7 +451,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/65174">GTPO and GRPO-S: Token and Sequence-Level Reward Shaping with Policy Entropy</a>
           <span class="authors">HONGZE TAN, Zihan Wang, Jianfei Pan, Jinghao Lin, Hao Wang, et al. (10 authors)</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Online</span>
+          <span class="abstract">Reinforcement Learning (RL) is pivotal for enhancing Large Language Model (LLM) reasoning, yet mainstream algorithms such as GRPO and DAPO remain constrained by a coarse-grained credit assignment paradigm, where all tokens within the same response receive...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Online · <a href="https://icml.cc/virtual/2026/poster/65174">ICML</a> · <a href="https://openreview.net/forum?id=G5x5eEZ8yY">OpenReview</a> · <a href="https://openreview.net/pdf?id=G5x5eEZ8yY">PDF</a></span>
         </div>
       </li>
       <li>
@@ -412,7 +460,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/64108">Hierarchical Goal Abstractions via Learned Subset Relations</a>
           <span class="authors">Fabian Wurzberger, Sebastian Gottwald, Zeqiang Zhang, Daniel A Braun</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Everything Else</span>
+          <span class="abstract">In self-supervised goal-conditioned reinforcement learning (RL) without external rewards, goals are typically specified by observations sampled from experience. However, depending on the observation structure, such a fixed representation of goals may be...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Everything Else · <a href="https://icml.cc/virtual/2026/poster/64108">ICML</a> · <a href="https://openreview.net/forum?id=Qoh16QHG24">OpenReview</a> · <a href="https://openreview.net/pdf?id=Qoh16QHG24">PDF</a></span>
         </div>
       </li>
       <li>
@@ -420,7 +469,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/64058">HiPER: Hierarchical Plan–Execute RL for Multi-Turn LLM Agents</a>
           <span class="authors">Jiangweizhi Peng, Yuanxin Liu, Ruida Zhou, Charles Fleming, Zhaoran Wang, et al. (7 authors)</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Planning</span>
+          <span class="abstract">Training LLMs as interactive agents for multi-turn decision-making remains challenging, particularly in long-horizon tasks with sparse and delayed rewards, where agents must execute extended sequences of actions before receiving meaningful feedback. Most...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Planning · <a href="https://icml.cc/virtual/2026/poster/64058">ICML</a> · <a href="https://openreview.net/forum?id=RJWQcgd3hX">OpenReview</a> · <a href="https://openreview.net/pdf?id=RJWQcgd3hX">PDF</a></span>
         </div>
       </li>
       <li>
@@ -428,7 +478,8 @@
         <div>
           <a href="https://icml.cc/virtual/2026/poster/63033">HTAC: Hierarchical Task-Aware Composition for Continual Offline Reinforcement Learning</a>
           <span class="authors">Qiyang Zhou, Xu Ruihang, Peng Wang, Wenjie Lu, Xiaochun Cao, et al. (7 authors)</span>
-          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
+          <span class="abstract">Continual Offline Reinforcement Learning (CORL) enables building long-term autonomous agents from static datasets. However, it faces heterogeneity in environment dynamics, reward functions, and behavior policies across tasks. Combined with the inherent...</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline · <a href="https://icml.cc/virtual/2026/poster/63033">ICML</a> · <a href="https://openreview.net/forum?id=akfJfpUEBj">OpenReview</a> · <a href="https://openreview.net/pdf?id=akfJfpUEBj">PDF</a></span>
         </div>
       </li>
     </ol>
