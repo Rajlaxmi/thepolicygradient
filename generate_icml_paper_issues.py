@@ -10,7 +10,6 @@ import re
 import urllib.request
 from pathlib import Path
 
-from generate_iclr_oral_drafts import is_rl_related
 from generate_iclr_poster_issues import ORAL_ISSUES
 
 
@@ -21,7 +20,7 @@ ICML_DATA_PATH = DRAFT_DIR / "icml2026_papers.json"
 ICML_INDEX_PATH = DRAFT_DIR / "icml2026_paper_drafts_index.md"
 SITE_INDEX_PATH = ROOT / "index.html"
 BATCH_SIZE = 50
-ICML_PAPERS_URL = "https://icml.cc/virtual/2026/papers.html?layout=mini"
+ICML_PAPERS_URL = "https://icml.cc/static/virtual/data/icml-2026-orals-posters.json"
 ICLR_POSTER_DIR = DRAFT_DIR / "posters"
 
 
@@ -33,36 +32,48 @@ def clean_text(value: str) -> str:
     return re.sub(r"\s+", " ", html.unescape(value or "")).strip()
 
 
+def author_line(authors: list[str]) -> str:
+    authors = [clean_text(author) for author in authors if clean_text(author)]
+    if len(authors) <= 6:
+        return ", ".join(authors)
+    return ", ".join(authors[:5]) + f", et al. ({len(authors)} authors)"
+
+
 def fetch_icml_papers() -> list[dict]:
     request = urllib.request.Request(
         ICML_PAPERS_URL,
         headers={
             "User-Agent": "Mozilla/5.0 (Policy Gradient draft generator)",
-            "Accept": "text/html,application/xhtml+xml",
+            "Accept": "application/json",
         },
     )
     with urllib.request.urlopen(request, timeout=90) as response:
-        page = response.read().decode("utf-8", errors="replace")
+        data = json.load(response)
 
-    seen = set()
     papers = []
-    for match in re.finditer(r'<a\s+href="(/virtual/2026/poster/(\d+))">(.*?)</a>', page, re.S):
-        path, paper_id, raw_title = match.groups()
-        if paper_id in seen:
+    for item in data.get("results", []):
+        if item.get("eventtype") != "Poster":
             continue
-        seen.add(paper_id)
-        title = clean_text(re.sub(r"<[^>]+>", " ", raw_title))
+        topic = clean_text(item.get("topic") or "")
+        if not topic.startswith("Reinforcement Learning->"):
+            continue
+        title = clean_text(item.get("name") or "")
         if not title:
             continue
+        path = item.get("virtualsite_url") or f"/virtual/2026/poster/{item['id']}"
         papers.append(
             {
-                "id": paper_id,
+                "id": str(item["id"]),
                 "title": title,
                 "url": "https://icml.cc" + path,
-                "abstract": "",
-                "tldr": "",
-                "primary_area": "",
-                "keywords": [],
+                "authors": [
+                    clean_text(author.get("fullname", ""))
+                    for author in item.get("authors", [])
+                    if clean_text(author.get("fullname", ""))
+                ],
+                "topic": topic,
+                "keywords": [clean_text(keyword) for keyword in item.get("keywords", []) if clean_text(keyword)],
+                "pdf": item.get("paper_pdf_url") or "",
             }
         )
 
@@ -73,11 +84,16 @@ def fetch_icml_papers() -> list[dict]:
 def render_icml_issue(issue: int, total: int, papers: list[dict]) -> str:
     items = []
     for index, paper in enumerate(papers, start=1):
+        pdf = paper.get("pdf")
+        pdf_url = pdf if str(pdf).startswith("http") else "https://icml.cc" + str(pdf)
+        pdf_link = f' · <a href="{esc(pdf_url)}">PDF</a>' if pdf else ""
         items.append(
             f"""      <li>
         <span class="paper-num">{index:02d}</span>
         <div>
           <a href="{esc(paper['url'])}">{esc(paper['title'])}</a>
+          <span class="authors">{esc(author_line(paper.get('authors', [])))}</span>
+          <span class="paper-meta">{esc(paper.get('topic', ''))}{pdf_link}</span>
         </div>
       </li>"""
         )
@@ -97,6 +113,8 @@ def render_icml_issue(issue: int, total: int, papers: list[dict]) -> str:
     .paper-list {{ list-style: none; margin: 0; padding: 0; }}
     .paper-list li {{ border-top: 1px solid #d8d2c1; display: grid; grid-template-columns: 48px 1fr; gap: 18px; padding: 16px 0; }}
     .paper-num {{ color: #8a3324; font-family: "Courier New", Courier, monospace; font-size: 13px; letter-spacing: 1px; padding-top: 3px; }}
+    .authors, .paper-meta {{ display: block; color: #5b5b5b; font-size: 14px; margin-top: 4px; }}
+    .paper-meta {{ font-family: "Courier New", Courier, monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }}
     .nav {{ display: flex; justify-content: space-between; gap: 16px; margin-top: 36px; }}
     @media (max-width: 640px) {{
       h1 {{ font-size: 32px; }}
@@ -226,8 +244,7 @@ def render_site_index(total_icml_issues: int, icml_count: int) -> str:
 def main() -> None:
     DRAFT_DIR.mkdir(exist_ok=True)
     ICML_DIR.mkdir(parents=True, exist_ok=True)
-    papers = fetch_icml_papers()
-    rl_papers = [paper for paper in papers if is_rl_related(paper)]
+    rl_papers = fetch_icml_papers()
     ICML_DATA_PATH.write_text(json.dumps(rl_papers, indent=2) + "\n")
 
     total_issues = math.ceil(len(rl_papers) / BATCH_SIZE)
@@ -236,8 +253,8 @@ def main() -> None:
     index_lines = [
         "# ICML 2026 RL Paper Drafts",
         "",
-        f"- Source papers found: {len(papers)}",
-        f"- RL-related papers kept: {len(rl_papers)}",
+        "- Source: ICML virtual site official JSON topic metadata",
+        f"- RL-topic papers kept: {len(rl_papers)}",
         f"- Issue size: {BATCH_SIZE}",
         "",
     ]
@@ -249,8 +266,7 @@ def main() -> None:
 
     ICML_INDEX_PATH.write_text("\n".join(index_lines) + "\n")
     SITE_INDEX_PATH.write_text(render_site_index(total_issues, len(rl_papers)))
-    print(f"Fetched {len(papers)} ICML papers")
-    print(f"Kept {len(rl_papers)} RL-related papers")
+    print(f"Kept {len(rl_papers)} ICML RL-topic papers")
     print(f"Wrote {total_issues} ICML issue files")
 
 

@@ -14,6 +14,8 @@
     .paper-list { list-style: none; margin: 0; padding: 0; }
     .paper-list li { border-top: 1px solid #d8d2c1; display: grid; grid-template-columns: 48px 1fr; gap: 18px; padding: 16px 0; }
     .paper-num { color: #8a3324; font-family: "Courier New", Courier, monospace; font-size: 13px; letter-spacing: 1px; padding-top: 3px; }
+    .authors, .paper-meta { display: block; color: #5b5b5b; font-size: 14px; margin-top: 4px; }
+    .paper-meta { font-family: "Courier New", Courier, monospace; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
     .nav { display: flex; justify-content: space-between; gap: 16px; margin-top: 36px; }
     @media (max-width: 640px) {
       h1 { font-size: 32px; }
@@ -27,306 +29,406 @@
   <main>
     <div class="meta">The Policy Gradient · ICML 2026 RL Papers</div>
     <h1>ICML Paper Issue 001</h1>
-    <h2>50 reinforcement-learning-related papers · issue 1 of 19</h2>
+    <h2>50 reinforcement-learning-related papers · issue 1 of 3</h2>
     <ol class="paper-list">
       <li>
         <span class="paper-num">01</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/64377">$\tau^2$-Bench: Evaluating Conversational Agents in a Dual-Control Environment</a>
+          <a href="https://icml.cc/virtual/2026/poster/65617">$\text{DT}^\text{2}$: Decision-Targeted Digital Twins</a>
+          <span class="authors">Harry Amad, Mihaela van der Schaar</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
         </div>
       </li>
       <li>
         <span class="paper-num">02</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/61018">$\textit{S}$-SPPO: Semantic-Calibrated Self-Play Preference Optimization</a>
+          <a href="https://icml.cc/virtual/2026/poster/60524">A KL-regularization framework for learning to plan with adaptive priors</a>
+          <span class="authors">Álvaro Serra-Gómez, Daniel Jarne Ornia, Dhruva Tirumala, Thomas M Moerland</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Policy Search</span>
         </div>
       </li>
       <li>
         <span class="paper-num">03</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/65731">$E^2$PO: Embedding-perturbed Exploration Preference Optimization for Flow Models</a>
+          <a href="https://icml.cc/virtual/2026/poster/62964">Accelerating Q-learning through Efficient Value-sharing across Actions</a>
+          <span class="authors">Prabhat Nagarajan, Brett Daley, Martha White, Marlos C. Machado</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL</span>
         </div>
       </li>
       <li>
         <span class="paper-num">04</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/63348">$f$-Divergence Regularized RLHF: Two Tales of Sampling and Unified Analyses</a>
+          <a href="https://icml.cc/virtual/2026/poster/65122">Achieving Logarithmic Regret in KL-Regularized Zero-Sum Markov Games</a>
+          <span class="authors">Anupam Nayak, Tong Yang, Osman Yagan, Gauri Joshi, Yuejie Chi</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent</span>
         </div>
       </li>
       <li>
         <span class="paper-num">05</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/61247">$f$-Trajectory Balance: A Loss Family for Tuning GFlowNets, Generative Models, and LLMs with Off- and On-Policy Data</a>
+          <a href="https://icml.cc/virtual/2026/poster/64704">Adaptive Policy Backbone via Shared Network</a>
+          <span class="authors">Bumgeun Park, Donghwan Lee</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL</span>
         </div>
       </li>
       <li>
         <span class="paper-num">06</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/62048">A Control-Theoretic View of Mamba on Stability and Robustness</a>
+          <a href="https://icml.cc/virtual/2026/poster/62398">Advancing LLM Reasoning with Natural Language and Numerical Feedback</a>
+          <span class="authors">Xiaoying Zhang, Yipeng Zhang, Hao Sun, Kaituo Feng, Chaochao Lu, et al. (7 authors)</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Online</span>
         </div>
       </li>
       <li>
         <span class="paper-num">07</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/66064">A Direct Approach for Handling Contextual Bandits with Latent State Dynamics</a>
+          <a href="https://icml.cc/virtual/2026/poster/65501">Agent Primitives: Reuseable Latent Building Blocks for Multi-Agent Systems</a>
+          <span class="authors">Haibo Jin, Peng Kuang, Ye Yu, Xiaopeng Yuan, Haohan Wang</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent</span>
         </div>
       </li>
       <li>
         <span class="paper-num">08</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/63016">A Linear Expectation Constraint for Selective Prediction and Routing with False-Discovery Control</a>
+          <a href="https://icml.cc/virtual/2026/poster/64172">ASAP: Exploiting the Satisficing Generalization Edge in Neural Combinatorial Optimization</a>
+          <span class="authors">Han Fang, Paul Weng, Yutong Ban</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL</span>
         </div>
       </li>
       <li>
         <span class="paper-num">09</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/66649">A Minimax Approach for Optimal Intervention Policy Learning with Two-Stage Outcomes</a>
+          <a href="https://icml.cc/virtual/2026/poster/63254">Automata-Conditioned Cooperative Multi-Agent Reinforcement Learning</a>
+          <span class="authors">Beyazit Yalcinkaya, Marcell Vazquez-Chanlatte, Ameesh Shah, Hanna Krasowski, Sanjit Seshia</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent</span>
         </div>
       </li>
       <li>
         <span class="paper-num">10</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/63400">A Perturbation Approach to Unconstrained Linear Bandits</a>
+          <a href="https://icml.cc/virtual/2026/poster/65423">Autoregressive Direct Preference Optimization</a>
+          <span class="authors">Masanari Oi, Mahiro Ukai, Masahiro Kaneko, Naoaki Okazaki, Nakamasa Inoue</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL</span>
         </div>
       </li>
       <li>
         <span class="paper-num">11</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/61242">A Regime-Aware Trajectory Prediction Framework for 1000+ Systems Biology Models</a>
+          <a href="https://icml.cc/virtual/2026/poster/64372">Beyond Rewards in RL for Cyber Defence</a>
+          <span class="authors">Elizabeth Bates, Chris Hicks, Vasilios Mavroudis</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Everything Else</span>
         </div>
       </li>
       <li>
         <span class="paper-num">12</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/63960">A Tale of Two Graphs: Separating Knowledge Exploration from Outline Structure for Open-Ended Deep Research</a>
+          <a href="https://icml.cc/virtual/2026/poster/62945">Black-Box Combinatorial Optimization with Order-Invariant Reinforcement Learning</a>
+          <span class="authors">Olivier Goudet, Quentin Suire, Adrien Goëffon, Frédéric Saubion, sylvain lamprier</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Online</span>
         </div>
       </li>
       <li>
         <span class="paper-num">13</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/62790">A Two-Layer Framework for Joint Online Configuration Selection and Admission Control</a>
+          <a href="https://icml.cc/virtual/2026/poster/63301">Bridging Scaling Laws to On-Policy Reinforcement Learning via Adaptive Batch Scaling</a>
+          <span class="authors">Jongchan Park</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Online</span>
         </div>
       </li>
       <li>
         <span class="paper-num">14</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/63293">A Unified Density Operator View of Flow Control and Merging</a>
+          <a href="https://icml.cc/virtual/2026/poster/63397">Cardinality-Invariant Neural Operator Policies for Scalable PDE Control</a>
+          <span class="authors">Pietro Zanotta, Dibakar Sarkar, Honghui Zheng, Somdatta Goswami, Jan Drgona</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent</span>
         </div>
       </li>
       <li>
         <span class="paper-num">15</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/62964">Accelerating Q-learning through Efficient Value-sharing across Actions</a>
+          <a href="https://icml.cc/virtual/2026/poster/64920">Causal Flow Q-Learning for Robust Offline Reinforcement Learning</a>
+          <span class="authors">Mingxuan Li, Junzhe Zhang, Elias Bareinboim</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
         </div>
       </li>
       <li>
         <span class="paper-num">16</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/60863">ACTG-ARL: Differentially Private Conditional Text Generation with RL-Boosted Control</a>
+          <a href="https://icml.cc/virtual/2026/poster/65634">CFPO : Counterfactual Policy Optimization For Multimodal Reasoning</a>
+          <span class="authors">Zhangyuan Yu, Wanran Sun, Guangjing Yang, Xiaohu Wu, Qicheng Lao</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Everything Else</span>
         </div>
       </li>
       <li>
         <span class="paper-num">17</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/64723">Action Manifold Smoothing: A Lipschitz Pathway Perspective on High-Dimensional Reinforcement Learning</a>
+          <a href="https://icml.cc/virtual/2026/poster/60579">Chunk-Guided Q-Learning</a>
+          <span class="authors">Gwanwoo Song, Kwanyoung Park, Youngwoon Lee</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
         </div>
       </li>
       <li>
         <span class="paper-num">18</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/65627">Active Curriculum Refinement for Reinforcement Learning</a>
+          <a href="https://icml.cc/virtual/2026/poster/61274">Closing the Sim-to-Real Gap in Non-Markovian Spreading Processes via GPU-Accelerated Distributional RL</a>
+          <span class="authors">Heman Shakeri</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Everything Else</span>
         </div>
       </li>
       <li>
         <span class="paper-num">19</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/63774">Active Policy Optimization for Individualized Dosing via Gradient Variance Minimization</a>
+          <a href="https://icml.cc/virtual/2026/poster/64640">COLLIE: Guiding Skill Discovery in Semantically Coherent Latent Space</a>
+          <span class="authors">Yao Luan, Ni Mu, Hanfei Ge, Yiqin Yang, Bo XU, Qing-Shan Jia</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Online</span>
         </div>
       </li>
       <li>
         <span class="paper-num">20</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/66636">ACTIVE-o3 : Empowering MLLMs with Active Perception via Pure Reinforcement Learning</a>
+          <a href="https://icml.cc/virtual/2026/poster/62821">Compositional Planning with Jumpy World Models</a>
+          <span class="authors">Jesse Farebrother, Matteo Pirotta, Andrea Tirinzoni, Marc Bellemare, Alessandro Lazaric, Ahmed Touati</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Planning</span>
         </div>
       </li>
       <li>
         <span class="paper-num">21</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/61849">AdamO: A Collapse-Suppressed Optimizer for Offline RL</a>
+          <a href="https://icml.cc/virtual/2026/poster/64324">Compositional Transduction with Latent Analogies for Offline Goal-Conditioned Reinforcement Learning</a>
+          <span class="authors">Junseok Kim, Dohyeong Kim, Mineui Hong, Songhwai Oh</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
         </div>
       </li>
       <li>
         <span class="paper-num">22</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/64981">Adaptive Bandit Algorithms for Contextual Matching Markets</a>
+          <a href="https://icml.cc/virtual/2026/poster/61224">Continuity-Regularized Flow Matching for Offline Reinforcement Learning</a>
+          <span class="authors">Xiaocong Chen, Siyu Wang, Lina Yao</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
         </div>
       </li>
       <li>
         <span class="paper-num">23</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/66298">Adaptive Code Watermarking Through Reinforcement Learning</a>
+          <a href="https://icml.cc/virtual/2026/poster/63505">Conversation for Non-verifiable Learning: Self-Evolving Large Language Models through Meta-Evaluation</a>
+          <span class="authors">Yuan Sui, Bryan Hooi</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent</span>
         </div>
       </li>
       <li>
         <span class="paper-num">24</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/64105">Adaptive Reinforcement Learning for Unobservable Random Delays</a>
+          <a href="https://icml.cc/virtual/2026/poster/65271">CoRe: Combined Rewards with Vision-Language Model Feedback for Preference-Aligned Reinforcement Learning</a>
+          <span class="authors">Hexian Ni, Tao Lu, Yinghao Cai</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL</span>
         </div>
       </li>
       <li>
         <span class="paper-num">25</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/63971">Adaptively Grouped Contextual Bandits for Heterogeneous Human-AI Decision Making with Conformal Prediction Sets</a>
+          <a href="https://icml.cc/virtual/2026/poster/66410">CSPO: Constraint-Sensitive Policy Optimization for Safe Reinforcement Learning</a>
+          <span class="authors">Ayoub Belouadah, Sylvain Kubler, YVES LE TRAON</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL</span>
         </div>
       </li>
       <li>
         <span class="paper-num">26</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/61830">ADEPT: RL-Aligned Agentic Decoding of Emotion via Evidence Probing Tools — From Consensus Learning to Ambiguity-Driven Emotion Reasoning</a>
+          <a href="https://icml.cc/virtual/2026/poster/61278">Decentralized and Disentangled Task–Role Representation Learning for Generalizable Offline Multi-Agent Meta Reinforcement Learning</a>
+          <span class="authors">lei yuan, Ruiqi Xue, Yang Yu</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent</span>
         </div>
       </li>
       <li>
         <span class="paper-num">27</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/64547">Advantage Collapse in Group Relative Policy Optimization: Diagnosis and Mitigation</a>
+          <a href="https://icml.cc/virtual/2026/poster/62096">Decision Transformers As Zero-Shot Learners via Text-Behavior Alignment</a>
+          <span class="authors">Xin Zhang, Jonathan Martinez, Yanhua Li, Yingxue Zhang</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
         </div>
       </li>
       <li>
         <span class="paper-num">28</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/61737">Advantage Weighted Matching: Aligning RL with Pretraining in Diffusion Models</a>
+          <a href="https://icml.cc/virtual/2026/poster/63694">DF-ExpEnse: Diffusion Filtered Exploration for Sample Efficient Finetuning</a>
+          <span class="authors">Calvin Luo, Chen Sun, shuran song</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL</span>
         </div>
       </li>
       <li>
         <span class="paper-num">29</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/65904">Adversarial Reinforcement Learning for Robust Diffusion Large Language Model Unlearning</a>
+          <a href="https://icml.cc/virtual/2026/poster/62491">Differentiable Weightless Controllers: Learning Logic Circuits for Continuous Control</a>
+          <span class="authors">Fabian Kresse, Christoph Lampert</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Everything Else</span>
         </div>
       </li>
       <li>
         <span class="paper-num">30</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/66402">Adversarial Training for Process Reward Models</a>
+          <a href="https://icml.cc/virtual/2026/poster/64018">Direct Flow Q-Learning</a>
+          <span class="authors">Shicheng Cao, Jingrui Jia, Wenyu Li, Feng Duan, Tao Zhang, Shengbo Li</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL</span>
         </div>
       </li>
       <li>
         <span class="paper-num">31</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/63594">Adversarially Robust Control of Conditional Value-at-Risk via Kelly Conformal Inference</a>
+          <a href="https://icml.cc/virtual/2026/poster/62655">Doubly Regularized Markov Decision Processes for Robust Reinforcement Learning</a>
+          <span class="authors">Yiting He, Zhishuai Liu, Pan Xu</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Online</span>
         </div>
       </li>
       <li>
         <span class="paper-num">32</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/66275">AdvEvo-MARL: Shaping Internalized Safety through Adversarial Co-Evolution in Multi-Agent Reinforcement Learning</a>
+          <a href="https://icml.cc/virtual/2026/poster/63244">Dream-MPC: Gradient-Based Model Predictive Control with Latent Imagination</a>
+          <span class="authors">Jonathan Spieler, Sven Behnke</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Planning</span>
         </div>
       </li>
       <li>
         <span class="paper-num">33</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/66062">Agent JIT Compilation for Latency-Optimizing Computer-Use Agent Planning and Scheduling</a>
+          <a href="https://icml.cc/virtual/2026/poster/62759">Dreaming in Code for Curriculum Learning in Open-Ended Worlds</a>
+          <span class="authors">Konstantinos Mitsides, Maxence Faldor, Antoine Cully</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL</span>
         </div>
       </li>
       <li>
         <span class="paper-num">34</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/64306">Agent World Model: Infinity Synthetic Environments for Agentic Reinforcement Learning</a>
+          <a href="https://icml.cc/virtual/2026/poster/63926">DualCOIL: Offline Imitation Learning from Contrasting Demonstrations</a>
+          <span class="authors">Huy Hoang, Tien Mai, Pradeep Varakantham, Tanvi Verma</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
         </div>
       </li>
       <li>
         <span class="paper-num">35</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/63271">Agent-Omit: Training Efficient LLM Agents for Adaptive Thought and Observation Omission via Agentic Reinforcement Learning</a>
+          <a href="https://icml.cc/virtual/2026/poster/66514">Efficient Preference Poisoning Attack on Offline RLHF</a>
+          <span class="authors">Chenye Yang, Weiyu Xu, Lifeng Lai</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Everything Else</span>
         </div>
       </li>
       <li>
         <span class="paper-num">36</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/62292">Agentic Model Predictive Questioning Control in Visual Design</a>
+          <a href="https://icml.cc/virtual/2026/poster/65400">Efficient Test-time Inference for Generative Planning Models with OCL Search</a>
+          <span class="authors">Robert Gieselmann, Mihai Samson, Federico Pecora, Jeremy Wyatt</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Planning</span>
         </div>
       </li>
       <li>
         <span class="paper-num">37</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/62740">Agentic Monte Carlo: Reinforcement Learning for Black-Box LLM Agents</a>
+          <a href="https://icml.cc/virtual/2026/poster/65653">Epistemic Gain, Aleatoric Cost: Uncertainty Decomposition in Multi-Agent Debate for Math Reasoning</a>
+          <span class="authors">Dan Qiao, Binbin Chen, Fengyu Cai, Jianlong Chen, Wenhao Li, et al. (10 authors)</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent</span>
         </div>
       </li>
       <li>
         <span class="paper-num">38</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/60754">AgentTailor: A Semantic-Aware LLM-Based Multi-Agent System with Actor-Critic Structure</a>
+          <a href="https://icml.cc/virtual/2026/poster/63115">Expected Returns and Policy Inconsistency-Aware Offline Federated Deep Reinforcement Learning</a>
+          <span class="authors">Meng XU, Zhongying Chen, Weiwei Fu, Yan Li, Shuguang Wang, Jianping Wang</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
         </div>
       </li>
       <li>
         <span class="paper-num">39</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/65784">Align Your Trajectory Tangent: Training Better Consistency Models via Manifold-Aligned Tangents</a>
+          <a href="https://icml.cc/virtual/2026/poster/62462">Factored Value Functions for Graph-Based Multi-Agent Reinforcement Learning</a>
+          <span class="authors">Ahmed Rashwan, Keith Briggs, Chris Budd, Lisa Kreusser</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent</span>
         </div>
       </li>
       <li>
         <span class="paper-num">40</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/61418">Alignment Tampering: How Reinforcement Learning from Human Feedback Is Exploited to Optimize Misaligned Biases</a>
+          <a href="https://icml.cc/virtual/2026/poster/64895">Factorized Scheduling Principle: Learning Interpretable and Transferable Policies via Structured Additive Functions</a>
+          <span class="authors">Hong Je-Gal, Hyun-Suk Lee</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Everything Else</span>
         </div>
       </li>
       <li>
         <span class="paper-num">41</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/63164">Alleviating Sparse Rewards by Modeling Step-Wise and Long-Term Sampling Effects in Flow-Based GRPO</a>
+          <a href="https://icml.cc/virtual/2026/poster/66531">Fast and Highly Expressive Policy Learning for Offline Reinforcement Learning via Bootstrapped Flow Q-Learning</a>
+          <span class="authors">Thanh Nguyen, Tri Ton, Hongbin Choe, Minh-Tung Luu, Chang Yoo</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
         </div>
       </li>
       <li>
         <span class="paper-num">42</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/63811">AlphaRouter: Token-level Routing Between SLM and LLM with Reinforcement Learning and Tree Search</a>
+          <a href="https://icml.cc/virtual/2026/poster/61312">Frictional Q-Learning</a>
+          <span class="authors">Hyunwoo Kim, Hyo Kyung Lee</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
         </div>
       </li>
       <li>
         <span class="paper-num">43</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/66465">Alternating Reinforcement Learning for Rubric-Based Reward Modeling in Non-Verifiable LLM Post-Training</a>
+          <a href="https://icml.cc/virtual/2026/poster/61243">From Reward-Free Representations to Preferences: Rethinking Offline Preference-Based Reinforcement Learning</a>
+          <span class="authors">Jun-Jie Yang, Chia-Heng Hsu, Kui-Yuan Chen, Ping-Chun Hsieh</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
         </div>
       </li>
       <li>
         <span class="paper-num">44</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/64390">An Exploration of Non-Euclidean Gradient Descent: Muon and its Many Variants</a>
+          <a href="https://icml.cc/virtual/2026/poster/63495">From Static Constraints to Dynamic Adaptation: Sample-Level Constraint Release for Offline-to-Online Reinforcement Learning</a>
+          <span class="authors">Lipeng Zu, YU QIAN, Shayok Chakraborty, Xiaonan Zhang</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Deep RL</span>
         </div>
       </li>
       <li>
         <span class="paper-num">45</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/65360">Anchored Policy Optimization: Mitigating Exploration Collapse via Support-Constrained Rectification</a>
+          <a href="https://icml.cc/virtual/2026/poster/60708">Geometric Control of Out-of-Distribution Shift in Safe Offline RL</a>
+          <span class="authors">Zhiqi Zhuang, di wu, Benoit Boulet</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
         </div>
       </li>
       <li>
         <span class="paper-num">46</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/64505">Angel or Demon: Investigating the Plasticity Interventions&#x27; Impact on Backdoor Threats in Deep Reinforcement Learning</a>
+          <a href="https://icml.cc/virtual/2026/poster/65471">Global Policy-Space Response Oracles for Two-Player Zero-Sum Games</a>
+          <span class="authors">Junyu Zhang, Feihong Yang, Jian Wang, Chao Wang, Xudong Zhang</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Multi-agent</span>
         </div>
       </li>
       <li>
         <span class="paper-num">47</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/63676">AnyCanvas: Potential Field Guidance for Training-Free Spatial Control in Text-to-Image Diffusion</a>
+          <a href="https://icml.cc/virtual/2026/poster/65174">GTPO and GRPO-S: Token and Sequence-Level Reward Shaping with Policy Entropy</a>
+          <span class="authors">HONGZE TAN, Zihan Wang, Jianfei Pan, Jinghao Lin, Hao Wang, et al. (10 authors)</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Online</span>
         </div>
       </li>
       <li>
         <span class="paper-num">48</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/62287">AReaL-DTA: Dynamic Tree Attention for Efficient Reinforcement Learning of Large Language Models</a>
+          <a href="https://icml.cc/virtual/2026/poster/64108">Hierarchical Goal Abstractions via Learned Subset Relations</a>
+          <span class="authors">Fabian Wurzberger, Sebastian Gottwald, Zeqiang Zhang, Daniel A Braun</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Everything Else</span>
         </div>
       </li>
       <li>
         <span class="paper-num">49</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/66670">ArenaRL: Scaling RL for Open-Ended Agents via Tournament-based Relative Ranking</a>
+          <a href="https://icml.cc/virtual/2026/poster/64058">HiPER: Hierarchical Plan–Execute RL for Multi-Turn LLM Agents</a>
+          <span class="authors">Jiangweizhi Peng, Yuanxin Liu, Ruida Zhou, Charles Fleming, Zhaoran Wang, et al. (7 authors)</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Planning</span>
         </div>
       </li>
       <li>
         <span class="paper-num">50</span>
         <div>
-          <a href="https://icml.cc/virtual/2026/poster/65909">ARLArena: Demystifying Policy Gradient Stability in Agentic Reinforcement Learning</a>
+          <a href="https://icml.cc/virtual/2026/poster/63033">HTAC: Hierarchical Task-Aware Composition for Continual Offline Reinforcement Learning</a>
+          <span class="authors">Qiyang Zhou, Xu Ruihang, Peng Wang, Wenjie Lu, Xiaochun Cao, et al. (7 authors)</span>
+          <span class="paper-meta">Reinforcement Learning-&gt;Batch/Offline</span>
         </div>
       </li>
     </ol>
